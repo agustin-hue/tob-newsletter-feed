@@ -1,0 +1,662 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:2f09:b0:1f3:5b97:24c0 with SMTP id ck9csp11007237rdb;
+        Wed, 23 Sep 2026 09:37:58 -0700 (PDT)
+X-Received: by 2002:a05:6808:1993:b0:4d6:90d3:e185 with SMTP id 5614622812f47-4d690d3e2ecmr1840089b6e.46.1790181477990;
+        Wed, 23 Sep 2026 09:37:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790181477; cv=none;
+        d=google.com; s=arc-20260327;
+        b=Er5NIumqec2N6S9JlSvXVBqmIF2egHwWaddtw+BI/6vYZidICh8sCrb44w1r3yL+XJ
+         9fEXcxud8HAD5/qia40JrNYb7FKffty9XbU792RMFzZAOxWpH6HV7CouO/kVy5UcICPl
+         5sPYbVUYOZ4W/iJENxCDTwSPnMxvzYwGSLYpyz6ueTA7s1OnGqFB9o7ae3Cj8f0jgn55
+         jYnTBsVJXiOAn0kOhOmAlsyvt/INllatqVfwzfzmSsZTmu0PYNfQt3+8yG+ROMcUllQy
+         npQL0WM7m9zvYAZhzcRSjqUmhAT2llu4DN6yJETX/hs+YFm0jtpBs3pgD/AuJJK2QbkT
+         muVw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=XEF/kZoxXLEjwnAwvODZ8BJoFOdWT7A/kJU4npD/wQ8=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=ZJdbys4NgJQTz5GbgHqT98XtPCV2r+mb5myQVAhq84p6XwuOvTupfRWMp4SwLMPk/5
+         SvZrLSjSiS2kTSSR+YfUYBaJSHeMADKS9Xkl8+qNyrmrcz8CenwvSDW/4jrd1KBjGbDx
+         ZIvLJF0UDE49DiKrIxSE7eJDCQU/hcGn6bcNghlmZIuWoUuZuUI4l34dHtwvVVDnEp7+
+         hcjmnhl6ly10NZtrtx0z2Tljse7vuKSn0QtA7gNMH2m3xny+F1qjPOl0M93cxJQKQzgn
+         VedMjuvXHEwRZ/i0Exyeh618O5stp9YWHYFZh0Fzfo2tfFo/NQEzWT33SEDSn+XHpC3j
+         HROg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=EwBrTMZU;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-155.sparkpostmail.com (mta-203-49-155.sparkpostmail.com. [168.203.49.155])
+        by mx.google.com with ESMTPS id 5614622812f47-4d5c553c40esi5101280b6e.119.2026.09.23.09.37.57
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Sep 2026 09:37:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) client-ip=168.203.49.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=EwBrTMZU;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: 4xj1m4/lPvHz5VALzvZIne+hzW4GXbARe34GpInjoeI=|eyJtZXNzYWdlX2lkIjo
+	iNmFiMzY0MDBiNDZhMTE5NzYwNzYiLCJ0ZW5hbnRfaWQiOiJzcGMiLCJyIjoiam9
+	hcXVpbkBvcHRpbmdyb3d0aC5jb20iLCJjdXN0b21lcl9pZCI6IjMwMzI4NyIsInN
+	1YmFjY291bnRfaWQiOiIxMDExNyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1790181476;
+	i=@colonysparkweekly.com;
+	bh=XEF/kZoxXLEjwnAwvODZ8BJoFOdWT7A/kJU4npD/wQ8=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=EwBrTMZUhUvDu0ly9hEgEsmEdFGPF/HarJQ/0s2J9lejVdqjxB8CFZLNmfSj6mmkS
+	 EeBRwUJMaA+vbVZUDZT8LVTbtQXrc8WgC5pc9fj8L5JLW7RwlV6qjh9D8mbzcJZdDZ
+	 KZSVaEhhNOM4MxlV1zqDZ2ivvSWZ+F2nRE2Dz2J0=
+Received: from [10.90.3.120] ([10.90.3.120])
+	by i-0e3b50f4686f94104.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76429 r(msys-ecelerity:tags/5.3.0.18)) with REST
+	id 67/0E-31255-46004BA6; Wed, 23 Sep 2026 16:37:56 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <67.0E.31255.46004BA6@i-0e3b50f4686f94104.mta1vrest.sd.prd.sparkpost>
+Date: Wed, 23 Sep 2026 16:37:56 +0000
+Content-Type: multipart/alternative; boundary="_----+ye5TTkXJHV0RQ2cZO913w===_D3/0E-31255-46004BA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] The fine is visible. The lost hours are not.
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3AaghSxhk7eN5tpGYVyN2lNpIoAOZqpY0h8k8kj7gWuuo~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJzdWJhY2NvdW50X2lkIjogIjEwMTE3IiwgIm1lc3NhZ2VfaWQiOiAiNmFiMzY0MDBiNDZhMTE5NzYwNzYiIH0~>,<https://unsubscribe.spmta.com/u/XjJ4qFH-JS_vQwRB41CHFQ~~/AASgtxA~/F4ynbjQyZ2BiVQHjWEu8Q9SHIyyU9B6tp4U6DPUJzbMVeiVXxM4uDJ19qDRqLNDiQW-K8hfL7eIwDN4Wa7Yqdg~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----+ye5TTkXJHV0RQ2cZO913w===_D3/0E-31255-46004BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+68.4% of manufacturing compliance cost is labor. Put it on the capacity cal=
+endar.=0A68.4% of manufacturing compliance cost is labor. Put it on the cap=
+acity=0Acalendar.=0A68.4% of manufacturing compliance cost is labor. Put it=
+ on the capacity=0Acalendar.=0A=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=0A=0A=C2=A0=0A=0ABy Bill M=
+urphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://www.colonyspark.c=
+om/]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=0A=0AISSUE #21 =C2=A0=C2=B7=
+=C2=A0 AUGUST 7, 2026=0A=0A=C2=A0=0A=0A=C2=A0=0A=0AHi ${first_name},=0A=0AC=
+ompliance used to arrive as a date on the legal calendar. It now arrives as=
+ a=0Aclaim on the week: evidence requests, vendor reviews, access checks, t=
+raining=0Arenewals, and approvals that land on people whose calendars are a=
+lready full.=0A=0AThis issue is about making that load visible. The fine is=
+ the part everyone can=0Asee. The interrupted capacity is the part that nev=
+er shows up in one place,=0Awhich is exactly why it never gets scheduled.=
+=0A=0ABill=0A=0A=C2=A0=0A=0ATHE SHIFT=0A=0A=0ACompliance Work Is Becoming a=
+ Capacity Plan.=0A=0ACompliance is moving out of the legal calendar and int=
+o the operating plan.=0A=0AThe requirements are not arriving as one clean p=
+roject with a start date and a=0Abudget line. They are arriving as dozens o=
+f recurring tasks: evidence requests,=0Avendor reviews, access recertificat=
+ions, training renewals, approvals. Each one=0Alands on someone who already=
+ owns production, quality, purchasing, finance, or=0AIT.=0A=0AFive signals =
+make the same argument from different directions.=0A=0AFive signals from 20=
+26=0A=0A=C2=B7 The IIA Third-Party Topical Requirement takes effect Septemb=
+er 15, 2026, and=0Ais mandatory for any internal audit engagement touching =
+third-party risk. It=0Asits inside a fast rollout: Cybersecurity effective =
+February 5, 2026,=0AOrganizational Behavior effective December 15, 2026 (Th=
+e IIA=0A[https://www.theiia.org/en/standards/2024-standards/topical-require=
+ments/third-party/],=0AVendor Centric=0A[https://vendorcentric.com/single-p=
+ost/iia-third-party-topical-requirement/]).=0A=0A=C2=B7 Manufacturers pay a=
+n average $29,100 per employee per year on federal=0Acompliance. Small manu=
+facturers under 50 employees pay $50,100 (NAM=0A[https://nam.org/regulation=
+s-cost-small-manufacturers-more-than-50k-per-worker-29244/]).=0A=0A=C2=B7 6=
+8.4% of total manufacturing compliance cost is labor, which is the whole=0A=
+point: compliance is a people-capacity line (NBER=0A[https://www.nber.org/d=
+igest/20232/tracking-cost-complying-government-regulation]).=0A=0A=C2=B7 11=
+% to 40% of third parties rate high-risk, yet most programs still assemble=
+=0Athe supporting evidence reactively across email, shared drives, and disc=
+onnected=0Asystems (Gartner via Atlas Systems=0A[https://www.gartner.com/en=
+/legal-compliance/topics/third-party-risk-management-tprm]).=0A=0A=C2=B7 Or=
+ganizations that stay audit-ready year round report roughly 40% lower audit=
+=0Aprep effort. That gap is the capacity story (Atlas Systems=0A[https://ww=
+w.atlassystems.com/blog/third-party-risk-audit-readiness-checklist]).=0A=0A=
+The NAM figure establishes the scale. The NBER figure identifies the mechan=
+ism.=0ACompliance cost is largely employee time, which means it is capacity=
+, and=0Acapacity is already committed to something else. A plant that budge=
+ts for=0Acompliance as an occasional event is budgeting for the wrong thing=
+.=0A=0AThe interruption mechanism is always the same. A request arrives. T=
+he owner is=0Aunclear. Evidence has to be located. Quality, purchasing, IT,=
+ finance, and=0Aoperations each surrender fragments of a day. The total nev=
+er appears in one=0Aplace, so leadership sees the missed work but not the l=
+oad that caused it.=0A=0AThe operators handling this well are not the ones =
+with the thickest binder. They=0Ado not wait for the auditor to create the =
+work queue. They keep evidence where=0Athe work happens, name an owner and =
+a backup, set a review cadence, estimate the=0Ahours, and reserve capacity =
+before the due date.=0A=0AWhere does compliance demand appear in your weekl=
+y capacity plan today=3F=0A=0A=C2=A0=0A=0AFROM THE FLOOR=0A=0A=0AIt is not =
+a footnote. It is scheduled work.=0A=0AMiguel Ramirez, VP of Operations at =
+Fresca Foods, on what food-safety compliance=0Acosts in people and time=0A=
+=0AMiguel Ramirez runs operations at Fresca Foods, a food manufacturer in=
+=0ALouisville, Colorado. Speaking with Food Safety Magazine in June about b=
+uilding=0Aand maintaining a food-safety culture, he described compliance as=
+ work that has=0Ato be operationalized across levels and shared between qua=
+lity and production,=0Anot parked with the QA team or saved for audit week.=
+=0A=0ADoing it properly can mean adding people and accepting a different co=
+st=0Astructure. The training and coaching are not a one-time spend either.=
+=0A=0AMiguel Ramirez=0A=0AVP of Operations, Fresca Foods =C2=A0=C2=B7=C2=A0=
+ Food Safety Magazine, June 2026=0A[https://www.food-safety.com/articles/11=
+536-ep-220-ramirez-and-hodgson-what-it-takes-to-build-and-maintain-an-effec=
+tive-food-safety-culture]=0A=0AThe operational detail is the interesting pa=
+rt. Moving monitoring checks from QA=0Aalone to QA plus production took tim=
+e to implement, but it put ownership on the=0Afloor, where the work actuall=
+y happens.=0A=0AThat is the capacity story in operator language. The audit =
+is the visible event.=0AThe real workload is the recurring monitoring, trai=
+ning, verification, and=0Across-functional follow-up required to keep the e=
+vidence true. Ramirez is not=0Aarguing for less rigor. He is saying the rig=
+or needs labor, time, and operating=0Aownership.=0A=0AThe takeaway=0A=0AIf =
+a recurring check needs production, quality, IT, or purchasing time, it is=
+=0Anot an administrative footnote. It is scheduled work. Put it in the same=
+=0Aconversation as labor coverage, maintenance, changeovers, cycle counts, =
+and=0Acustomer commitments.=0A=0A=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Complian=
+ce Capacity Calendar.=0A=0AEvery obligation mapped to the people, hours, an=
+d interruption it will claim.=0A=0AOne weekly view of compliance demand, si=
+tting inside the operating plan instead=0Aof beside it.=0A=0AThe pattern ac=
+ross mid-market operators is consistent. The compliance calendar=0Alists de=
+adlines. The operating calendar lists labor, production, inventory,=0Acusto=
+mer work, maintenance, and close activities. The two calendars meet only=0A=
+when a request becomes urgent.=0A=0AThe Compliance Capacity Calendar is a r=
+ecurring planning layer that maps every=0Aobligation to the people, systems=
+, hours, and interruption exposure required to=0Acomplete it. It does not r=
+eplace the ERP, QMS, LMS, identity platform, vendor=0Aportal, or document r=
+epository. It links to those systems and makes their=0Acombined demand visi=
+ble in one weekly view.=0A=0AWhat goes into it=0A=0AOne row for every recur=
+ring or event-driven obligation. Each row needs:=0A=0A=C2=B7 Obligation. Ev=
+idence request, supplier review, access recertification,=0Atraining renewal=
+, policy approval, customer audit pack, certification check,=0Ainsurance do=
+cument, remediation item, or regulatory filing.=0A=0A=C2=B7 Requirement sou=
+rce. Regulation, customer contract, certification standard,=0Ainsurer, inte=
+rnal policy, lender, prime contractor, or audit request.=0A=0A=C2=B7 Primar=
+y owner and backup. One accountable person plus the person who covers an=0A=
+absence.=0A=0A=C2=B7 Contributing functions. Quality, operations, purchasin=
+g, IT, finance, HR,=0Aengineering, warehouse, or outside partner.=0A=0A=C2=
+=B7 Source system. The exact ERP record, QMS folder, LMS course, IAM report=
+, HRIS=0Arecord, vendor portal, ticket queue, or controlled drive location =
+that produces=0Athe evidence.=0A=0A=C2=B7 Evidence output. The report, appr=
+oval record, certificate, access list,=0Atraining completion file, supplier=
+ document, control test, or signed review the=0Aobligation must produce.=0A=
+=0A=C2=B7 Frequency and trigger. Weekly, monthly, quarterly, annual, contra=
+ct renewal,=0Anew vendor, employee role change, system change, customer req=
+uest, or incident.=0A=0A=C2=B7 Evidence freshness rule. How current the art=
+ifact must be when reviewed.=0A=0A=C2=B7 Planned hours. Preparation, execut=
+ion, review, correction, approval, and=0Afollow-up time by function.=0A=0A=
+=C2=B7 Interruption cost. Unplanned hours multiplied by loaded labor cost, =
+plus=0Adocumented overtime, expedite cost, delayed release, missed producti=
+on, or=0Alate-shipment exposure.=0A=0A=C2=B7 Capacity window. The week and =
+time block in which the work will be completed.=0A=0A=C2=B7 Status. Schedul=
+ed, at risk, blocked, complete, or overdue.=0A=0AThe planning math=0A=0ASim=
+ple enough to maintain=0A=0APlanned hours. Preparation plus execution plus =
+review plus correction plus=0Afollow-up.=0A=0AUnplanned hours. Actual hours=
+ completed outside the reserved capacity window.=0A=0AInterruption cost. Un=
+planned hours times loaded hourly cost, plus documented=0Aovertime, expedit=
+e, delay, or lost-production cost.=0A=0AForecast accuracy. Planned hours co=
+mpared with actual hours. Use the variance to=0Aimprove the next cycle.=0A=
+=0AThe point is not to manufacture a perfect cost figure. The point is to s=
+top=0Atreating the load as free.=0A=0AWhat the weekly output looks like=0A=
+=0AEvery Monday, one six-week view=0A=0A1. Capacity demand by function. Tot=
+al compliance hours required from quality,=0Aoperations, IT, purchasing, fi=
+nance, and HR this week.=0A=0A2. Collision alerts. Obligations competing wi=
+th production runs, inventory=0Acounts, month-end close, maintenance, custo=
+mer shipments, vacations, or training=0Awindows.=0A=0A3. Evidence risk. Mis=
+sing, stale, inaccessible, or unapproved artifacts due in=0Athe next two, f=
+our, and six weeks.=0A=0A4. Owner actions. The three to five decisions or e=
+scalations that cannot wait.=0A=0A5. Actual versus planned. Hours used last=
+ week, interruptions created, overdue=0Awork, and the estimate that needs t=
+o change next cycle.=0A=0AIllustrative weekly rows=0A=0AThese are planning =
+examples, not industry benchmarks.=0A=0ASupplier insurance and cybersecurit=
+y review=0A=0APurchasing manager =C2=A0=C2=B7=C2=A0 Vendor portal and ERP v=
+endor record =C2=A0=C2=B7=C2=A0 Rolling annual=0Arenewal=0A=0A2.5 planned h=
+ours =C2=A0=C2=B7=C2=A0 Reserved Thursday, 2:00 PM=0A=0AExposure: extra cha=
+sing time and approval delay if documents expire.=0A=0AQuarterly access rec=
+ertification=0A=0AIT manager plus department managers =C2=A0=C2=B7=C2=A0 IA=
+M and HRIS =C2=A0=C2=B7=C2=A0 Quarterly and on role=0Achange=0A=0A6 planned=
+ hours =C2=A0=C2=B7=C2=A0 Reserved Tuesday morning=0A=0AExposure: manager p=
+ull-away time and elevated access remaining open.=0A=0AFood-safety training=
+ evidence refresh=0A=0AQA manager plus operations supervisors =C2=A0=C2=B7=
+=C2=A0 LMS and QMS =C2=A0=C2=B7=C2=A0 Monthly and before=0Aaudit=0A=0A4 pla=
+nned hours =C2=A0=C2=B7=C2=A0 Reserved split across Tuesday shifts=0A=0AExp=
+osure: supervisor time removed from shift coverage.=0A=0ACustomer audit evi=
+dence pack=0A=0AQuality lead plus finance and IT contributors =C2=A0=C2=B7=
+=C2=A0 QMS, ERP, controlled drive =C2=A0=C2=B7=C2=A0=0AMonthly refresh and =
+on customer request=0A=0A8 planned hours =C2=A0=C2=B7=C2=A0 Reserved Wednes=
+day, 9:00 AM=0A=0AExposure: multi-function search time if the request arriv=
+es ad hoc.=0A=0AVendor corrective-action review=0A=0AQuality manager =C2=A0=
+=C2=B7=C2=A0 QMS and supplier record =C2=A0=C2=B7=C2=A0 Monthly until closu=
+re=0A=0A3 planned hours =C2=A0=C2=B7=C2=A0 Reserved Friday, 10:00 AM=0A=0AE=
+xposure: repeat defect, delayed approval, and added follow-up.=0A=0ADecisio=
+ns this eliminates=0A=0A=C2=B7 Who owns this request=3F=0A=0A=C2=B7 Which s=
+ystem holds the current evidence=3F=0A=0A=C2=B7 Is the artifact still valid=
+=3F=0A=0A=C2=B7 Which functions will lose time this week=3F=0A=0A=C2=B7 Doe=
+s the work collide with production or close activities=3F=0A=0A=C2=B7 Shoul=
+d the obligation be moved, staffed differently, or escalated=3F=0A=0A=C2=B7=
+ Which outside partner needs to act before the internal owner can finish=3F=
+=0A=0A=C2=B7 Is the recurring estimate wrong because the same interruption =
+happens every=0Acycle=3F=0A=0AOperating rhythm=0A=0A=C2=B7 Friday. Owners c=
+onfirm next week=E2=80=99s hours, blockers, and evidence status.=0ASystem d=
+ata updates automatically where possible.=0A=0A=C2=B7 Monday. Leadership ru=
+ns a 20-minute capacity review. Resolve collisions,=0Aapprove moved work, a=
+ssign backup coverage.=0A=0A=C2=B7 Midweek. Escalate only items that become=
+ blocked, exceed planned hours, or=0Acreate a new operating risk.=0A=0A=C2=
+=B7 Month-end. Compare planned hours with actuals. Update the estimate, ret=
+ire=0Aobsolete obligations, add new recurring work.=0A=0A=C2=B7 Quarter-end=
+. Review total compliance capacity by function. Decide whether to=0Arebala=
+nce work, automate evidence creation, change the control, or add partner=0A=
+support.=0A=0ABuild guardrails=0A=0A=C2=B7 Link to evidence. Do not duplica=
+te controlled documents in the calendar.=0A=0A=C2=B7 Keep human approval on=
+ interpretations, attestations, and control conclusions.=0A=0A=C2=B7 Restri=
+ct rows and evidence links by role. Compliance visibility should not=0Acrea=
+te a new access problem.=0A=0A=C2=B7 Require a backup owner for every mater=
+ial obligation.=0A=0A=C2=B7 Record actual hours. A capacity plan that never=
+ learns from actuals becomes=0Aanother stale checklist.=0A=0A=C2=B7 Separat=
+e the obligation from the task. One requirement may generate several=0Atask=
+s across functions.=0A=0A=C2=B7 Track recurring interruptions as defects in=
+ the operating design, not as proof=0Athat the team needs to work faster.=
+=0A=0AWhat the operator gets every week=0A=0A=C2=B7 A visible compliance lo=
+ad before it becomes urgent.=0A=0A=C2=B7 A realistic view of which function=
+s are overcommitted.=0A=0A=C2=B7 A ranked list of stale evidence and blocke=
+d owners.=0A=0A=C2=B7 Reserved time for work that was previously invisible.=
+=0A=0A=C2=B7 Better estimates based on actual hours.=0A=0A=C2=B7 A record o=
+f where interruption cost keeps repeating.=0A=0A=C2=B7 Fewer leadership dec=
+isions made from inboxes and memory.=0A=0ATwo paths to build it=0A=0APath 1=
+: Internal build=0A=0AStart with Microsoft Lists, Airtable, Smartsheet, or =
+a shared spreadsheet.=0AImport the next 90 days of obligations. Add the req=
+uired fields above. Link=0Aevery row to its source system. Ask each owner t=
+o estimate hours for one cycle,=0Athen replace estimates with actuals. Publ=
+ish a six-week view and review it for=0A20 minutes every Monday. Automate r=
+eminders only after ownership, evidence=0Alocation, and escalation rules ar=
+e stable.=0A=0APath 2: ERP or existing partner=0A=0AAsk the existing ERP, Q=
+MS, IT, or compliance partner to add the planning layer=0Awithout creating =
+a second system of record. The deliverable should include=0Asource-system l=
+inks, owner and backup fields, recurring triggers,=0Aevidence-freshness rul=
+es, planned versus actual hours, role-based access, and a=0Asix-week capaci=
+ty dashboard. Require the partner to show how vendor renewals,=0Aaccess cha=
+nges, training completion, corrective actions, and audit requests=0Aenter t=
+he calendar automatically. The partner should leave the operating team=0Awi=
+th a weekly review rhythm, not another dashboard nobody owns.=0A=0APut comp=
+liance on the capacity calendar before the next request puts it there=0Afor=
+ you.=0A=0A=C2=A0=0A=0ATHE OPERATIONS BRIEF=0A=0ABy Bill Murphy =C2=A0=C2=
+=B7=C2=A0 Powered by Colony Spark [https://www.colonyspark.com/]=0A=0AAlrea=
+dy reserving capacity for compliance work, or watching it interrupt the=0Aw=
+eek one request at a time=3F Hit reply, I read every one. Bill=0A=0AYou=E2=
+=80=99re receiving this because you subscribed to The Operations Brief.=0AU=
+nsubscribe [[[custom:unsubscribe]]]
+--_----+ye5TTkXJHV0RQ2cZO913w===_D3/0E-31255-46004BA6
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head> <style></style> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>The Operations Brief &#xB7; ISSUE #21 &#xA0;&#xB7;&#xA0; AUGUST 7, 2026</title>
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<style type="text/css">
+table, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+td, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exactly;}
+body, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f2ef" style="margin:0;padding:0;width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" class="bodyClass"><span style="display:none">68.4% of manufacturing compliance cost is labor. Put it on the capacity calendar.</span>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">68.4% of manufacturing compliance cost is labor. Put it on the capacity calendar.</div>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;</div>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#f4f2ef" style="background-color:#f4f2ef;width:100%;">
+<tbody><tr>
+<td align="center" valign="top" style="padding:24px 16px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="max-width:600px;width:100%;">
+<tbody><tr>
+<td>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td height="5" bgcolor="#C8392A" style="background-color:#C8392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td align="center" bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:36px 40px 28px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td align="center" style="padding-bottom:20px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com/" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>
+<tr><td align="center"><h1 style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-transform:uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br>BRIEF</h1></td></tr>
+<tr><td align="center" style="padding-top:14px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="48" height="2" bgcolor="#C8392A" style="background-color:#C8392A;width:48px;height:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td></tr>
+<tr><td align="center" style="padding-top:12px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transform:uppercase;">ISSUE #21 &#xA0;&#xB7;&#xA0; AUGUST 7, 2026</p></td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#C8392A" style="background-color:#C8392A;height:3px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;padding:32px 40px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Hi ${first_name},</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Compliance used to arrive as a date on the legal calendar. It now arrives as a claim on the week: evidence requests, vendor reviews, access checks, training renewals, and approvals that land on people whose calendars are already full.</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">This issue is about making that load visible. The fine is the part everyone can see. The interrupted capacity is the part that never shows up in one place, which is exactly why it never gets scheduled.</p>
+<p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Compliance Work Is Becoming a Capacity Plan.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Compliance is moving out of the legal calendar and into the operating plan.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The requirements are not arriving as one clean project with a start date and a budget line. They are arriving as dozens of recurring tasks: evidence requests, vendor reviews, access recertifications, training renewals, approvals. Each one lands on someone who already owns production, quality, purchasing, finance, or IT.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Five signals make the same argument from different directions.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 0 24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Five signals from 2026</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; The <strong style="color:#1a1a1a;">IIA Third-Party Topical Requirement</strong> takes effect <strong style="color:#1a1a1a;">September 15, 2026</strong>, and is mandatory for any internal audit engagement touching third-party risk. It sits inside a fast rollout: Cybersecurity effective February 5, 2026, Organizational Behavior effective December 15, 2026 (<a href="https://www.theiia.org/en/standards/2024-standards/topical-requirements/third-party/" style="color:#C8392A;text-decoration:underline;">The IIA</a>, <a href="https://vendorcentric.com/single-post/iia-third-party-topical-requirement/" style="color:#C8392A;text-decoration:underline;">Vendor Centric</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Manufacturers pay an average <strong style="color:#1a1a1a;">$29,100 per employee per year</strong> on federal compliance. Small manufacturers under 50 employees pay <strong style="color:#1a1a1a;">$50,100</strong> (<a href="https://nam.org/regulations-cost-small-manufacturers-more-than-50k-per-worker-29244/" style="color:#C8392A;text-decoration:underline;">NAM</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">68.4%</strong> of total manufacturing compliance cost is labor, which is the whole point: compliance is a people-capacity line (<a href="https://www.nber.org/digest/20232/tracking-cost-complying-government-regulation" style="color:#C8392A;text-decoration:underline;">NBER</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">11% to 40%</strong> of third parties rate high-risk, yet most programs still assemble the supporting evidence reactively across email, shared drives, and disconnected systems (<a href="https://www.gartner.com/en/legal-compliance/topics/third-party-risk-management-tprm" style="color:#C8392A;text-decoration:underline;">Gartner via Atlas Systems</a>).</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Organizations that stay audit-ready year round report roughly <strong style="color:#1a1a1a;">40% lower audit prep effort</strong>. That gap is the capacity story (<a href="https://www.atlassystems.com/blog/third-party-risk-audit-readiness-checklist" style="color:#C8392A;text-decoration:underline;">Atlas Systems</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The NAM figure establishes the scale. The NBER figure identifies the mechanism. Compliance cost is largely employee time, which means it is capacity, and capacity is already committed to something else. A plant that budgets for compliance as an occasional event is budgeting for the wrong thing.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The interruption mechanism is always the same. A request arrives. The owner is unclear. Evidence has to be located. Quality, purchasing, IT, finance, and operations each surrender fragments of a day. The total never appears in one place, so leadership sees the missed work but not the load that caused it.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The operators handling this well are not the ones with the thickest binder. They do not wait for the auditor to create the work queue. They keep evidence where the work happens, name an owner and a backup, set a review cadence, estimate the hours, and reserve capacity before the due date.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">Where does compliance demand appear in your weekly capacity plan today?</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">FROM THE FLOOR</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">It is not a footnote. It is scheduled work.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Miguel Ramirez, VP of Operations at Fresca Foods, on what food-safety compliance costs in people and time</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Miguel Ramirez runs operations at Fresca Foods, a food manufacturer in Louisville, Colorado. Speaking with Food Safety Magazine in June about building and maintaining a food-safety culture, he described compliance as work that has to be operationalized across levels and shared between quality and production, not parked with the QA team or saved for audit week.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="background-color:#fdf6f5;border-radius:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">Doing it properly can mean adding people and accepting a different cost structure. The training and coaching are not a one-time spend either.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td>
+<p style="margin:0 0 1px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;">Miguel Ramirez</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">VP of Operations, Fresca Foods &#xA0;&#xB7;&#xA0; <a href="https://www.food-safety.com/articles/11536-ep-220-ramirez-and-hodgson-what-it-takes-to-build-and-maintain-an-effective-food-safety-culture" style="color:#C8392A;text-decoration:none;">Food Safety Magazine, June 2026</a></p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The operational detail is the interesting part. Moving monitoring checks from QA alone to QA plus production took time to implement, but it put ownership on the floor, where the work actually happens.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">That is the capacity story in operator language. The audit is the visible event. The real workload is the recurring monitoring, training, verification, and cross-functional follow-up required to keep the evidence true. Ramirez is not arguing for less rigor. He is saying the rigor needs labor, time, and operating ownership.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:18px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">The takeaway</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">If a recurring check needs production, quality, IT, or purchasing time, it is not an administrative footnote. It is scheduled work. Put it in the same conversation as labor coverage, maintenance, changeovers, cycle counts, and customer commitments.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE STACK</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">The Compliance Capacity Calendar.</h2>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Every obligation mapped to the people, hours, and interruption it will claim.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-height-rule:exactly;">One weekly view of compliance demand, sitting inside the operating plan instead of beside it.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The pattern across mid-market operators is consistent. The compliance calendar lists deadlines. The operating calendar lists labor, production, inventory, customer work, maintenance, and close activities. The two calendars meet only when a request becomes urgent.</p>
+<p style="margin:0 0 28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The Compliance Capacity Calendar is a recurring planning layer that maps every obligation to the people, systems, hours, and interruption exposure required to complete it. It does not replace the ERP, QMS, LMS, identity platform, vendor portal, or document repository. It links to those systems and makes their combined demand visible in one weekly view.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">What goes into it</p>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">One row for every recurring or event-driven obligation. Each row needs:</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Obligation.</strong> Evidence request, supplier review, access recertification, training renewal, policy approval, customer audit pack, certification check, insurance document, remediation item, or regulatory filing.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Requirement source.</strong> Regulation, customer contract, certification standard, insurer, internal policy, lender, prime contractor, or audit request.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Primary owner and backup.</strong> One accountable person plus the person who covers an absence.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Contributing functions.</strong> Quality, operations, purchasing, IT, finance, HR, engineering, warehouse, or outside partner.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Source system.</strong> The exact ERP record, QMS folder, LMS course, IAM report, HRIS record, vendor portal, ticket queue, or controlled drive location that produces the evidence.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Evidence output.</strong> The report, approval record, certificate, access list, training completion file, supplier document, control test, or signed review the obligation must produce.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Frequency and trigger.</strong> Weekly, monthly, quarterly, annual, contract renewal, new vendor, employee role change, system change, customer request, or incident.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Evidence freshness rule.</strong> How current the artifact must be when reviewed.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Planned hours.</strong> Preparation, execution, review, correction, approval, and follow-up time by function.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Interruption cost.</strong> Unplanned hours multiplied by loaded labor cost, plus documented overtime, expedite cost, delayed release, missed production, or late-shipment exposure.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Capacity window.</strong> The week and time block in which the work will be completed.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Status.</strong> Scheduled, at risk, blocked, complete, or overdue.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The planning math</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:20px;">
+<tbody><tr>
+<td bgcolor="#1a1a1a" style="padding:22px 24px;background-color:#1a1a1a;border-radius:6px;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Simple enough to maintain</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Planned hours.</strong> Preparation plus execution plus review plus correction plus follow-up.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Unplanned hours.</strong> Actual hours completed outside the reserved capacity window.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Interruption cost.</strong> Unplanned hours times loaded hourly cost, plus documented overtime, expedite, delay, or lost-production cost.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Forecast accuracy.</strong> Planned hours compared with actual hours. Use the variance to improve the next cycle.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The point is not to manufacture a perfect cost figure. The point is to stop treating the load as free.</p>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">What the weekly output looks like</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Every Monday, one six-week view</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">1. Capacity demand by function.</strong> Total compliance hours required from quality, operations, IT, purchasing, finance, and HR this week.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">2. Collision alerts.</strong> Obligations competing with production runs, inventory counts, month-end close, maintenance, customer shipments, vacations, or training windows.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">3. Evidence risk.</strong> Missing, stale, inaccessible, or unapproved artifacts due in the next two, four, and six weeks.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">4. Owner actions.</strong> The three to five decisions or escalations that cannot wait.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">5. Actual versus planned.</strong> Hours used last week, interruptions created, overdue work, and the estimate that needs to change next cycle.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Illustrative weekly rows</p>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-height-rule:exactly;">These are planning examples, not industry benchmarks.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:10px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:16px 20px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#1a1a1a;line-height:20px;mso-line-height-rule:exactly;">Supplier insurance and cybersecurity review</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;">Purchasing manager &#xA0;&#xB7;&#xA0; Vendor portal and ERP vendor record &#xA0;&#xB7;&#xA0; Rolling annual renewal</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">2.5 planned hours</strong> &#xA0;&#xB7;&#xA0; Reserved Thursday, 2:00 PM</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#888888;mso-line-height-rule:exactly;">Exposure: extra chasing time and approval delay if documents expire.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:10px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:16px 20px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#1a1a1a;line-height:20px;mso-line-height-rule:exactly;">Quarterly access recertification</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;">IT manager plus department managers &#xA0;&#xB7;&#xA0; IAM and HRIS &#xA0;&#xB7;&#xA0; Quarterly and on role change</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">6 planned hours</strong> &#xA0;&#xB7;&#xA0; Reserved Tuesday morning</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#888888;mso-line-height-rule:exactly;">Exposure: manager pull-away time and elevated access remaining open.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:10px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:16px 20px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#1a1a1a;line-height:20px;mso-line-height-rule:exactly;">Food-safety training evidence refresh</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;">QA manager plus operations supervisors &#xA0;&#xB7;&#xA0; LMS and QMS &#xA0;&#xB7;&#xA0; Monthly and before audit</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">4 planned hours</strong> &#xA0;&#xB7;&#xA0; Reserved split across Tuesday shifts</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#888888;mso-line-height-rule:exactly;">Exposure: supervisor time removed from shift coverage.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:10px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:16px 20px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#1a1a1a;line-height:20px;mso-line-height-rule:exactly;">Customer audit evidence pack</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;">Quality lead plus finance and IT contributors &#xA0;&#xB7;&#xA0; QMS, ERP, controlled drive &#xA0;&#xB7;&#xA0; Monthly refresh and on customer request</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">8 planned hours</strong> &#xA0;&#xB7;&#xA0; Reserved Wednesday, 9:00 AM</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#888888;mso-line-height-rule:exactly;">Exposure: multi-function search time if the request arrives ad hoc.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:16px 20px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#1a1a1a;line-height:20px;mso-line-height-rule:exactly;">Vendor corrective-action review</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;">Quality manager &#xA0;&#xB7;&#xA0; QMS and supplier record &#xA0;&#xB7;&#xA0; Monthly until closure</p>
+<p style="margin:0 0 4px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">3 planned hours</strong> &#xA0;&#xB7;&#xA0; Reserved Friday, 10:00 AM</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:21px;color:#888888;mso-line-height-rule:exactly;">Exposure: repeat defect, delayed approval, and added follow-up.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Decisions this eliminates</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Who owns this request?</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Which system holds the current evidence?</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Is the artifact still valid?</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Which functions will lose time this week?</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Does the work collide with production or close activities?</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Should the obligation be moved, staffed differently, or escalated?</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Which outside partner needs to act before the internal owner can finish?</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Is the recurring estimate wrong because the same interruption happens every cycle?</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Operating rhythm</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Friday.</strong> Owners confirm next week&#x2019;s hours, blockers, and evidence status. System data updates automatically where possible.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Monday.</strong> Leadership runs a 20-minute capacity review. Resolve collisions, approve moved work, assign backup coverage.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Midweek.</strong> Escalate only items that become blocked, exceed planned hours, or create a new operating risk.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Month-end.</strong> Compare planned hours with actuals. Update the estimate, retire obsolete obligations, add new recurring work.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Quarter-end.</strong> Review total compliance capacity by function. Decide whether to rebalance work, automate evidence creation, change the control, or add partner support.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Build guardrails</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Link to evidence. Do not duplicate controlled documents in the calendar.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Keep human approval on interpretations, attestations, and control conclusions.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Restrict rows and evidence links by role. Compliance visibility should not create a new access problem.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Require a backup owner for every material obligation.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Record actual hours. A capacity plan that never learns from actuals becomes another stale checklist.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Separate the obligation from the task. One requirement may generate several tasks across functions.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Track recurring interruptions as defects in the operating design, not as proof that the team needs to work faster.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">What the operator gets every week</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:28px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A visible compliance load before it becomes urgent.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A realistic view of which functions are overcommitted.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A ranked list of stale evidence and blocked owners.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Reserved time for work that was previously invisible.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Better estimates based on actual hours.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A record of where interruption cost keeps repeating.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Fewer leadership decisions made from inboxes and memory.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Two paths to build it</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:14px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 1: Internal build</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Start with Microsoft Lists, Airtable, Smartsheet, or a shared spreadsheet. Import the next 90 days of obligations. Add the required fields above. Link every row to its source system. Ask each owner to estimate hours for one cycle, then replace estimates with actuals. Publish a six-week view and review it for 20 minutes every Monday. Automate reminders only after ownership, evidence location, and escalation rules are stable.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #C8392A;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 2: ERP or existing partner</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Ask the existing ERP, QMS, IT, or compliance partner to add the planning layer without creating a second system of record. The deliverable should include source-system links, owner and backup fields, recurring triggers, evidence-freshness rules, planned versus actual hours, role-based access, and a six-week capacity dashboard. Require the partner to show how vendor renewals, access changes, training completion, corrective actions, and audit requests enter the calendar automatically. The partner should leave the operating team with a weekly review rhythm, not another dashboard nobody owns.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">Put compliance on the capacity calendar before the next request puts it there for you.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#1a1a1a" style="background-color:#1a1a1a;border-radius:8px;padding:32px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:20px;">
+<tbody><tr>
+<td>
+<p style="margin:0 0 2px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-transform:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIONS BRIEF</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com/" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#222222" style="background-color:#222222;border-radius:6px;padding:16px 20px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-rule:exactly;">Already reserving capacity for compliance work, or watching it interrupt the week one request at a time? Hit reply, I read every one. Bill</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#555555;text-align:center;mso-line-height-rule:exactly;">You&#x2019;re receiving this because you subscribed to The Operations Brief.<br><a href="[[custom:unsubscribe]]" style="color:#C8392A;text-decoration:underline;">Unsubscribe</a></p>
+</td>
+</tr>
+<tr><td height="24" style="height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<img src="https://trk.ebitcommweekly.com/opens?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&type=html&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMTgxNDc2fQ.yijwwZWzsmpU5Ri-o4OCj0tpPZwTcI_6QQgV2PoCgrw" height="1px" width="1px"><table width="100%" align="center"><tbody><tr><td width="100%" align="center">
+        <a style="margin-left: auto; margin-right: auto; color: grey; font-size: 10px; text-decoration: underline;" href="https://trk.ebitcommweekly.com/unsubscribes?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMTgxNDc2fQ.yijwwZWzsmpU5Ri-o4OCj0tpPZwTcI_6QQgV2PoCgrw&type=html">Click here to unsubscribe</a>
+        </td></tr></tbody></table></body></html>
+--_----+ye5TTkXJHV0RQ2cZO913w===_D3/0E-31255-46004BA6--
+

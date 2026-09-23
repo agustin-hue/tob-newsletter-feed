@@ -1,0 +1,759 @@
+Delivered-To: agustin@media150.com
+Received: by 2002:a05:6504:40c6:b0:314:720c:6874 with SMTP id w6csp8143755ltg;
+        Wed, 23 Sep 2026 11:31:11 -0700 (PDT)
+X-Received: by 2002:a05:6820:81d4:b0:6c4:f50e:97d0 with SMTP id 006d021491bc7-6d43ebeff51mr99917eaf.8.1790188271621;
+        Wed, 23 Sep 2026 11:31:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790188271; cv=none;
+        d=google.com; s=arc-20260327;
+        b=HMgsHI5X4uegUKWi7d9VCkGbiLcGheDPoAOtIr/rKkXx/5HF5I+CAeFzTn7T8Wn7NO
+         NWwawrCl2zcePCpmRizwWGqHbImFYlZgwGEWD1mY75DJyKAKyDhErRBeTvBulmqvMKCV
+         GHMtyxnSscD+ICJAun0cjzVtLKED3MJBXjCkx8gnzaRUNIEdhplzOIBhLsLceJGzQ1XF
+         1iCtowyYbqGjUKpUmgh/OYa7qHeZoKJ71MKOLt7fQmw1z6XedNpTCGX/bpgRgZLgtWOI
+         n7ooWwFxpHSphdJKWsAa5hW2dX25LhACWDqqIKEd4bsM7mZaf/zW9m3Xats6HfdYjksl
+         keAQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=Ic1E8VLeB1jVAuKiDwBx1jlBc4FEx/L3i+8OKfQwR3k=;
+        fh=HHrjEAvXg1voA2ribokICAGLU0uXgDCGQin+OhhN30c=;
+        b=E6NM7hd/HWYAFaoR8rAJsjSkkE/FA1swbQ1wzdqy3w6JFsS8CIdGPq5usnQPMerS06
+         ntAkT9Ln03J8zJY+38xxn1dDr2DG1wRgIlMEe/ffaMcN2ZAj0msGJAWirUiz1qVxOTcg
+         C9jJT9Ri0IU2WMpGKhRz5Lcw2y1qX7hJg2RnGoR5u3v2l5CKf3/Rxd+dG3FpW1588Sb8
+         FkfXjpI25I+quvy0kmptzapYfh8ZeeFgR1/6qyy5a3JDzE/oIo2KqjNphX9hEoPuVEsF
+         sZwNTp4jCJC0T/qAlBcQOcMIl9YyCIWiBHrskk8HPEh4jT1Djm6lDavKBAB91yZVlJm6
+         gMHg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=J0HnbSRY;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-164.sparkpostmail.com (mta-203-49-164.sparkpostmail.com. [168.203.49.164])
+        by mx.google.com with ESMTPS id 586e51a60fabf-491b3e956ecsi715729fac.231.2026.09.23.11.31.10
+        for <agustin@media150.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Sep 2026 11:31:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) client-ip=168.203.49.164;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=J0HnbSRY;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: gcRr7Oj1hWTz2PAUOOoueYN3CDsExcULTfuCz3d2RIs=|eyJyIjoiYWd1c3RpbkB
+	tZWRpYTE1MC5jb20iLCJjdXN0b21lcl9pZCI6IjMwMzI4NyIsIm1lc3NhZ2VfaWQ
+	iOiI2YWIzZWUxYWI0NmExMzY4MDU5ZiIsInN1YmFjY291bnRfaWQiOiIxMDExNyI
+	sInRlbmFudF9pZCI6InNwYyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1790188270;
+	i=@colonysparkweekly.com;
+	bh=Ic1E8VLeB1jVAuKiDwBx1jlBc4FEx/L3i+8OKfQwR3k=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=J0HnbSRYmTCQLbQh1NwkRHpgnuzyJGaseWkJl5/vVU1r9CiYfmKhFffHCiDXFwMAC
+	 O9A375qhkLdp19zxzOh/sD53vB0D+3AIpjoTuvCRgMeKBK/gaooFTvIvMn/Z0ktezW
+	 K8RsfP95nYIrZ50CH6NqYW1ApnvfiHuaF+2WIY/M=
+Received: from [10.90.10.206] ([10.90.10.206])
+	by i-039209a1cdd037bf8.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76429 r(msys-ecelerity:tags/5.3.0.18)) with REST
+	id F9/50-25618-EEA14BA6; Wed, 23 Sep 2026 18:31:10 +0000
+To: "agustin@media150.com" <agustin@media150.com>
+Message-ID: <F9.50.25618.EEA14BA6@i-039209a1cdd037bf8.mta1vrest.sd.prd.sparkpost>
+Date: Wed, 23 Sep 2026 18:31:10 +0000
+Content-Type: multipart/alternative; boundary="_----NescvyYtcloL6IIlqAFG/A===_47/50-25618-EEA14BA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] When AI answers aren't enough
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3Ah10G7xFsu2V_-u56Q5wY_e-13noNF3kTaaQpcS6-mXE~%7CeyAicmNwdF90byI6ICJhZ3VzdGluQG1lZGlhMTUwLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJtZXNzYWdlX2lkIjogIjZhYjNlZTFhYjQ2YTEzNjgwNTlmIiwgInN1YmFjY291bnRfaWQiOiAiMTAxMTciIH0~>,<https://unsubscribe.spmta.com/u/C3fcTU0EzC_GvLr2ILg1rQ~~/AASgtxA~/HprNTpXBnBC9lHw7K10MjfO5HjY0PVWxiE8YpEqRiP5HYhruq-q6S6rWYyb-sznAMmIoFjK1mRL5LJQH2N8EbQ~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----NescvyYtcloL6IIlqAFG/A===_47/50-25618-EEA14BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+The handoff is what matters. Seven fields that make it work.=0AThe handoff =
+is what matters. Seven fields that make it work.=0AA correct AI answer can =
+still fail the handoff. The work closes only when the=0Anext operator recei=
+ves the artifact in the required format, with evidence,=0Aownership, and an=
+ acceptance rule that makes action possible.=0A=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=0A=0A=C2=A0=
+=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://ww=
+w.colonyspark.com]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=0A=0AISSUE #1=
+9 =C2=A0=C2=B7=C2=A0 SEPTEMBER 11, 2026=0A=0A=C2=A0=0A=0A=C2=A0=0A=0AHi ${f=
+irst_name},=0A=0AA correct AI answer can still be a failed workflow. The wo=
+rk closes only when=0Athe next operator, planner, quality lead, buyer, or w=
+arehouse leader receives=0Athe required artifact, in the required format, w=
+ith the evidence, ownership,=0Aacceptance rule, and fallback needed to act.=
+ If a person still has to rebuild=0Athe work after the model responds, the =
+workflow has produced an answer but not a=0Adelivery.=0A=0AThis issue moves=
+ the question from "Was the answer correct=3F" to "Can the next=0Aperson ac=
+t without rebuilding the work=3F" At the end, a practical field tool that=
+=0Aturns one bounded workflow into a usable delivery contract.=0A=0ABill=0A=
+=0A=C2=A0=0A=0ATHE SHIFT=0A=0A=0AFrom Answer Quality to Delivery Quality.=
+=0A=0AThe hidden cost is the last manual mile.=0A=0AManufacturing and distr=
+ibution teams do not act on prose alone. The useful=0Aresult may be a relea=
+se-ready production schedule, a quality-disposition packet,=0Aa supplier-ex=
+ception record, a work instruction, an audit trail, or a=0Atransaction in t=
+he required system format. If a person still has to translate an=0AAI respo=
+nse into that artifact, reconstruct its evidence, find its owner, or=0Adeci=
+de what happens when it fails, the workflow has produced an answer but not =
+a=0Adelivery.=0A=0AThe work of turning the response into an accepted artifa=
+ct and routing it to the=0Aaccountable person is the last manual mile. Inte=
+rpretation, reformatting,=0Aevidence gathering, routing, approval, exceptio=
+n handling, and verification=0Aafter the model responds. The model is one l=
+ayer. The delivery is the entire=0Asystem.=0A=0AThis is not only an editori=
+al framing. NIST's Artificial Intelligence for=0AManufacturing=0A[https://w=
+ww.nist.gov/programs-projects/artificial-intelligence-ai-manufacturing]=0Ap=
+rogram evaluates AI-generated engineering artifacts on completeness, clarit=
+y,=0Atraceability, operator understanding, and interoperability, and works =
+through=0Avalidation diagrams, functional flows, and audit trails linked to=
+ operator=0Ainputs, with production scheduling and process control named as=
+ pilot areas. Its=0Aroadmap for AI and machine learning in smart manufactur=
+ing=0A[https://www.nist.gov/publications/2026-roadmap-artificial-intelligen=
+ce-and-machine-learning-smart-manufacturing]=0Aputs data management, integr=
+ation with heterogeneous sensing and control=0Asystems, and trustworthy, ex=
+plainable, reliable operation at the center of the=0Adeployment problem. Th=
+e criteria describe the delivery, not the answer.=0A=0AThree recognizable A=
+I workflow outputs=0A=0A=C2=B7 Production schedule. The planner receives a =
+recommended sequence reorder, but=0Athe artifact must be import-ready, incl=
+ude change summary and reason for each=0Areordered operation, attach the so=
+urce constraints, show customer impact for=0Aaffected orders, and validate =
+against the ERP before release.=0A=0A=C2=B7 Disposition record. Quality rec=
+eives an AI recommendation to scrap, rework, or=0Arelease with conditions, =
+but the record must include reference photos, test=0Adata, audit trail, acc=
+ountable approver, escalation trigger if rework time=0Aexceeds threshold, a=
+nd archive proof that the decision was logged and verified.=0A=0A=C2=B7 Sup=
+plier exception. Procurement receives a sourcing recommendation, but it=0Am=
+ust be routed to the category manager, include approved-vendor status and=
+=0Apricing tier, attach the exception justification and price comparison, a=
+nd=0Aretain the last three quotes for audit.=0A=0AThe operational test of A=
+I in a real workflow is not whether the answer is=0Acorrect. It is whether =
+the next person has the artifact, evidence, destination,=0Aowner, acceptanc=
+e rule, and fallback needed to act. The difference is the=0Adistance from "=
+here is what I found" to "here is what you can do with it."=0A=0ADelivering=
+ an answer is step one. Delivering an artifact is the workflow.=0A=0AOpen t=
+he 7-field AI Delivery Contract=0A[https://www.colonyspark.com/tools/ai-del=
+ivery-contract/=3Futm_source=3Doperations_brief&utm_medium=3Demail&utm_camp=
+aign=3Dai_delivery_contract&utm_content=3Dshift_button]=0A=0AComplete the a=
+ssessment and leave with a delivery specification you can copy or=0Aprint a=
+nd hand to the process owner, IT team, ERP partner, systems integrator,=0Ao=
+r workflow vendor.=0A=0A=C2=A0=0A=0AFROM THE FLOOR=0A=0A=0AAgents work thro=
+ugh approved workflows and verify the result.=0A=0ARuss Ford, Honeywell Tec=
+hnologies, on closed-loop decision-making on the factory=0Afloor=0A=0A=E2=
+=80=9CAgents can perceive conditions, reason over context, execute approved=
+=0Aworkflows, interact with other agents, applications and operational syst=
+ems, and=0Averify results.=E2=80=9D=0A=0ARuss Ford=0A=0APresident, Projects=
+ and Automation Solutions, Honeywell Technologies =C2=A0=C2=B7=C2=A0 BizTec=
+h=0AMagazine, August 2026=0A[https://biztechmagazine.com/article/2026/08/ai=
+-agents-factory-floor-moving-copilots-closed-loop-decision-making]=0A=0AFor=
+d names the finish line directly. An agent perceives the operating conditio=
+n,=0Areasons over the context it has, executes through an approved workflow=
+,=0Ainteracts with the systems and people in that workflow, and verifies wh=
+at=0Ahappened next. The distinction between assistance and operating delive=
+ry is=0Awhether the system can move through the workflow and confirm the re=
+sult.=0A=0AThat last step changes everything. A fluent recommendation is no=
+t the finish=0Aline. The workflow must carry the output into an approved pr=
+ocess and confirm=0Awhat happened next. If an agent recommends a production=
+ resequence and nobody=0Averifies whether the resequence was loaded into th=
+e ERP and did not break=0Adownstream commitments, the recommendation has no=
+ consequence.=0A=0AThe takeaway=0A=0AThe test of whether an AI workflow is =
+operating or advisory is whether it=0Averifies what happened next. Verify m=
+eans the workflow confirms the artifact was=0Areceived, acted on, the actio=
+n succeeded or failed, and the fallback executed if=0Ait did.=0A=0A=C2=A0=
+=0A=0ATHE STACK=0A=0A=0AThe Seven-Field AI Output Delivery Contract.=0A=0AD=
+efine what finished means before an AI response enters the handoff.=0A=0AA =
+one-page specification that tells the workflow what the next person must=0A=
+receive and how to act on it.=0A=0AMany AI workflows stop at a plausible an=
+swer. The operation still needs a=0Aschedule, disposition record, supplier =
+exception, work instruction, or system=0Atransaction that can move into the=
+ real process. The boundary between assistance=0Aand delivery is whether th=
+e workflow can move the artifact through an approved=0Aprocess with a clear=
+ owner, acceptance rule, and fallback.=0A=0AThe seven-field contract define=
+s what finished means for one bounded AI=0Aworkflow. It tells you what the =
+next person must receive, what format makes it=0Ausable, what evidence trav=
+els with it, where it goes, who accepts or rejects it,=0Awhat the pass cond=
+ition is, and what happens if it fails. The tool lets you=0Aassess one work=
+flow against these fields, see what is missing or not tested, and=0Awalk aw=
+ay with a specification the team can use to build or govern that=0Aworkflow=
+.=0A=0AThe seven fields=0A=0A=C2=B7 Decision or action. The exact operatio=
+nal move the output must enable.=0A=0A=C2=B7 Required artifact. The deliver=
+able the next person can use without rebuilding=0Ait.=0A=0A=C2=B7 Required =
+format. The template, fields, file type, or system shape that makes=0Athe a=
+rtifact usable.=0A=0A=C2=B7 Source evidence. The records, constraints, refe=
+rences, and change history that=0Amust travel with the result.=0A=0A=C2=B7 =
+Destination. The queue, record, inbox, system, or workspace where the deliv=
+ery=0Abecomes actionable.=0A=0A=C2=B7 Accountable owner. The role that acce=
+pts, rejects, acts, and resolves=0Aexceptions.=0A=0A=C2=B7 Acceptance test =
+and fallback. The pass condition, rejection path, safe=0Afallback, escalati=
+on trigger, and stop condition.=0A=0AHow the assessment works=0A=0A1. Choos=
+e one bounded AI workflow and name the next person or system that must=0Aac=
+t.=0A=0A2. Rate each of the seven fields as Not defined, Partly defined, or=
+ Defined and=0Atested, then add any useful notes.=0A=0A3. The tool scores t=
+he handoff, flags missing critical fields, identifies the=0Aweakest field, =
+and recommends the first repair.=0A=0A4. You copy or print the completed co=
+ntract and give it to the workflow owner or=0Abuilder before the next pilot=
+ or automation change.=0A=0A5. After a controlled test, the team updates th=
+e contract with any exception,=0Aownership, evidence, or fallback requireme=
+nt the test exposed.=0A=0AAn illustrative example: production scheduling=0A=
+=0ABefore the contract:=0A=0AThe AI recommends a production resequence. The=
+ planner receives the=0Arecommendation and still has to rebuild the work. T=
+hey extract it into a=0Aspreadsheet, check it against open orders, flag whi=
+ch customers get impacted,=0Arebuild the constraint logic to make sure noth=
+ing is missed, create a change=0Asummary for the finance team, and verify i=
+t will load into the ERP without=0Aerrors. The recommendation was useful, b=
+ut the workflow is not closed until the=0Aplanner has rebuilt the work by h=
+and.=0A=0AAfter the contract:=0A=0AThe workflow delivers an import-ready sc=
+hedule. The artifact includes the=0Areordered operations, a change summary =
+for each affected order with reason=0Acodes, the source constraints, custom=
+er impact flagged by order, ERP-format=0Aexport ready to load, and a pre-lo=
+ad validation showing pass or fail. If=0Avalidation fails, the fallback is =
+to retain the last approved schedule and=0Aescalate to the planning manager=
+. The planner receives a complete, verified=0Aartifact and makes the accep=
+tance decision. The hidden work is now visible and=0Ahappens in the workflo=
+w, not in the planner's inbox.=0A=0ANote. The above is an illustrative exam=
+ple of how the contract clarifies the=0Ahandoff. It is not a NIST case stud=
+y, a completed client engagement, or proof=0Athat the recommendation is cor=
+rect.=0A=0AThe tool runs in the browser. It does not push anything into an =
+ERP or any other=0Asystem. Its deliverable is the completed specification y=
+ou can copy or print and=0Atake to the responsible team.=0A=0AThe value is =
+not the score by itself. The value is the completed specification=0Ayou wal=
+k away with. Use it to confirm what finished means for that workflow,=0Ahan=
+d it to the process owner or IT team, use it as the requirements handoff fo=
+r=0Aa pilot or build, or attach it to a build ticket so the output is revie=
+wed=0Aagainst the same contract after a controlled test.=0A=0AOpen the 7-fi=
+eld delivery contract and run it on one workflow=0A[https://www.colonyspark=
+.com/tools/ai-delivery-contract/=3Futm_source=3Doperations_brief&utm_mediu=
+m=3Demail&utm_campaign=3Dai_delivery_contract&utm_content=3Dstack_text_link=
+].=0AAn Operations Brief field tool, powered by Colony Spark.=0A=0AThe hand=
+off is finished when the next person can act without rebuilding the=0Awork.=
+=0A=0A=C2=A0=0A=0ATHE OPERATIONS BRIEF=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=
+=A0 Powered by Colony Spark [https://www.colonyspark.com]=0A=0ABuilding an =
+AI workflow where the next person has everything they need to act,=0Aor sti=
+ll translating model outputs into working artifacts=3F Hit reply, I read=0A=
+every one. Bill
+--_----NescvyYtcloL6IIlqAFG/A===_47/50-25618-EEA14BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head> <style></style> =0A<meta charset=3D"UTF-8">=0A<meta =
+name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A=
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D=
+"x-apple-disable-message-reformatting">=0A<meta name=3D"format-detection" c=
+ontent=3D"telephone=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<me=
+ta name=3D"color-scheme" content=3D"light only">=0A<meta name=3D"supported-=
+color-schemes" content=3D"light only">=0A<title>The Operations Brief &#x201=
+4; Issue #19</title>=0A<!--[if mso]>=0A<xml><o:OfficeDocumentSettings><o:Pi=
+xelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></x=
+ml>=0A<style type=3D"text/css">=0Atable, td, th {border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;}=0Atd, p, a, span, div, h1, =
+h2, h3 {mso-line-height-rule: exactly;}=0Abody, table, td, p, a, h1, h2, h3=
+ {font-family: 'Segoe UI', Arial, sans-serif !important;}=0A</style>=0A<![e=
+ndif]-->=0A</head>=0A<body bgcolor=3D"#f4f2ef" style=3D"margin:0;padding:0;=
+width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-=
+size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" cl=
+ass=3D"bodyClass"><span style=3D"display:none">The handoff is what matters.=
+ Seven fields that make it work.</span>=0A<div style=3D"display:none;max-he=
+ight:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide=
+:all;">A correct AI answer can still fail the handoff. The work closes only=
+ when the next operator receives the artifact in the required format, with =
+evidence, ownership, and an acceptance rule that makes action possible.</di=
+v>=0A<div style=3D"display:none;max-height:0;overflow:hidden;font-size:1px;=
+line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#x=
+A0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#=
+x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C=
+;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;</div>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" width=3D"100%" bgcolor=3D"#f4f2ef" style=3D"background-colo=
+r:#f4f2ef;width:100%;">=0A<tbody><tr>=0A<td align=3D"center" valign=3D"top"=
+ style=3D"padding:24px 16px;">=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600" align=3D"center" style=
+=3D"max-width:600px;width:100%;">=0A<tbody><tr>=0A<td>=0A<table role=3D"pre=
+sentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=
+=0A<tbody><tr><td height=3D"5" bgcolor=3D"#C8392A" style=3D"background-colo=
+r:#C8392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">=
+&#xA0;</td></tr>=0A<tr>=0A<td align=3D"center" bgcolor=3D"#1a1a1a" style=3D=
+"background-color:#1a1a1a;padding:36px 40px 28px 40px;">=0A<table role=3D"p=
+resentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%=
+">=0A<tbody><tr><td align=3D"center" style=3D"padding-bottom:20px;"><p styl=
+e=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&a=
+pos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;lette=
+r-spacing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0=
+;&#xB7;&#xA0; Powered by <a href=3D"https://www.colonyspark.com" style=3D"c=
+olor:#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>=0A<tr><t=
+d align=3D"center"><h1 style=3D"margin:0;padding:0;font-family:-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-trans=
+form:uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIO=
+NS<br>BRIEF</h1></td></tr>=0A<tr><td align=3D"center" style=3D"padding-top:=
+14px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0"><tbody><tr><td width=3D"48" height=3D"2" bgcolor=3D"#C8392A" styl=
+e=3D"background-color:#C8392A;width:48px;height:2px;font-size:0;line-height=
+:0;">&#xA0;</td></tr></tbody></table></td></tr>=0A<tr><td align=3D"center" =
+style=3D"padding-top:12px;"><p style=3D"margin:0;font-family:-apple-system,=
+BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;f=
+ont-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transfo=
+rm:uppercase;">ISSUE #19 &#xA0;&#xB7;&#xA0; SEPTEMBER 11, 2026</p></td></tr=
+>=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"3" bgcolor=3D"#C83=
+92A" style=3D"background-color:#C8392A;height:3px;font-size:0;line-height:0=
+;">&#xA0;</td></tr>=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"=
+8" style=3D"height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=
+=0A<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;border-radius:=
+8px;padding:32px 40px;">=0A<p style=3D"margin:0;font-family:-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">=
+Hi ${first_name},</p>=0A<p style=3D"margin:12px 0 0;font-family:-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactl=
+y;">A correct AI answer can still be a failed workflow. The work closes onl=
+y when the next operator, planner, quality lead, buyer, or warehouse leader=
+ receives the required artifact, in the required format, with the evidence,=
+ ownership, acceptance rule, and fallback needed to act. If a person still =
+has to rebuild the work after the model responds, the workflow has produced=
+ an answer but not a delivery.</p>=0A<p style=3D"margin:12px 0 0;font-famil=
+y:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ar=
+ial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-heigh=
+t-rule:exactly;">This issue moves the question from &quot;Was the answer co=
+rrect=3F&quot; to &quot;Can the next person act without rebuilding the work=
+=3F&quot; At the end, a practical field tool that turns one bounded workflo=
+w into a usable delivery contract.</p>=0A<p style=3D"margin:18px 0 0;font-f=
+amily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetic=
+a,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-h=
+eight-rule:exactly;">Bill</p>=0A</td>=0A</tr>=0A<tr><td height=3D"8" style=
+=3D"height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=0A<td bg=
+color=3D"#ffffff" style=3D"background-color:#ffffff;border-radius:8px;">=0A=
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%">=0A<tbody><tr><td bgcolor=3D"#1a1a1a" style=3D"background=
+-color:#1a1a1a;padding:18px 40px;"><p style=3D"margin:0;font-family:-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-=
+transform:uppercase;">THE SHIFT</p></td></tr>=0A</tbody></table>=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%">=0A<tbody><tr>=0A<td style=3D"padding:32px 40px 36px;">=0A<h2 sty=
+le=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Seg=
+oe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:80=
+0;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">From Answer=
+ Quality to Delivery Quality.</h2>=0A<p style=3D"margin:0 0 20px;font-famil=
+y:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ar=
+ial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:=
+0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactl=
+y;">The hidden cost is the last manual mile.</p>=0A<p style=3D"margin:0 0 1=
+6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robot=
+o,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;=
+mso-line-height-rule:exactly;">Manufacturing and distribution teams do not =
+act on prose alone. The useful result may be a release-ready production sch=
+edule, a quality-disposition packet, a supplier-exception record, a work in=
+struction, an audit trail, or a transaction in the required system format. =
+If a person still has to translate an AI response into that artifact, recon=
+struct its evidence, find its owner, or decide what happens when it fails, =
+the workflow has produced an answer but not a delivery.</p>=0A<p style=3D"m=
+argin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;col=
+or:#444444;mso-line-height-rule:exactly;">The work of turning the response =
+into an accepted artifact and routing it to the accountable person is the l=
+ast manual mile. Interpretation, reformatting, evidence gathering, routing,=
+ approval, exception handling, and verification after the model responds. T=
+he model is one layer. The delivery is the entire system.</p>=0A<p style=3D=
+"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe U=
+I&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;c=
+olor:#444444;mso-line-height-rule:exactly;">This is not only an editorial f=
+raming. NIST&apos;s <a href=3D"https://www.nist.gov/programs-projects/artif=
+icial-intelligence-ai-manufacturing" style=3D"color:#C8392A;text-decoration=
+:underline;">Artificial Intelligence for Manufacturing</a> program evaluate=
+s AI-generated engineering artifacts on completeness, clarity, traceability=
+, operator understanding, and interoperability, and works through validatio=
+n diagrams, functional flows, and audit trails linked to operator inputs, w=
+ith production scheduling and process control named as pilot areas. Its <a =
+href=3D"https://www.nist.gov/publications/2026-roadmap-artificial-intellige=
+nce-and-machine-learning-smart-manufacturing" style=3D"color:#C8392A;text-d=
+ecoration:underline;">roadmap for AI and machine learning in smart manufact=
+uring</a> puts data management, integration with heterogeneous sensing and =
+control systems, and trustworthy, explainable, reliable operation at the ce=
+nter of the deployment problem. The criteria describe the delivery, not the=
+ answer.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 24px;">=0A<tbody><tr=
+>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px;background-color:#f9=
+f9f9;border-radius:6px;border-top:2px solid #C8392A;">=0A<p style=3D"margin=
+:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-sp=
+acing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-=
+height-rule:exactly;">Three recognizable AI workflow outputs</p>=0A<p style=
+=3D"margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24p=
+x;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"colo=
+r:#1a1a1a;">Production schedule.</strong> The planner receives a recommende=
+d sequence reorder, but the artifact must be import-ready, include change s=
+ummary and reason for each reordered operation, attach the source constrain=
+ts, show customer impact for affected orders, and validate against the ERP =
+before release.</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;=
+">&#xB7; <strong style=3D"color:#1a1a1a;">Disposition record.</strong> Qual=
+ity receives an AI recommendation to scrap, rework, or release with conditi=
+ons, but the record must include reference photos, test data, audit trail, =
+accountable approver, escalation trigger if rework time exceeds threshold, =
+and archive proof that the decision was logged and verified.</p>=0A<p style=
+=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color=
+:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a=
+1a;">Supplier exception.</strong> Procurement receives a sourcing recommend=
+ation, but it must be routed to the category manager, include approved-vend=
+or status and pricing tier, attach the exception justification and price co=
+mparison, and retain the last three quotes for audit.</p>=0A</td>=0A</tr>=
+=0A</tbody></table>=0A<p style=3D"margin:0 0 24px;font-family:-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;=
+">The operational test of AI in a real workflow is not whether the answer i=
+s correct. It is whether the next person has the artifact, evidence, destin=
+ation, owner, acceptance rule, and fallback needed to act. The difference i=
+s the distance from &quot;here is what I found&quot; to &quot;here is what =
+you can do with it.&quot;</p>=0A<table role=3D"presentation" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24=
+px;">=0A<tbody><tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"border-left:3px soli=
+d #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6p=
+x 0;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-=
+height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height=
+-rule:exactly;">Delivering an answer is step one. Delivering an artifact is=
+ the workflow.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<table role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" s=
+tyle=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td align=3D"center">=0A<!--[=
+if mso]><table role=3D"presentation" width=3D"240" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" align=3D"center"><tr><td><![endif]-->=0A<table rol=
+e=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=
+=3D"center">=0A<tbody><tr>=0A<td align=3D"center">=0A<!--[if mso]><v:roundr=
+ect xmlns:v=3D"urn:schemas-microsoft-com:vml" href=3D"https://www.colonyspa=
+rk.com/tools/ai-delivery-contract/=3Futm_source=3Doperations_brief&utm_medi=
+um=3Demail&utm_campaign=3Dai_delivery_contract&utm_content=3Dshift_button" =
+style=3D"height:44px;v-text-anchor:middle;width:300px;" arcsize=3D"12%" fil=
+lcolor=3D"#C8392A" stroke=3D"f"><center style=3D"color:#ffffff;font-family:=
+-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-ser=
+if;font-size:16px;"><![endif]-->=0A<a href=3D"https://www.colonyspark.com/t=
+ools/ai-delivery-contract/=3Futm_source=3Doperations_brief&utm_medium=3Dema=
+il&utm_campaign=3Dai_delivery_contract&utm_content=3Dshift_button" style=3D=
+"background:#C8392A;color:#ffffff;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;t=
+ext-decoration:none;padding:12px 28px;border-radius:6px;display:inline-bloc=
+k;font-weight:600;">Open the 7-field AI Delivery Contract</a>=0A<!--[if mso=
+]></center></v:roundrect><![endif]-->=0A</td>=0A</tr>=0A</tbody></table>=0A=
+<!--[if mso]></td></tr></table><![endif]-->=0A</td>=0A</tr>=0A</tbody></tab=
+le>=0A<p style=3D"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;l=
+ine-height:22px;color:#888888;mso-line-height-rule:exactly;text-align:cente=
+r;">Complete the assessment and leave with a delivery specification you can=
+ copy or print and hand to the process owner, IT team, ERP partner, systems=
+ integrator, or workflow vendor.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<=
+/td>=0A</tr>=0A<tr><td height=3D"8" style=3D"height:8px;font-size:0;line-he=
+ight:0;">&#xA0;</td></tr>=0A<tr>=0A<td bgcolor=3D"#ffffff" style=3D"backgro=
+und-color:#ffffff;border-radius:8px;">=0A<table role=3D"presentation" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr><t=
+d bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;padding:18px 40px;"=
+><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:7=
+00;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">FROM THE FLO=
+OR</p></td></tr>=0A</tbody></table>=0A<table role=3D"presentation" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A<t=
+d style=3D"padding:32px 40px 36px;">=0A<h2 style=3D"margin:0 0 8px;font-fam=
+ily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,=
+Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:3=
+0px;mso-line-height-rule:exactly;">Agents work through approved workflows a=
+nd verify the result.</h2>=0A<p style=3D"margin:0 0 20px;font-family:-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;te=
+xt-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Russ=
+ Ford, Honeywell Technologies, on closed-loop decision-making on the factor=
+y floor</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody><tr=
+>=0A<td bgcolor=3D"#fdf6f5" style=3D"background-color:#fdf6f5;border-radius=
+:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">=0A<p style=3D"m=
+argin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27px;col=
+or:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;"=
+>&#x201C;Agents can perceive conditions, reason over context, execute appro=
+ved workflows, interact with other agents, applications and operational sys=
+tems, and verify results.&#x201D;</p>=0A<table role=3D"presentation" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A=
+<td>=0A<p style=3D"margin:0 0 1px;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;f=
+ont-weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;=
+">Russ Ford</p>=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSy=
+stemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:1=
+2px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">President=
+, Projects and Automation Solutions, Honeywell Technologies &#xA0;&#xB7;&#x=
+A0; <a href=3D"https://biztechmagazine.com/article/2026/08/ai-agents-factor=
+y-floor-moving-copilots-closed-loop-decision-making" style=3D"color:#C8392A=
+;text-decoration:none;">BizTech Magazine, August 2026</a></p>=0A</td>=0A</t=
+r>=0A</tbody></table>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"marg=
+in:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:=
+#444444;mso-line-height-rule:exactly;">Ford names the finish line directly.=
+ An agent perceives the operating condition, reasons over the context it ha=
+s, executes through an approved workflow, interacts with the systems and pe=
+ople in that workflow, and verifies what happened next. The distinction bet=
+ween assistance and operating delivery is whether the system can move throu=
+gh the workflow and confirm the result.</p>=0A<p style=3D"margin:0 0 24px;f=
+ont-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Hel=
+vetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-l=
+ine-height-rule:exactly;">That last step changes everything. A fluent recom=
+mendation is not the finish line. The workflow must carry the output into a=
+n approved process and confirm what happened next. If an agent recommends a=
+ production resequence and nobody verifies whether the resequence was loade=
+d into the ERP and did not break downstream commitments, the recommendation=
+ has no consequence.</p>=0A<table role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A<td bgcolor=
+=3D"#f9f9f9" style=3D"padding:18px 22px;background-color:#f9f9f9;border-rad=
+ius:6px;border-top:2px solid #1a1a1a;">=0A<p style=3D"margin:0 0 6px;font-f=
+amily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetic=
+a,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:=
+#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exac=
+tly;">The takeaway</p>=0A<p style=3D"margin:0;font-family:-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font=
+-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Th=
+e test of whether an AI workflow is operating or advisory is whether it ver=
+ifies what happened next. Verify means the workflow confirms the artifact w=
+as received, acted on, the action succeeded or failed, and the fallback exe=
+cuted if it did.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A</td>=0A</tr>=0A<=
+/tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"8" style=3D"height:8px;=
+font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=0A<td bgcolor=3D"#fffff=
+f" style=3D"background-color:#ffffff;border-radius:8px;">=0A<table role=3D"=
+presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100=
+%">=0A<tbody><tr><td bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;=
+padding:18px 40px;"><p style=3D"margin:0;font-family:-apple-system,BlinkMac=
+SystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size=
+:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:upper=
+case;">THE STACK</p></td></tr>=0A</tbody></table>=0A<table role=3D"presenta=
+tion" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<t=
+body><tr>=0A<td style=3D"padding:32px 40px 36px;">=0A<h2 style=3D"margin:0 =
+0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Rob=
+oto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a=
+;line-height:30px;mso-line-height-rule:exactly;">The Seven-Field AI Output =
+Delivery Contract.</h2>=0A<p style=3D"margin:0 0 8px;font-family:-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-t=
+ransform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Define w=
+hat finished means before an AI response enters the handoff.</p>=0A<p style=
+=3D"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22p=
+x;color:#888888;mso-line-height-rule:exactly;">A one-page specification tha=
+t tells the workflow what the next person must receive and how to act on it=
+.</p>=0A<p style=3D"margin:0 0 16px;font-family:-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15p=
+x;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Many AI wor=
+kflows stop at a plausible answer. The operation still needs a schedule, di=
+sposition record, supplier exception, work instruction, or system transacti=
+on that can move into the real process. The boundary between assistance and=
+ delivery is whether the workflow can move the artifact through an approved=
+ process with a clear owner, acceptance rule, and fallback.</p>=0A<p style=
+=3D"margin:0 0 28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26p=
+x;color:#444444;mso-line-height-rule:exactly;">The seven-field contract def=
+ines what finished means for one bounded AI workflow. It tells you what the=
+ next person must receive, what format makes it usable, what evidence trave=
+ls with it, where it goes, who accepts or rejects it, what the pass conditi=
+on is, and what happens if it fails. The tool lets you assess one workflow =
+against these fields, see what is missing or not tested, and walk away with=
+ a specification the team can use to build or govern that workflow.</p>=0A<=
+p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apo=
+s;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weig=
+ht:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-heigh=
+t:18px;mso-line-height-rule:exactly;">The seven fields</p>=0A<table role=3D=
+"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"10=
+0%" style=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" =
+style=3D"padding:20px 22px;background-color:#f9f9f9;border-radius:6px;borde=
+r-top:2px solid #1a1a1a;">=0A<p style=3D"margin:0 0 8px;font-family:-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:ex=
+actly;">&#xB7; <strong style=3D"color:#1a1a1a;">Decision or action.</strong=
+> The exact operational move the output must enable.</p>=0A<p style=3D"marg=
+in:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#=
+555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a=
+;">Required artifact.</strong> The deliverable the next person can use with=
+out rebuilding it.</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactl=
+y;">&#xB7; <strong style=3D"color:#1a1a1a;">Required format.</strong> The t=
+emplate, fields, file type, or system shape that makes the artifact usable.=
+</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;l=
+ine-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong=
+ style=3D"color:#1a1a1a;">Source evidence.</strong> The records, constraint=
+s, references, and change history that must travel with the result.</p>=0A<=
+p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apo=
+s;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heig=
+ht:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=
+=3D"color:#1a1a1a;">Destination.</strong> The queue, record, inbox, system,=
+ or workspace where the delivery becomes actionable.</p>=0A<p style=3D"marg=
+in:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#=
+555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a=
+;">Accountable owner.</strong> The role that accepts, rejects, acts, and re=
+solves exceptions.</p>=0A<p style=3D"margin:0;font-family:-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font=
+-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#=
+xB7; <strong style=3D"color:#1a1a1a;">Acceptance test and fallback.</strong=
+> The pass condition, rejection path, safe fallback, escalation trigger, an=
+d stop condition.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"marg=
+in:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-s=
+pacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line=
+-height-rule:exactly;">How the assessment works</p>=0A<table role=3D"presen=
+tation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" sty=
+le=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#1a1a1a" style=
+=3D"padding:22px 24px;background-color:#1a1a1a;border-radius:6px;">=0A<p st=
+yle=3D"margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:=
+24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style=3D"color:#f=
+fffff;">1.</strong> Choose one bounded AI workflow and name the next person=
+ or system that must act.</p>=0A<p style=3D"margin:0 0 10px;font-family:-ap=
+ple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,s=
+ans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rul=
+e:exactly;"><strong style=3D"color:#ffffff;">2.</strong> Rate each of the s=
+even fields as Not defined, Partly defined, or Defined and tested, then add=
+ any useful notes.</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exact=
+ly;"><strong style=3D"color:#ffffff;">3.</strong> The tool scores the hando=
+ff, flags missing critical fields, identifies the weakest field, and recomm=
+ends the first repair.</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:e=
+xactly;"><strong style=3D"color:#ffffff;">4.</strong> You copy or print the=
+ completed contract and give it to the workflow owner or builder before the=
+ next pilot or automation change.</p>=0A<p style=3D"margin:0;font-family:-a=
+pple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,=
+sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-ru=
+le:exactly;"><strong style=3D"color:#ffffff;">5.</strong> After a controlle=
+d test, the team updates the contract with any exception, ownership, eviden=
+ce, or fallback requirement the test exposed.</p>=0A</td>=0A</tr>=0A</tbody=
+></table>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSy=
+stemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:1=
+2px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:upperca=
+se;line-height:18px;mso-line-height-rule:exactly;">An illustrative example:=
+ production scheduling</p>=0A<table role=3D"presentation" cellspacing=3D"0"=
+ cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24px;=
+">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px;backg=
+round-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">=0A<p =
+style=3D"margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weigh=
+t:600;color:#1a1a1a;line-height:20px;mso-line-height-rule:exactly;">Before =
+the contract:</p>=0A<p style=3D"margin:0 0 12px;font-family:-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">=
+The AI recommends a production resequence. The planner receives the recomme=
+ndation and still has to rebuild the work. They extract it into a spreadshe=
+et, check it against open orders, flag which customers get impacted, rebuil=
+d the constraint logic to make sure nothing is missed, create a change summ=
+ary for the finance team, and verify it will load into the ERP without erro=
+rs. The recommendation was useful, but the workflow is not closed until the=
+ planner has rebuilt the work by hand.</p>=0A<p style=3D"margin:0 0 10px;fo=
+nt-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helv=
+etica,Arial,sans-serif;font-size:13px;font-weight:600;color:#1a1a1a;line-he=
+ight:20px;mso-line-height-rule:exactly;">After the contract:</p>=0A<p style=
+=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color=
+:#555555;mso-line-height-rule:exactly;">The workflow delivers an import-rea=
+dy schedule. The artifact includes the reordered operations, a change summa=
+ry for each affected order with reason codes, the source constraints, custo=
+mer impact flagged by order, ERP-format export ready to load, and a pre-loa=
+d validation showing pass or fail. If validation fails, the fallback is to =
+retain the last approved schedule and escalate to the planning manager. The=
+ planner receives a complete, verified artifact and makes the acceptance de=
+cision. The hidden work is now visible and happens in the workflow, not in =
+the planner&apos;s inbox.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=
+=3D"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:20p=
+x;color:#888888;mso-line-height-rule:exactly;"><em>Note. The above is an il=
+lustrative example of how the contract clarifies the handoff. It is not a N=
+IST case study, a completed client engagement, or proof that the recommenda=
+tion is correct.</em></p>=0A<p style=3D"margin:0 0 24px;font-family:-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:ex=
+actly;">The tool runs in the browser. It does not push anything into an ERP=
+ or any other system. Its deliverable is the completed specification you ca=
+n copy or print and take to the responsible team.</p>=0A<p style=3D"margin:=
+0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#44=
+4444;mso-line-height-rule:exactly;">The value is not the score by itself. T=
+he value is the completed specification you walk away with. Use it to confi=
+rm what finished means for that workflow, hand it to the process owner or I=
+T team, use it as the requirements handoff for a pilot or build, or attach =
+it to a build ticket so the output is reviewed against the same contract af=
+ter a controlled test.</p>=0A<p style=3D"margin:0 0 28px;font-family:-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:e=
+xactly;"><a href=3D"https://www.colonyspark.com/tools/ai-delivery-contract/=
+=3Futm_source=3Doperations_brief&utm_medium=3Demail&utm_campaign=3Dai_deliv=
+ery_contract&utm_content=3Dstack_text_link" style=3D"color:#C8392A;text-dec=
+oration:underline;">Open the 7-field delivery contract and run it on one wo=
+rkflow</a>. An Operations Brief field tool, powered by Colony Spark.</p>=0A=
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%">=0A<tbody><tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"border-=
+left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-ra=
+dius:0 6px 6px 0;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkM=
+acSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-si=
+ze:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;ms=
+o-line-height-rule:exactly;">The handoff is finished when the next person c=
+an act without rebuilding the work.</p>=0A</td>=0A</tr>=0A</tbody></table>=
+=0A</td>=0A</tr>=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"8" =
+style=3D"height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=0A<=
+td bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;border-radius:8px;=
+padding:32px 40px;">=0A<table role=3D"presentation" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:20px;">=0A<=
+tbody><tr>=0A<td>=0A<p style=3D"margin:0 0 2px;font-family:-apple-system,Bl=
+inkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fon=
+t-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-transform=
+:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIONS B=
+RIEF</p>=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;col=
+or:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murphy &=
+#xA0;&#xB7;&#xA0; Powered by <a href=3D"https://www.colonyspark.com" style=
+=3D"color:#C8392A;text-decoration:none;">Colony Spark</a></p>=0A</td>=0A</t=
+r>=0A</tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24px;">=0A=
+<tbody><tr>=0A<td bgcolor=3D"#222222" style=3D"background-color:#222222;bor=
+der-radius:6px;padding:16px 20px;">=0A<p style=3D"margin:0;font-family:-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-rule=
+:exactly;">Building an AI workflow where the next person has everything the=
+y need to act, or still translating model outputs into working artifacts=3F=
+ Hit reply, I read every one. Bill</p>=0A</td>=0A</tr>=0A</tbody></table>=
+=0A=0A</td>=0A</tr>=0A<tr><td height=3D"24" style=3D"height:24px;font-size:=
+0;line-height:0;">&#xA0;</td></tr>=0A</tbody></table>=0A</td>=0A</tr>=0A</t=
+body></table>=0A=0A<img src=3D"https://trk.ebitcommweekly.com/opens=3Femail=
+=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&type=3Dhtml&info=3DeyJhbGciOiJIUzI1=
+NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYT=
+VhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1Y=
+TljIiwiaWF0IjoxNzkwMTg4MjY5fQ.qEMDle6IIOaenpJjZDem7yDUixEhnkXXkAqp_IAcKHo" =
+height=3D"1px" width=3D"1px"><table width=3D"100%" align=3D"center"><tbody>=
+<tr><td width=3D"100%" align=3D"center">=0A        <a style=3D"margin-left:=
+ auto; margin-right: auto; color: grey; font-size: 10px; text-decoration: u=
+nderline;" href=3D"https://trk.ebitcommweekly.com/unsubscribes=3Femail=3Def=
+9adbd7-58a1-5141-a08b-c984cd7ffc03&info=3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXV=
+CJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1=
+wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNz=
+kwMTg4MjY5fQ.qEMDle6IIOaenpJjZDem7yDUixEhnkXXkAqp_IAcKHo&type=3Dhtml">Click=
+ here to unsubscribe</a>=0A        </td></tr></tbody></table></body></html>
+--_----NescvyYtcloL6IIlqAFG/A===_47/50-25618-EEA14BA6--
+

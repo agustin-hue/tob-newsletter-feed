@@ -1,0 +1,475 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:790e:b0:1e7:9e60:6b22 with SMTP id fa14csp1287667rdb;
+        Fri, 28 Aug 2026 06:35:51 -0700 (PDT)
+X-Received: by 2002:a17:902:d58a:b0:2d2:da8e:9017 with SMTP id d9443c01a7336-2d74dc797cemr152529735ad.8.1787924150930;
+        Fri, 28 Aug 2026 06:35:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1787924150; cv=none;
+        d=google.com; s=arc-20260327;
+        b=S2gZmQ4gvOP23yABgJjQ6E34AQXRaFNWh7hhP7BgNwPN0x/RRpp9INaDBqoKKhvkuo
+         HnDygJ7iCkZMhUKuvjIp24ur18trUIhK1aZtiMcVC+P6rrENxtlprTAfi2xCcBCcDk+B
+         lMHrE8lKjXQlWla5xhK19peWsNKw2EAV+jXr2kKdITj3MsoXY7btxpnolNlMgHj/vxe5
+         xZyosXj+tA/+w9KRSBlDvEaPGUdwAitnfV/dF1v0LR89pJmcYEYe/K2kxwVimjI9/QSQ
+         AgsDKCB8IeyAhZyWDYpzdCB+Tip7oVAJfC3OJPq40PSd3u1K8D0glXkXVZYiPPdb2zhi
+         rx9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=hXdrHv3MV6F9VFaQtRuRB82eyNxF1SxxMf9t+yE5Tf4=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=cwHNlD1XLud6j0Yct7iEdWFkB+IH2BtzxyMCRY+wyXnsRBL5Hh1sOsDgxG0x/OCzje
+         Bn3WFHniOp9WFuSYH+XieJ5AuwD4hXTIeJad244puTuWOreviJ4kKB1XSWBcmLMW7bk9
+         sJAAYRlkTASPqaDogXzZpTyHydIACAa+SE52SWoSnefDeydTCLze2kJYEGAPdJz68j6C
+         5TOeOzRBl3Olm/zlqLQIPORT/VP5ppPmax6dhUZ2SAeXK+BSf93O6YuYcsXCnoJk2ogw
+         b7pg5FcKIYGGHjlaPP7G/V5F6zHEFWd86nLhytVXBSotzVTBSzKr5fjSTh+/UJCx7WJG
+         wrLw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b="hT/WQPBY";
+       spf=pass (google.com: domain of msprvs1=20700lewdf1hh=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20700leWdf1HH=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20700leWdf1HH=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-164.sparkpostmail.com (mta-203-49-164.sparkpostmail.com. [168.203.49.164])
+        by mx.google.com with ESMTPS id 5a478bee46e88-3286f74874esi4985663eec.11.2026.08.28.06.35.49
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 28 Aug 2026 06:35:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20700lewdf1hh=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) client-ip=168.203.49.164;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b="hT/WQPBY";
+       spf=pass (google.com: domain of msprvs1=20700lewdf1hh=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20700leWdf1HH=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: AbWCkmydS8FU2pXgaPsSY5NxrYdJxAcoB1rN88qhoKk=|eyJzdWJhY2NvdW50X2l
+	kIjoiMTAxMTciLCJtZXNzYWdlX2lkIjoiNmE5MGIzOGU5MTZhNmJlMDVhNDAiLCJ
+	yIjoiam9hcXVpbkBvcHRpbmdyb3d0aC5jb20iLCJjdXN0b21lcl9pZCI6IjMwMzI
+	4NyIsInRlbmFudF9pZCI6InNwYyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1787924147;
+	i=@colonysparkweekly.com;
+	bh=hXdrHv3MV6F9VFaQtRuRB82eyNxF1SxxMf9t+yE5Tf4=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=hT/WQPBYCTgTSFbKhqbRVx+A3hk3DBi83FmxdR3m+WKTy+rKGraCU6HvcHcfPJTHe
+	 WCP+Lo8IkoPpVy2Se2IBcb0kgeOGLqDxP5MpQIQLZv9ipc9w5xjxFZ57t3baekIslv
+	 tD/q7CNSXMFsiRM2FYF5El0pYHTqdr5bKOpTqpns=
+Received: from [10.90.35.168] ([10.90.35.168])
+	by i-090f125a089c6813a.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76384 r(msys-ecelerity:tags/5.3.0.7)) with REST
+	id 04/A5-38691-3BE819A6; Fri, 28 Aug 2026 13:35:47 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <04.A5.38691.3BE819A6@i-090f125a089c6813a.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 28 Aug 2026 13:35:47 +0000
+Content-Type: multipart/alternative; boundary="_----UNDfx3WyX/80RJnW1QERvw===_80/A5-38691-3BE819A6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] The workaround nobody kills
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3Ab4yi00h40AytURp_6_GK3SUhzHTAZ0YP3xQ7BjvofGQ~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJtZXNzYWdlX2lkIjogIjZhOTBiMzhlOTE2YTZiZTA1YTQwIiwgInN1YmFjY291bnRfaWQiOiAiMTAxMTciIH0~>,<https://unsubscribe.spmta.com/u/hLpjhR37ynbAMhgV3IIB_g~~/AASgtxA~/frtjF9wlbcDV-WLL399zL4AUuiSw22a_qaERDdBrLV_DqOFUzWi6oC4KXu_ngBCiLMJem4J5dQKh-BWo-4ReVg~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----UNDfx3WyX/80RJnW1QERvw===_80/A5-38691-3BE819A6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+An operations director on tools that worked and still got ignored anyway=0A=
+An operations director on tools that worked and still got ignored anyway=0A=
+AI adoption is not the day the tool goes live. It is the day your people st=
+op=0Agoing back to their own spreadsheet.=0A=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=0A=0A=C2=A0=0A=
+=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://www.c=
+olonyspark.com]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=0A=0AISSUE #22 =
+=C2=A0=C2=B7=C2=A0 AUGUST 28, 2026=0A=0A=C2=A0=0A=0A=C2=A0=0A=0AHi ${first_=
+name},=0A=0AAI adoption is not the day the tool goes live. It is the day yo=
+ur people stop=0Agoing back to their own spreadsheet.=0A=0AEvery section in=
+ this issue carries that theme. The Shift says nobody measures=0Awhether pe=
+ople actually use what was deployed. From the Floor is an operations=0Adire=
+ctor who built tools that worked and nobody used. The Stack is the one-page=
+=0Aweekly record that catches it.=0A=0ABill=0A=0A=C2=A0=0A=0ATHE SHIFT=0A=
+=0A=0AWe measure whether AI works. We do not measure whether anyone uses it=
+.=0A=0AThe gap is not between companies that bought AI and companies that =
+did not. It=0Ais between companies where people use the thing and companies=
+ where the tool=0Asits there while the operation runs on the same spreadshe=
+ets it always ran on.=0A=0AEvery AI conversation in manufacturing is still =
+framed as a technology question.=0AWhich model, which vendor, which use cas=
+e. The 2026 data says the technology=0Aquestion got settled and the behavio=
+r question was never asked.=0A=0ASix signals from 2026=0A=0A=C2=B7 84% of m=
+anufacturers agreed executive leadership is more enthusiastic about AI=0Ath=
+an employees. In the same survey, 88% said they have the right in-house AI=
+=0Aexpertise, but only 22% said their AI investment is concentrated on upsk=
+illing=0Atheir own people (RSM US, July 2026=0A[https://rsmus.com/insights/=
+industries/manufacturing/manufacturers-using-ai-2026.html]).=0A=0A=C2=B7 Ve=
+ndor surveys put manufacturing AI adoption near 88%. The federal survey put=
+s=0Aactual business AI use at 19.8% as of May 2026. Both are accurate. They=
+ measure=0Adifferent things. One measures that a company has AI somewhere. =
+The other=0Ameasures whether the business used it (U.S. Census Bureau, May =
+2026=0A[https://www.census.gov/library/stories/2026/05/ai-use-businesses.ht=
+ml]).=0A=0A=C2=B7 Usage splits hard by size. 37% at firms with 250+ employe=
+es, 32% at 100 to=0A249, under 20% at the smallest firms.=0A=0A=C2=B7 The f=
+ailure has a specific shape on the factory floor. Operators don't trust=0At=
+he recommendations. Supervisors revert to spreadsheets. Engineers quietly=
+=0Adisconnect the system to keep lines running. The problem is not the algo=
+rithm.=0AIt is the absence of people in the process (Catalyst Connection, O=
+ct 2025=0A[https://www.catalystconnection.org/news-blog/why-ai-can-often-fa=
+il-on-the-factory-floor/]).=0A=0A=C2=B7 When AI pilots underperform, manufa=
+cturers cite data quality (51%),=0Aintegration (43%), security or complianc=
+e (34%), unclear ROI (30%), and adoption=0Aresistance (30%). Data quality a=
+nd integration get budgets, owners, and=0Adashboards. Adoption gets a train=
+ing email.=0A=0A=C2=B7 The measurement fix: Track engagement metrics, user =
+confidence, decision=0Aconsistency, and collaboration alongside technical K=
+PIs like accuracy or uptime.=0AThe best models mean little if no one uses t=
+hem (Catalyst Connection, Oct 2025=0A[https://www.catalystconnection.org/ne=
+ws-blog/why-ai-can-often-fail-on-the-factory-floor/]).=0A=0AAt our roundtab=
+le on August 26, Robert Wyse=0A[https://www.linkedin.com/in/robert-wyse-3aa=
+20884/], owner of Industronics=0AService Company [https://industronics.com/=
+], described the signal he watches=0Afor: the point where employees get com=
+fortable enough with a tool that they=0Astart advocating for it on their ow=
+n, without being asked. It is an early=0Asignal, not a return. It also cost=
+s nothing to watch, and almost nobody writes=0Ait down.=0A=0AThat is the pa=
+ttern across all of it. The only proof of adoption is that the old=0Aworkar=
+ound is gone, and nobody checks. Deployment gets a project plan. Uptime=0Ag=
+ets a dashboard. Whether anyone asked for the thing gets nothing.=0A=0AFor =
+every tool you deployed this year, can you name the workaround it was=0Asup=
+posed to replace, and can you prove that workaround is gone.=0A=0A=C2=A0=0A=
+=0AFROM THE FLOOR=0A=0A=0AWhy adoption stays invisible.=0A=0AMatt Gargas, D=
+irector of US Operations, RDT, on tools that work and get ignored=0A=0AMatt=
+ Gargas runs operations at RDT, a mid-market industrial manufacturer.=0ASpe=
+aking with the Operations Brief Roundtable on August 26 about his early=0Ae=
+xperience with AI deployment, he described a failure mode nobody talks abou=
+t:=0Athe tools that work but nobody uses.=0A=0A"I can't tell you how many V=
+BA spreadsheets I built that looked good and=0Acalculated quickly but never=
+ got used. Everyone went back to their own=0Aspreadsheet."=0A=0AMatt Gargas=
+=0A=0ADirector of US Operations, RDT =C2=A0=C2=B7=C2=A0 LinkedIn=0A[https:/=
+/www.linkedin.com/in/mattgargas/]=0A=0AThe tools were not broken. They work=
+ed. They looked good. They calculated fast.=0AThey were ignored. That is th=
+e difference between technically finished and=0Aoperationally adopted, and =
+it is the whole issue in two sentences. This failure=0Amode is not new eith=
+er. It predates AI by twenty years. That is exactly why the=0AAI version wa=
+s predictable.=0A=0AThe takeaway=0A=0AThe rollout is not the finish line. A=
+ training completion report is not=0Aevidence. If the old spreadsheet is st=
+ill open on somebody's second monitor=0Aninety days in, the deployment is a=
+ line item, not a capability.=0A=0A=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Adopti=
+on Ledger.=0A=0AA one-page weekly record that catches what dashboards miss.=
+=0A=0ANot a dashboard. Dashboards are how the adoption question gets avoide=
+d.=0A=0AAdoption has no owner in most operations. Data quality has an owner=
+. Uptime has=0Aan owner. Whether Denise in scheduling still runs her own s=
+preadsheet is=0Anobody's job. The Adoption Ledger is a one-page weekly reco=
+rd per deployed tool,=0Aanswering one question: is this tool replacing the =
+thing it was supposed to=0Areplace.=0A=0ASet up once, at deployment=0A=0A=
+=C2=B7 Target task. One specific task this tool performs. If you cannot nam=
+e one,=0Athat is already the finding.=0A=0A=C2=B7 The workaround it replace=
+s. Name it exactly. "Manual process" is not an=0Aanswer. "Denise's shipping=
+ spreadsheet on the shared drive" is an answer.=0A=0A=C2=B7 Expected users =
+and how often. Daily, per shift, per order, per exception.=0A=0A=C2=B7 One =
+operating metric. Cycle time, error rate, rework, or touches per order.=0AP=
+ick it before go-live.=0A=0AUpdate weekly=0A=0A=C2=B7 Usage this week again=
+st the expectation.=0A=0A=C2=B7 Workaround status: retired, shrinking, unch=
+anged, or grown.=0A=0A=C2=B7 Exceptions with a reason code: too slow, did n=
+ot trust it, could not access=0Ait, did not fit the process, faster my way,=
+ nobody showed me, tool was wrong.=0A=0A=C2=B7 The operating metric reading=
+.=0A=0A=C2=B7 Unprompted advocacy: did anyone ask for it or recommend it w=
+ithout being=0Aasked.=0A=0AThe weekly decision=0A=0AOne line per tool=0A=0A=
+Keep: usage meets expectation, workaround is shrinking or gone.=0A=0AChange=
+: usage is short and the reason codes point at a fixable cause. Fix the=0An=
+amed cause, set a review date.=0A=0AStop: four straight weeks of unchanged =
+workaround status with no fixable reason.=0AWrite down why, so the next ven=
+dor conversation starts from evidence.=0A=0AThree examples=0A=0AAI quoting =
+assistant.=0A=0ATarget task: first-pass quote build. Workaround: the estima=
+tor's personal=0Apricing spreadsheet. Expected on every quote under $50K. U=
+sed on 9 of 22.=0AWorkaround unchanged. Top reason code: did not trust it o=
+n nonstandard parts.=0ADecision: change. Pull nonstandard parts out of scop=
+e and re-baseline in three=0Aweeks.=0A=0APredictive maintenance alerts on l=
+ine 3.=0A=0AWorkaround: monthly walk-around plus operator intuition. All 11=
+ alerts triaged=0Awithin a shift. Walk-around dropped to biweekly. Unplanne=
+d downtime down. The=0Aline 2 supervisor asked to be added. Decision: keep =
+and expand.=0A=0AAI meeting notes for production standup.=0A=0AWorkaround: =
+the supervisor's notebook. Used 2 of 5 days. Workaround unchanged.=0AReason=
+ code: faster my way. No operating metric was ever defined at deployment.=
+=0ADecision: stop.=0A=0AThe reason codes are the whole build. "People are n=
+ot using it" is not=0Aactionable. "Six exceptions this week, five coded too=
+ slow" is a specification.=0ALog exceptions as they happen, thirty seconds =
+each. If logging takes longer than=0Athe workaround, nobody logs it and the=
+ ledger dies. Friday, fifteen minutes,=0Awalk the page per tool and make th=
+e call. Monthly, look at reason codes across=0Aall tools. The same code sho=
+wing up on four tools is a design finding, not a=0Apeople problem.=0A=0ATwo=
+ ways to build it=0A=0APath 1: Internal build=0A=0AA shared sheet and a rec=
+urring fifteen minutes on Friday. Start with the three=0Atools you spent th=
+e most on this year. Run it four weeks before judging=0Aanything. The disci=
+pline is the product, not the software.=0A=0APath 2: Through your partner=
+=0A=0AAsk the ERP partner or integrator to instrument usage and report over=
+ride rate,=0Aabandonment rate, and exception reasons alongside uptime. Most=
+ can. Almost none=0Ado unless asked. Put it in the next statement of work.=
+=0A=0AA tool nobody uses is not a tool. It is a line item.=0A=0A=C2=A0=0A=
+=0ATHE OPERATIONS BRIEF=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by C=
+olony Spark [https://www.colonyspark.com]=0A=0AWatching people go back to t=
+he spreadsheet, or already tracking adoption=0Ametrics=3F Hit reply, I read=
+ every one. Bill
+--_----UNDfx3WyX/80RJnW1QERvw===_80/A5-38691-3BE819A6
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head> <style></style> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>The Operations Brief &#x2014; Issue #22</title>
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<style type="text/css">
+table, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+td, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exactly;}
+body, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f2ef" style="margin:0;padding:0;width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" class="bodyClass"><span style="display:none">An operations director on tools that worked and still got ignored anyway</span>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">AI adoption is not the day the tool goes live. It is the day your people stop going back to their own spreadsheet.</div>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;</div>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#f4f2ef" style="background-color:#f4f2ef;width:100%;">
+<tbody><tr>
+<td align="center" valign="top" style="padding:24px 16px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="max-width:600px;width:100%;">
+<tbody><tr>
+<td>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td height="5" bgcolor="#C8392A" style="background-color:#C8392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td align="center" bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:36px 40px 28px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td align="center" style="padding-bottom:20px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>
+<tr><td align="center"><h1 style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-transform:uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br>BRIEF</h1></td></tr>
+<tr><td align="center" style="padding-top:14px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="48" height="2" bgcolor="#C8392A" style="background-color:#C8392A;width:48px;height:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td></tr>
+<tr><td align="center" style="padding-top:12px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transform:uppercase;">ISSUE #22 &#xA0;&#xB7;&#xA0; AUGUST 28, 2026</p></td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#C8392A" style="background-color:#C8392A;height:3px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;padding:32px 40px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Hi ${first_name},</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">AI adoption is not the day the tool goes live. It is the day your people stop going back to their own spreadsheet.</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Every section in this issue carries that theme. The Shift says nobody measures whether people actually use what was deployed. From the Floor is an operations director who built tools that worked and nobody used. The Stack is the one-page weekly record that catches it.</p>
+<p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">We measure whether AI works. We do not measure whether anyone uses it.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The gap is not between companies that bought AI and companies that did not. It is between companies where people use the thing and companies where the tool sits there while the operation runs on the same spreadsheets it always ran on.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Every AI conversation in manufacturing is still framed as a technology question. Which model, which vendor, which use case. The 2026 data says the technology question got settled and the behavior question was never asked.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 0 24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Six signals from 2026</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">84% of manufacturers</strong> agreed executive leadership is more enthusiastic about AI than employees. In the same survey, 88% said they have the right in-house AI expertise, but only 22% said their AI investment is concentrated on upskilling their own people (<a href="https://rsmus.com/insights/industries/manufacturing/manufacturers-using-ai-2026.html" style="color:#C8392A;text-decoration:underline;">RSM US, July 2026</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Vendor surveys put manufacturing AI adoption near 88%.</strong> The federal survey puts actual business AI use at 19.8% as of May 2026. Both are accurate. They measure different things. One measures that a company has AI somewhere. The other measures whether the business used it (<a href="https://www.census.gov/library/stories/2026/05/ai-use-businesses.html" style="color:#C8392A;text-decoration:underline;">U.S. Census Bureau, May 2026</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Usage splits hard by size.</strong> 37% at firms with 250+ employees, 32% at 100 to 249, under 20% at the smallest firms.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">The failure has a specific shape on the factory floor.</strong> Operators don&apos;t trust the recommendations. Supervisors revert to spreadsheets. Engineers quietly disconnect the system to keep lines running. The problem is not the algorithm. It is the absence of people in the process (<a href="https://www.catalystconnection.org/news-blog/why-ai-can-often-fail-on-the-factory-floor/" style="color:#C8392A;text-decoration:underline;">Catalyst Connection, Oct 2025</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">When AI pilots underperform,</strong> manufacturers cite data quality (51%), integration (43%), security or compliance (34%), unclear ROI (30%), and adoption resistance (30%). Data quality and integration get budgets, owners, and dashboards. Adoption gets a training email.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">The measurement fix:</strong> Track engagement metrics, user confidence, decision consistency, and collaboration alongside technical KPIs like accuracy or uptime. The best models mean little if no one uses them (<a href="https://www.catalystconnection.org/news-blog/why-ai-can-often-fail-on-the-factory-floor/" style="color:#C8392A;text-decoration:underline;">Catalyst Connection, Oct 2025</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">At our roundtable on August 26, <a href="https://www.linkedin.com/in/robert-wyse-3aa20884/" style="color:#C8392A;text-decoration:underline;">Robert Wyse</a>, owner of <a href="https://industronics.com/" style="color:#C8392A;text-decoration:underline;">Industronics Service Company</a>, described the signal he watches for: the point where employees get comfortable enough with a tool that they start advocating for it on their own, without being asked. It is an early signal, not a return. It also costs nothing to watch, and almost nobody writes it down.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">That is the pattern across all of it. The only proof of adoption is that the old workaround is gone, and nobody checks. Deployment gets a project plan. Uptime gets a dashboard. Whether anyone asked for the thing gets nothing.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">For every tool you deployed this year, can you name the workaround it was supposed to replace, and can you prove that workaround is gone.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">FROM THE FLOOR</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Why adoption stays invisible.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Matt Gargas, Director of US Operations, RDT, on tools that work and get ignored</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Matt Gargas runs operations at RDT, a mid-market industrial manufacturer. Speaking with the Operations Brief Roundtable on August 26 about his early experience with AI deployment, he described a failure mode nobody talks about: the tools that work but nobody uses.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="background-color:#fdf6f5;border-radius:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">&quot;I can&apos;t tell you how many VBA spreadsheets I built that looked good and calculated quickly but never got used. Everyone went back to their own spreadsheet.&quot;</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td>
+<p style="margin:0 0 1px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;">Matt Gargas</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">Director of US Operations, RDT &#xA0;&#xB7;&#xA0; <a href="https://www.linkedin.com/in/mattgargas/" style="color:#C8392A;text-decoration:none;">LinkedIn</a></p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The tools were not broken. They worked. They looked good. They calculated fast. They were ignored. That is the difference between technically finished and operationally adopted, and it is the whole issue in two sentences. This failure mode is not new either. It predates AI by twenty years. That is exactly why the AI version was predictable.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:18px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">The takeaway</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">The rollout is not the finish line. A training completion report is not evidence. If the old spreadsheet is still open on somebody&apos;s second monitor ninety days in, the deployment is a line item, not a capability.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE STACK</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">The Adoption Ledger.</h2>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">A one-page weekly record that catches what dashboards miss.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-height-rule:exactly;">Not a dashboard. Dashboards are how the adoption question gets avoided.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Adoption has no owner in most operations. Data quality has an owner. Uptime has an owner. Whether Denise in scheduling still runs her own spreadsheet is nobody&apos;s job. The Adoption Ledger is a one-page weekly record per deployed tool, answering one question: is this tool replacing the thing it was supposed to replace.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Set up once, at deployment</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Target task.</strong> One specific task this tool performs. If you cannot name one, that is already the finding.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">The workaround it replaces.</strong> Name it exactly. &quot;Manual process&quot; is not an answer. &quot;Denise&apos;s shipping spreadsheet on the shared drive&quot; is an answer.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Expected users and how often.</strong> Daily, per shift, per order, per exception.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">One operating metric.</strong> Cycle time, error rate, rework, or touches per order. Pick it before go-live.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Update weekly</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Usage this week</strong> against the expectation.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Workaround status:</strong> retired, shrinking, unchanged, or grown.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Exceptions with a reason code:</strong> too slow, did not trust it, could not access it, did not fit the process, faster my way, nobody showed me, tool was wrong.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">The operating metric</strong> reading.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Unprompted advocacy:</strong> did anyone ask for it or recommend it without being asked.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The weekly decision</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#1a1a1a" style="padding:22px 24px;background-color:#1a1a1a;border-radius:6px;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">One line per tool</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Keep:</strong> usage meets expectation, workaround is shrinking or gone.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Change:</strong> usage is short and the reason codes point at a fixable cause. Fix the named cause, set a review date.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Stop:</strong> four straight weeks of unchanged workaround status with no fixable reason. Write down why, so the next vendor conversation starts from evidence.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Three examples</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;line-height:20px;color:#1a1a1a;mso-line-height-rule:exactly;">AI quoting assistant.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Target task: first-pass quote build. Workaround: the estimator&apos;s personal pricing spreadsheet. Expected on every quote under $50K. Used on 9 of 22. Workaround unchanged. Top reason code: did not trust it on nonstandard parts. Decision: change. Pull nonstandard parts out of scope and re-baseline in three weeks.</p>
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;line-height:20px;color:#1a1a1a;mso-line-height-rule:exactly;">Predictive maintenance alerts on line 3.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Workaround: monthly walk-around plus operator intuition. All 11 alerts triaged within a shift. Walk-around dropped to biweekly. Unplanned downtime down. The line 2 supervisor asked to be added. Decision: keep and expand.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;line-height:20px;color:#1a1a1a;mso-line-height-rule:exactly;">AI meeting notes for production standup.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Workaround: the supervisor&apos;s notebook. Used 2 of 5 days. Workaround unchanged. Reason code: faster my way. No operating metric was ever defined at deployment. Decision: stop.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The reason codes are the whole build. &quot;People are not using it&quot; is not actionable. &quot;Six exceptions this week, five coded too slow&quot; is a specification. Log exceptions as they happen, thirty seconds each. If logging takes longer than the workaround, nobody logs it and the ledger dies. Friday, fifteen minutes, walk the page per tool and make the call. Monthly, look at reason codes across all tools. The same code showing up on four tools is a design finding, not a people problem.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Two ways to build it</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:14px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 1: Internal build</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">A shared sheet and a recurring fifteen minutes on Friday. Start with the three tools you spent the most on this year. Run it four weeks before judging anything. The discipline is the product, not the software.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #C8392A;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 2: Through your partner</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Ask the ERP partner or integrator to instrument usage and report override rate, abandonment rate, and exception reasons alongside uptime. Most can. Almost none do unless asked. Put it in the next statement of work.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">A tool nobody uses is not a tool. It is a line item.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#1a1a1a" style="background-color:#1a1a1a;border-radius:8px;padding:32px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:20px;">
+<tbody><tr>
+<td>
+<p style="margin:0 0 2px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-transform:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIONS BRIEF</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#222222" style="background-color:#222222;border-radius:6px;padding:16px 20px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-rule:exactly;">Watching people go back to the spreadsheet, or already tracking adoption metrics? Hit reply, I read every one. Bill</p>
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+<tr><td height="24" style="height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<img src="https://trk.ebitcommweekly.com/opens?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&type=html&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzg3OTI0MTQ3fQ.n3zs4JevmL_rWwndxx5_sFJswcFIiMDFiDrUsZ-_Doo" height="1px" width="1px"><table width="100%" align="center"><tbody><tr><td width="100%" align="center">
+        <a style="margin-left: auto; margin-right: auto; color: grey; font-size: 10px; text-decoration: underline;" href="https://trk.ebitcommweekly.com/unsubscribes?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzg3OTI0MTQ3fQ.n3zs4JevmL_rWwndxx5_sFJswcFIiMDFiDrUsZ-_Doo&type=html">Click here to unsubscribe</a>
+        </td></tr></tbody></table></body></html>
+--_----UNDfx3WyX/80RJnW1QERvw===_80/A5-38691-3BE819A6--
+

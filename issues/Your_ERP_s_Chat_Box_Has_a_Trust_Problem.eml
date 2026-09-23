@@ -1,0 +1,490 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:2f09:b0:1f3:5b97:24c0 with SMTP id ck9csp4964297rdb;
+        Fri, 18 Sep 2026 06:59:23 -0700 (PDT)
+X-Received: by 2002:a05:6300:398:b0:3dd:a009:3188 with SMTP id adf61e73a8af0-3dda009323bmr5502637.48.1789739962891;
+        Fri, 18 Sep 2026 06:59:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1789739962; cv=none;
+        d=google.com; s=arc-20260327;
+        b=bBN0k/XTRb5YVXaU7NpPqbrQxGYiVYDcVAW7wrTaQKXzxky+Y0vccWXm3pVbIuyTN8
+         EHMCIqtAYqlqbggWiaTXcXVoToBhWa7Nfg5TgUnsjsK5ocWMBbjZ7RQFoyfFqnTXoypH
+         srQJdwMFlHeRmi1rLbmxc5ImuTsRSFjZNWyLUnoT2HC+7ngClm65qF3G3bZXAJLMj9dz
+         NTJtxawwhXmmd/B1YS/rZy5aWKOrVh1Z+geFpb9RFka1R43lvF8zmnX+2R/+d7kxP+Xg
+         PJu4jV9ufXYxxwcYDle//jZK9acAYClq7oPEk607+mr4ApzLqvefsRbkcij2FHca2ngF
+         VGbA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=VGOb9gMgHRhGmfdSSO/jetEwnrhGvXpLZ+eqoWBiqcQ=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=p4iERr+Skx3IKzH5Tb76rn9btxXoaFgc0aLD0Et5lthL+SZ0aHbH3XHuHA5RyIVPHf
+         70zThJqQzedic8ZXygPTuQn5ObbCDEW960/UU85BdZoVqvdK8Pq9+P6SUTK0kjLw2zTg
+         TfegrzV+pZH+uz+zTxetZysDQVpNd81CS9nw3IU+RtKGI5Y48ebtPPCycRptPfSOwjVH
+         wcNl9Wgzb4wPfnlhw3ArNKPj6pfTGaATK4eD0picYcHoa5ehD0D4aNkS5XDST6PDqCtp
+         k2eGm4soMz6ilIuTkoHD0d0Ym96R8dz9/21D62k0KyH5fwYG0saZV2LiGqmCyk5rIgt2
+         0DgA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=WnYupBj0;
+       spf=pass (google.com: domain of msprvs1=20721whircmmq=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) smtp.mailfrom="msprvs1=20721wHIrCmMq=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20721wHIrCmMq=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-174-90-59.sparkpostmail.com (mta-174-90-59.sparkpostmail.com. [192.174.90.59])
+        by mx.google.com with ESMTPS id a92af1059eb24-144cdf7521bsi5296304c88.25.2026.09.18.06.59.22
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Sep 2026 06:59:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20721whircmmq=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) client-ip=192.174.90.59;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=WnYupBj0;
+       spf=pass (google.com: domain of msprvs1=20721whircmmq=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) smtp.mailfrom="msprvs1=20721wHIrCmMq=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: IAJmV/6Qph+kVqW4jQ2iLCxJC6cRy0xqNofKyJBPle4=|eyJjdXN0b21lcl9pZCI
+	6IjMwMzI4NyIsInN1YmFjY291bnRfaWQiOiIxMDExNyIsInRlbmFudF9pZCI6InN
+	wYyIsInIiOiJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsIm1lc3NhZ2VfaWQiOiI
+	2YWFjYjg0M2FkNmEzZGMwNmQ1ZiJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1789739960;
+	i=@colonysparkweekly.com;
+	bh=VGOb9gMgHRhGmfdSSO/jetEwnrhGvXpLZ+eqoWBiqcQ=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=WnYupBj0MdFE4na5/8tK+SyOIekd8o0TTcpvFizoncrm/O0qU42PejkkTTMshZd2i
+	 DbMn4OFyPT8A1zEt7q067Zkt6XCj7X/tYePnx2ElerH06EHslPRz9fjybA+AaFW5wS
+	 VzQ+apr19x7Fgg/f4Xu86JgCR5XVym+xvHeWnvPI=
+Received: from [10.90.28.242] ([10.90.28.242])
+	by i-01c5b14b64ea2846c.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76420 r(msys-ecelerity:tags/5.3.0.15)) with REST
+	id F5/D6-27504-8B34DAA6; Fri, 18 Sep 2026 13:59:20 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <F5.D6.27504.8B34DAA6@i-01c5b14b64ea2846c.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 18 Sep 2026 13:59:20 +0000
+Content-Type: multipart/alternative; boundary="_----/hJxs4po4WNLT8X2aox0bQ===_C2/D6-27504-8B34DAA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Your ERP's Chat Box Has a Trust Problem
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@sharingnewsletter.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3A9XfVSe5YP-MJm9W9i30K9iXanebzqNaPYAyKE6TA7G0~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJtZXNzYWdlX2lkIjogIjZhYWNiODQzYWQ2YTNkYzA2ZDVmIiwgInN1YmFjY291bnRfaWQiOiAiMTAxMTciIH0~>,<https://unsubscribe.spmta.com/u/zy3xOLY1a1yoHhFqyIVsYA~~/AASgtxA~/_f3pbvuASScfW_X6splArLeYNw5YMHtidH_DUhkhs6klvzrzQzdBY5R2DvPsYslvhPjaruAHlsPGBiCaa2qPAA~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----/hJxs4po4WNLT8X2aox0bQ===_C2/D6-27504-8B34DAA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+A roundtable rule for proof, plus a five-step fix for governed KPIs.=0AA ro=
+undtable rule for proof, plus a five-step fix for governed KPIs.=0AA chat b=
+ox can answer an ERP question in four seconds. It still needs a governed=0A=
+definition behind the number, a roundtable rule for proving it, and a one-p=
+age=0Aconstitution that makes it reconcile every time.=0A=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=0A=0A=C2=A0=0A=0A=
+By Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://www.colo=
+nyspark.com/]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=0A=0AISSUE #19 =C2=
+=A0=C2=B7=C2=A0 SEPTEMBER 18, 2026=0A=0A=C2=A0=0A=0A=C2=A0=0A=0AHi ${first_=
+name},=0A=0AA plant manager types a question into the new ERP chat box and =
+gets an answer in=0Afour seconds. The number is clean, the sentence around =
+it is confident, and=0Anobody in the room can tell you which of a dozen unv=
+oted decisions produced it.=0ANatural language changed how fast you can ask=
+. It did not decide what the answer=0Ameans.=0A=0AThis issue is about what=
+ has to be true before you trust a conversational answer=0Aout of the ERP: =
+a roundtable operator's rule for proving a number before=0Aexplaining it, a=
+nd a one-page metric constitution you can fill in this week for=0Athe one K=
+PI everyone in the room already argues about.=0A=0ABill=0A=0A=C2=A0=0A=0ATH=
+E SHIFT=0A=0A=0ANatural-Language ERP Needs a Metric Constitution.=0A=0AConv=
+ersational access changes the cost of asking. It does not settle what the=
+=0Aquestion means.=0A=0APicture the question every operations leader eventu=
+ally types into a chat box:=0Awhat shipped late last month=3F The system th=
+at used to require a saved search and=0Aa report writer now returns an answ=
+er in seconds. What it does not surface is=0Athe list of choices baked into=
+ that answer: promised date or requested date,=0Aorder level or line level,=
+ whether a partial shipment counts as late, whether a=0Areopened order rese=
+ts the clock, whether a cancelled line ever enters the=0Adenominator, which=
+ plant's production calendar applies, and how stale the=0Aunderlying data i=
+s at the moment you asked.=0A=0AThat is the trade natural-language ERP is m=
+aking across the industry right now.=0AOracle's Ask Oracle lets eligible Ne=
+tSuite Next users ask business questions in=0Aplain English and pull an ans=
+wer straight out of the system. Oracle's own=0Adocumentation is candid abou=
+t the risk: vague terms such as open or delayed can=0Aproduce unexpected re=
+sults, and when the system is uncertain, it appends an=0Ainterpretation not=
+e explaining what it assumed. That is a useful safety valve.=0AIt is also a=
+n admission that the tool cannot read your mind about what open=0Aactually =
+means at your plant.=0A=0AFour data points behind the shift=0A=0A=C2=B7 Ora=
+cle's own guidance warns that ambiguous terms like open or delayed can lead=
+=0Ato unexpected results, so Ask Oracle appends an interpretation note when=
+ it is=0Auncertain (Oracle Ask Oracle documentation=0A[https://docs.oracle.=
+com/en/cloud/saas/netsuite/ns-online-help/article_5100902387.html]).=0A=0A=
+=C2=B7 NetSuite's August 2026 release lets admins manage Ask Oracle access =
+by role,=0Ause permitted saved searches as answer sources, and preview NetS=
+uite Next on a=0Acopy of live account data (Oracle NetSuite 2026.2 release =
+notes=0A[https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/arti=
+cle_1175030259.html]).=0A=0A=C2=B7 NIST's July 2026 smart-manufacturing roa=
+dmap names industrial data management,=0Aintegration across heterogeneous s=
+ystems, and trustworthy, explainable, reliable=0Aoperation as critical barr=
+iers to AI deployment on the floor (NIST=0A[https://www.nist.gov/publicatio=
+ns/2026-roadmap-artificial-intelligence-and-machine-learning-smart-manufact=
+uring]).=0A=0A=C2=B7 Deloitte's 2026 survey of more than 140 manufacturers =
+found 84% seeing=0Ameasurable value from AI, while only about 20% of use ca=
+ses are actually scaled,=0Aciting robust data and governance as the gap (De=
+loitte=0A[https://www.deloitte.com/de/de/Industries/industrial-construction=
+/research/ai-in-manufacturing.html]).=0A=0ATurn those August controls on. T=
+hen be honest about what they do. Role-based=0Aaccess decides who is allowe=
+d to ask. Saved searches decide what context the=0Aanswer is allowed to dra=
+w from. The sandbox preview decides who can break things=0Asafely. None of =
+the three decides whether a partial shipment counts as late at=0Ayour plant=
+. That is a business decision, it needs a named owner, and no release=0Ano=
+te is going to make it for you.=0A=0ANIST's framing backs up the operationa=
+l point: the barrier to trustworthy AI on=0Athe floor is not the model, it =
+is the industrial data management and governance=0Alayer sitting underneath=
+ it. Deloitte's numbers put a scale on the gap. Most=0Amanufacturers are al=
+ready seeing value from AI. Most of that value is still=0Astuck in pilots, =
+and the reason, in Deloitte's own words, comes down to robust=0Adata, gover=
+nance, and deployment models. Read that as a scale-gap signal from a=0Abroa=
+d, cross-industry study, not a market forecast for any one region.=0A=0ANon=
+e of this is an argument against handing people a chat box instead of a=0Ar=
+eport writer. It is an argument for certifying the handful of metrics that=
+=0Aactually drive daily decisions before turning the chat box loose on all =
+of them.=0AOn-time delivery, gross margin, backlog, late orders: pick the s=
+hort list first,=0Aand settle it before the questions start arriving at con=
+versational speed.=0A=0AThe fix is not fewer questions. It is fewer ungover=
+ned answers.=0A=0A=C2=A0=0A=0AFROM THE FLOOR=0A=0A=0AShow the proof before =
+the reasoning.=0A=0ARobert Wyse, Industronics Service Company, on what it t=
+akes to get an=0AAI-generated number trusted on the floor=0A=0ARobert Wyse =
+owns Industronics Service Company. Speaking at the Colony Spark=0AOperators=
+ Roundtable in August, he named the exact standard an AI-generated ERP=0Aan=
+swer has to clear before anyone on the floor will act on it.=0A=0A=E2=80=9C=
+I think you really have to show the proof before you get into the reasoning=
+.=0AYou have to illustrate the why. Otherwise, it's really hard to get eve=
+ryone on=0Aboard.=E2=80=9D=0A=0ARobert Wyse=0A=0AOwner, Industronics Servic=
+e Company =C2=A0=C2=B7=C2=A0 Colony Spark Operators Roundtable,=0AAugust 20=
+26=0A=0AWyse is describing sequence, not sentiment. Show the proof first: t=
+he=0Adefinition, the source records, the filters, the timestamp. Only then =
+does the=0Areasoning get a hearing. Flip that order, lead with a confident-=
+sounding=0Aexplanation before anyone has seen where the numbers came from, =
+and the room=0Astops trusting the tool the first time the number does not m=
+atch what the plant=0Amanager already knows.=0A=0AThe takeaway=0A=0ABefore =
+an AI-generated ERP answer changes a plan, a schedule, or a customer=0Acomm=
+itment, the operator needs to see what counts, where the data came from, an=
+d=0Aa way to check it against a report they already trust. Confidence is no=
+t proof.=0AReproducibility is.=0A=0A=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Metri=
+c Constitution, Built in dbt.=0A=0ADefine the metric once. Expose only the =
+certified answer.=0A=0AA one-page constitution per metric, a governed calcu=
+lation layer between the=0Achat box and the warehouse, and a four-step rout=
+ine for reconciling what it=0Areturns.=0A=0AThe problem in Section 1 has a =
+fix that does not require blocking the chat box.=0ADefine the operational m=
+etric once, in a governed semantic layer, then let the=0AAI agent query and=
+ explain that certified definition instead of inventing its=0Aown. The dbt =
+Semantic Layer paired with dbt MCP is the most specific version of=0Athis a=
+vailable today for manufacturers and distributors whose ERP and WMS data=0A=
+already land in a warehouse.=0A=0AThis setup centralizes the definitions of=
+ the metrics that actually run the=0Aplant: on-time delivery, fill rate, in=
+ventory turns, margin, supplier=0Aperformance. It separates the natural-lan=
+guage interface from the calculation.=0AThe agent's job becomes explaining =
+and querying an approved metric, not deciding=0Awhat late means on the fly.=
+=0A=0AThe one-page metric constitution=0A=0ABefore any of this is code, it =
+is a page. Pick the metric your team argues about=0Amost and answer these e=
+ight lines. If you cannot answer one of them without a=0Ameeting, you have =
+found the reason the chat box is going to embarrass someone.=0A=0A1. Name a=
+nd plain-English definition. One sentence an operator would say out=0Aloud,=
+ not a formula.=0A=0A2. Owner. A person, not a department. They settle disp=
+utes about this number.=0A=0A3. Calculation and grain. The math, and whethe=
+r it counts orders, lines, units,=0Aor dollars.=0A=0A4. Time dimension. Whi=
+ch date field, and why that one instead of the other=0Athree.=0A=0A5. Filte=
+rs and exclusions. Written down. Samples, intercompany, cancellations,=0Are=
+work, test orders.=0A=0A6. Source of record. Which system and which table t=
+he number comes from when two=0Adisagree.=0A=0A7. Refresh timing. How curre=
+nt the data is at the moment someone asks, stated in=0Ahours.=0A=0A8. Recon=
+ciles against. The one certified report this metric has to match, every=0At=
+ime.=0A=0ALines 1 through 7 become the metric definition in dbt. Line 8 is =
+what the=0Aoperator checks before acting. Here is the routine that moves th=
+e page into the=0Astack.=0A=0ADefine, expose, ask, reconcile=0A=0A1. Define=
+. Build the operational metric in dbt: calculation, time dimension,=0Aenti=
+ties, grain, filters, exclusions. Test it against known results and deploy=
+=0Ait to the Semantic Layer.=0A=0A2. Expose. Configure dbt MCP in the appro=
+ved agent environment. Turn on the=0ASemantic Layer and only the metadata t=
+ools the workflow needs, on the narrowest=0Apractical account and token per=
+missions.=0A=0A3. Ask. Pose the operating question. Require the response to=
+ show the metric=0Aname and definition, filters, grain, time range, and res=
+ult, not just a number.=0A=0A4. Reconcile. Check the result against the cer=
+tified report or a known query. If=0Athe numbers differ, the metric owner r=
+esolves the definition, source, or filter=0Amismatch before anyone acts on =
+it.=0A=0AExample=0A=0AAsk, why did on-time delivery fall at the East plant =
+last month=3F The agent=0Aqueries the governed on-time-delivery metric, sta=
+tes exactly how on time is=0Adefined, shows the plant and date filters and =
+the result grain, then breaks the=0Aresult down only through approved dimen=
+sions. The operator compares the total=0Aagainst the existing report before=
+ using the explanation for anything.=0A=0AAvailability and guardrails=0A=0A=
+Availability=0A=0AThe dbt Semantic Layer is available on dbt Platform Start=
+er, Enterprise, and=0AEnterprise+ accounts. The self-hosted dbt MCP server =
+can run locally, but its=0ASemantic Layer toolset needs dbt Platform creden=
+tials and a production=0Aenvironment ID. Starter pricing runs $100 per user=
+ per month with 5,000 queried=0Ametrics included (dbt Semantic Layer docs=
+=0A[https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl], dbt pricin=
+g=0A[https://www.getdbt.com/pricing]).=0A=0AGuardrails=0A=0AKeep the agent =
+scoped to the Semantic Layer and the metadata tools the workflow=0Aactually=
+ needs. Do not enable SQL execution, administrative, job-management, or=0Aw=
+rite-capable tools unless the use case and permissions explicitly call for =
+them=0A(dbt MCP setup [https://docs.getdbt.com/docs/dbt-ai/setup-local-mcp]=
+).=0A=0AThe interface can be conversational. The number it returns still ne=
+eds a=0Aconstitution behind it.=0A=0A=C2=A0=0A=0ATHE OPERATIONS BRIEF=0A=0A=
+By Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://www.colo=
+nyspark.com/]=0A=0AAlready treating your ERP metrics as a governed asset, o=
+r watching a chat box=0Agenerate three different answers to the same questi=
+on=3F Hit reply, I read every=0Aone. Bill
+--_----/hJxs4po4WNLT8X2aox0bQ===_C2/D6-27504-8B34DAA6
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head> <style></style> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>The Operations Brief &#x2014; Issue #19</title>
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<style type="text/css">
+table, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+td, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exactly;}
+body, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f2ef" style="margin:0;padding:0;width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" class="bodyClass"><span style="display:none">A roundtable rule for proof, plus a five-step fix for governed KPIs.</span>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">A chat box can answer an ERP question in four seconds. It still needs a governed definition behind the number, a roundtable rule for proving it, and a one-page constitution that makes it reconcile every time.</div>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;</div>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#f4f2ef" style="background-color:#f4f2ef;width:100%;">
+<tbody><tr>
+<td align="center" valign="top" style="padding:24px 16px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="max-width:600px;width:100%;">
+<tbody><tr>
+<td>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td height="5" bgcolor="#C8392A" style="background-color:#C8392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td align="center" bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:36px 40px 28px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td align="center" style="padding-bottom:20px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com/" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>
+<tr><td align="center"><h1 style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-transform:uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br>BRIEF</h1></td></tr>
+<tr><td align="center" style="padding-top:14px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="48" height="2" bgcolor="#C8392A" style="background-color:#C8392A;width:48px;height:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td></tr>
+<tr><td align="center" style="padding-top:12px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transform:uppercase;">ISSUE #19 &#xA0;&#xB7;&#xA0; SEPTEMBER 18, 2026</p></td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#C8392A" style="background-color:#C8392A;height:3px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;padding:32px 40px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Hi ${first_name},</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">A plant manager types a question into the new ERP chat box and gets an answer in four seconds. The number is clean, the sentence around it is confident, and nobody in the room can tell you which of a dozen unvoted decisions produced it. Natural language changed how fast you can ask. It did not decide what the answer means.</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">This issue is about what has to be true before you trust a conversational answer out of the ERP: a roundtable operator&apos;s rule for proving a number before explaining it, and a one-page metric constitution you can fill in this week for the one KPI everyone in the room already argues about.</p>
+<p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Natural-Language ERP Needs a Metric Constitution.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Conversational access changes the cost of asking. It does not settle what the question means.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Picture the question every operations leader eventually types into a chat box: what shipped late last month? The system that used to require a saved search and a report writer now returns an answer in seconds. What it does not surface is the list of choices baked into that answer: promised date or requested date, order level or line level, whether a partial shipment counts as late, whether a reopened order resets the clock, whether a cancelled line ever enters the denominator, which plant&apos;s production calendar applies, and how stale the underlying data is at the moment you asked.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">That is the trade natural-language ERP is making across the industry right now. Oracle&apos;s Ask Oracle lets eligible NetSuite Next users ask business questions in plain English and pull an answer straight out of the system. Oracle&apos;s own documentation is candid about the risk: vague terms such as open or delayed can produce unexpected results, and when the system is uncertain, it appends an interpretation note explaining what it assumed. That is a useful safety valve. It is also an admission that the tool cannot read your mind about what open actually means at your plant.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 0 24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Four data points behind the shift</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Oracle&apos;s own guidance warns that ambiguous terms like <strong style="color:#1a1a1a;">open</strong> or <strong style="color:#1a1a1a;">delayed</strong> can lead to unexpected results, so Ask Oracle appends an interpretation note when it is uncertain (<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_5100902387.html" style="color:#C8392A;text-decoration:underline;">Oracle Ask Oracle documentation</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; NetSuite&apos;s August 2026 release lets admins manage Ask Oracle access by role, use permitted saved searches as answer sources, and preview NetSuite Next on a copy of live account data (<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_1175030259.html" style="color:#C8392A;text-decoration:underline;">Oracle NetSuite 2026.2 release notes</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; NIST&apos;s July 2026 smart-manufacturing roadmap names industrial data management, integration across heterogeneous systems, and trustworthy, explainable, reliable operation as critical barriers to AI deployment on the floor (<a href="https://www.nist.gov/publications/2026-roadmap-artificial-intelligence-and-machine-learning-smart-manufacturing" style="color:#C8392A;text-decoration:underline;">NIST</a>).</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Deloitte&apos;s 2026 survey of more than 140 manufacturers found <strong style="color:#1a1a1a;">84%</strong> seeing measurable value from AI, while only about <strong style="color:#1a1a1a;">20%</strong> of use cases are actually scaled, citing robust data and governance as the gap (<a href="https://www.deloitte.com/de/de/Industries/industrial-construction/research/ai-in-manufacturing.html" style="color:#C8392A;text-decoration:underline;">Deloitte</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Turn those August controls on. Then be honest about what they do. Role-based access decides who is allowed to ask. Saved searches decide what context the answer is allowed to draw from. The sandbox preview decides who can break things safely. None of the three decides whether a partial shipment counts as late at your plant. That is a business decision, it needs a named owner, and no release note is going to make it for you.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">NIST&apos;s framing backs up the operational point: the barrier to trustworthy AI on the floor is not the model, it is the industrial data management and governance layer sitting underneath it. Deloitte&apos;s numbers put a scale on the gap. Most manufacturers are already seeing value from AI. Most of that value is still stuck in pilots, and the reason, in Deloitte&apos;s own words, comes down to robust data, governance, and deployment models. Read that as a scale-gap signal from a broad, cross-industry study, not a market forecast for any one region.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">None of this is an argument against handing people a chat box instead of a report writer. It is an argument for certifying the handful of metrics that actually drive daily decisions before turning the chat box loose on all of them. On-time delivery, gross margin, backlog, late orders: pick the short list first, and settle it before the questions start arriving at conversational speed.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">The fix is not fewer questions. It is fewer ungoverned answers.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">FROM THE FLOOR</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Show the proof before the reasoning.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Robert Wyse, Industronics Service Company, on what it takes to get an AI-generated number trusted on the floor</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Robert Wyse owns Industronics Service Company. Speaking at the Colony Spark Operators Roundtable in August, he named the exact standard an AI-generated ERP answer has to clear before anyone on the floor will act on it.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="background-color:#fdf6f5;border-radius:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">&#x201C;I think you really have to show the proof before you get into the reasoning. You have to illustrate the why. Otherwise, it&apos;s really hard to get everyone on board.&#x201D;</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td>
+<p style="margin:0 0 1px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;">Robert Wyse</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">Owner, Industronics Service Company &#xA0;&#xB7;&#xA0; Colony Spark Operators Roundtable, August 2026</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Wyse is describing sequence, not sentiment. Show the proof first: the definition, the source records, the filters, the timestamp. Only then does the reasoning get a hearing. Flip that order, lead with a confident-sounding explanation before anyone has seen where the numbers came from, and the room stops trusting the tool the first time the number does not match what the plant manager already knows.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:18px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">The takeaway</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Before an AI-generated ERP answer changes a plan, a schedule, or a customer commitment, the operator needs to see what counts, where the data came from, and a way to check it against a report they already trust. Confidence is not proof. Reproducibility is.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE STACK</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">The Metric Constitution, Built in dbt.</h2>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Define the metric once. Expose only the certified answer.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-height-rule:exactly;">A one-page constitution per metric, a governed calculation layer between the chat box and the warehouse, and a four-step routine for reconciling what it returns.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The problem in Section 1 has a fix that does not require blocking the chat box. Define the operational metric once, in a governed semantic layer, then let the AI agent query and explain that certified definition instead of inventing its own. The dbt Semantic Layer paired with dbt MCP is the most specific version of this available today for manufacturers and distributors whose ERP and WMS data already land in a warehouse.</p>
+<p style="margin:0 0 28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">This setup centralizes the definitions of the metrics that actually run the plant: on-time delivery, fill rate, inventory turns, margin, supplier performance. It separates the natural-language interface from the calculation. The agent&apos;s job becomes explaining and querying an approved metric, not deciding what late means on the fly.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The one-page metric constitution</p>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Before any of this is code, it is a page. Pick the metric your team argues about most and answer these eight lines. If you cannot answer one of them without a meeting, you have found the reason the chat box is going to embarrass someone.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:22px 24px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">1. Name and plain-English definition.</strong> One sentence an operator would say out loud, not a formula.</p>
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">2. Owner.</strong> A person, not a department. They settle disputes about this number.</p>
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">3. Calculation and grain.</strong> The math, and whether it counts orders, lines, units, or dollars.</p>
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">4. Time dimension.</strong> Which date field, and why that one instead of the other three.</p>
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">5. Filters and exclusions.</strong> Written down. Samples, intercompany, cancellations, rework, test orders.</p>
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">6. Source of record.</strong> Which system and which table the number comes from when two disagree.</p>
+<p style="margin:0 0 9px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">7. Refresh timing.</strong> How current the data is at the moment someone asks, stated in hours.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#555555;mso-line-height-rule:exactly;"><strong style="color:#1a1a1a;">8. Reconciles against.</strong> The one certified report this metric has to match, every time.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Lines 1 through 7 become the metric definition in dbt. Line 8 is what the operator checks before acting. Here is the routine that moves the page into the stack.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Define, expose, ask, reconcile</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#1a1a1a" style="padding:22px 24px;background-color:#1a1a1a;border-radius:6px;">
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">1. Define.</strong> Build the operational metric in dbt: calculation, time dimension, entities, grain, filters, exclusions. Test it against known results and deploy it to the Semantic Layer.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">2. Expose.</strong> Configure dbt MCP in the approved agent environment. Turn on the Semantic Layer and only the metadata tools the workflow needs, on the narrowest practical account and token permissions.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">3. Ask.</strong> Pose the operating question. Require the response to show the metric name and definition, filters, grain, time range, and result, not just a number.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">4. Reconcile.</strong> Check the result against the certified report or a known query. If the numbers differ, the metric owner resolves the definition, source, or filter mismatch before anyone acts on it.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Example</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Ask, why did on-time delivery fall at the East plant last month? The agent queries the governed on-time-delivery metric, states exactly how on time is defined, shows the plant and date filters and the result grain, then breaks the result down only through approved dimensions. The operator compares the total against the existing report before using the explanation for anything.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Availability and guardrails</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:14px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Availability</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">The dbt Semantic Layer is available on dbt Platform Starter, Enterprise, and Enterprise+ accounts. The self-hosted dbt MCP server can run locally, but its Semantic Layer toolset needs dbt Platform credentials and a production environment ID. Starter pricing runs $100 per user per month with 5,000 queried metrics included (<a href="https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl" style="color:#C8392A;text-decoration:underline;">dbt Semantic Layer docs</a>, <a href="https://www.getdbt.com/pricing" style="color:#C8392A;text-decoration:underline;">dbt pricing</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #C8392A;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Guardrails</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Keep the agent scoped to the Semantic Layer and the metadata tools the workflow actually needs. Do not enable SQL execution, administrative, job-management, or write-capable tools unless the use case and permissions explicitly call for them (<a href="https://docs.getdbt.com/docs/dbt-ai/setup-local-mcp" style="color:#C8392A;text-decoration:underline;">dbt MCP setup</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">The interface can be conversational. The number it returns still needs a constitution behind it.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#1a1a1a" style="background-color:#1a1a1a;border-radius:8px;padding:32px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:20px;">
+<tbody><tr>
+<td>
+<p style="margin:0 0 2px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-transform:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIONS BRIEF</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com/" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#222222" style="background-color:#222222;border-radius:6px;padding:16px 20px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-rule:exactly;">Already treating your ERP metrics as a governed asset, or watching a chat box generate three different answers to the same question? Hit reply, I read every one. Bill</p>
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+<tr><td height="24" style="height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<img src="https://trk.ebitcommweekly.com/opens?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&type=html&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzg5NzM5OTYwfQ.nwM7X6EHefhWYDsXUmp--yk58UAaL_UBwRL6sWnjhUw" height="1px" width="1px"><table width="100%" align="center"><tbody><tr><td width="100%" align="center">
+        <a style="margin-left: auto; margin-right: auto; color: grey; font-size: 10px; text-decoration: underline;" href="https://trk.ebitcommweekly.com/unsubscribes?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzg5NzM5OTYwfQ.nwM7X6EHefhWYDsXUmp--yk58UAaL_UBwRL6sWnjhUw&type=html">Click here to unsubscribe</a>
+        </td></tr></tbody></table></body></html>
+--_----/hJxs4po4WNLT8X2aox0bQ===_C2/D6-27504-8B34DAA6--
+

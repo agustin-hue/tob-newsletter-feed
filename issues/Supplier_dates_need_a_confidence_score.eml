@@ -1,0 +1,992 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:2f09:b0:1f3:5b97:24c0 with SMTP id ck9csp11004378rdb;
+        Wed, 23 Sep 2026 09:35:32 -0700 (PDT)
+X-Received: by 2002:a05:6870:f151:b0:485:d31b:7757 with SMTP id 586e51a60fabf-49089600998mr3044894fac.21.1790181331922;
+        Wed, 23 Sep 2026 09:35:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790181331; cv=none;
+        d=google.com; s=arc-20260327;
+        b=LcR/okcJ0iPFg5dAwojO+US7J6guEPL00OIO1c+ruGBSYbBL3bwc8dwisJQbV3NlT+
+         eGqF6FmlERjPhN31aBZIS/I2/55evxhQUSBAiTQlItyan4YX7p0uFmUiuIkrJHAieaAl
+         HHkHyUWdSJ8BNOLTQp2VC1+i8EGw18DQTikaEWpXFJ01HZFr9yM4el4lw1ysLvlSyI1/
+         ogbkS7ynyVoRD6jb1DlDBNwQdbAltNdg7+ynlLowQqcpqN5UBkASrB9+0cTmqZX1TBNn
+         PRGWT4lqKqBlRZhAKnYyhtK7/Rp+04tW+bSp5cUR4A3vzYeE9UITXw7G9j0O+yHl4REh
+         zeSA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=Sy/MbZWDugfx+hLuGadURV3A7IGRDoaJHRvk7phs09w=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=pHsWoYYPUIdhnnRe9C6y52g4FsWxPH+uzvEkjsb1aSnblpEh4jupmix8NJoAATuxbF
+         8X08Y5IM2DYSq1snj729vcYLZ9ZjXTaN4ENhdwaeBCpAp3kqeH+fD8/Y7gPbwSUmzigW
+         UWI0QeQ2eb4iXl1QZgzKmZwrb5kvmTTwSZR11khCViTdWjrEHdqmgFO99MGRRL65+Gan
+         zYCUJe402sLjuo7Nm5rkVM7YvMaPf5r0zTXJQh2q2+wKd5a1mCnUG5WhbN5pVvXxY1Wj
+         8+U0OnLjc8MtbxH3+nK3FPJsqWnfz1GvYnk5k2HdujCIHwdgfCY6eUB8nuVQcNm78+PK
+         FyKA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b="x7m7Ol/4";
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-155.sparkpostmail.com (mta-203-49-155.sparkpostmail.com. [168.203.49.155])
+        by mx.google.com with ESMTPS id 586e51a60fabf-4908eb9083fsi3848747fac.135.2026.09.23.09.35.31
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Sep 2026 09:35:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) client-ip=168.203.49.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b="x7m7Ol/4";
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: xeUcE7O4gD/mnYIh67wQ2gywYtyeN5aWT3QBqza7puw=|eyJjdXN0b21lcl9pZCI
+	6IjMwMzI4NyIsInN1YmFjY291bnRfaWQiOiIxMDExNyIsInRlbmFudF9pZCI6InN
+	wYyIsInIiOiJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsIm1lc3NhZ2VfaWQiOiI
+	2YWIzZDJmZmIzNmEwZGM2NDYxMyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1790181330;
+	i=@colonysparkweekly.com;
+	bh=Sy/MbZWDugfx+hLuGadURV3A7IGRDoaJHRvk7phs09w=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=x7m7Ol/4MJa/gZKf5C5quH5Sa+jMl9eqZl+4cOryYobQRZgqX8ILCcs24UcvGUDIW
+	 xeZ4/AEaLTIgf3Vo5Xbocx/lkqfaMTxHvJpi3GaiA8RmENBNoP4JjTs7izGe7a8nN6
+	 7UlXdZdQSJDM1H0AbqCWzMxo6Ex2jDChUbiQS/7I=
+Received: from [10.90.18.40] ([10.90.18.40])
+	by i-0c3f010f3bbfab270.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76429 r(msys-ecelerity:tags/5.3.0.18)) with REST
+	id 31/6C-50874-2DFF3BA6; Wed, 23 Sep 2026 16:35:30 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <31.6C.50874.2DFF3BA6@i-0c3f010f3bbfab270.mta1vrest.sd.prd.sparkpost>
+Date: Wed, 23 Sep 2026 16:35:30 +0000
+Content-Type: multipart/alternative; boundary="_----LX58rehoohmvwPOQMGFtfw===_5E/5C-50874-2DFF3BA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Supplier dates need a confidence score
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3AIcJN5xVgV6pKfYigT6AV340B-Y3rbJ0OEL1Pt_XX6xk~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJtZXNzYWdlX2lkIjogIjZhYjNkMmZmYjM2YTBkYzY0NjEzIiwgInN1YmFjY291bnRfaWQiOiAiMTAxMTciIH0~>,<https://unsubscribe.spmta.com/u/DC14XETNqpwi0xo13DtsXQ~~/AASgtxA~/3Muz-JPGBSzLz_zNIfhS4A9JXIcttvIrZhJNEXZe01jzNFrIOy1EsBbAlywso0bqdx68-gKUh8FgqFayX88w6g~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----LX58rehoohmvwPOQMGFtfw===_5E/5C-50874-2DFF3BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Not every promised delivery is equally trustworthy. Here's how to know whic=
+h ones are.=0ANot every promised delivery is equally trustworthy. Here's ho=
+w to know which=0Aones are.=0AMost planning systems store a supplier's prom=
+ised date as if every commitment=0Acarries the same reliability. Actual con=
+fidence varies by part, supplier, order=0Acondition, revision history, and =
+recent behavior. The shift is from planning=0Aaround one date to planning a=
+round the evidence behind that=0Adate.=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=0A=0A=C2=A0=0A=0ABy =
+Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://www.colonys=
+park.com]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=0A=0AISSUE #22 =C2=A0=
+=C2=B7=C2=A0 AUGUST 21, 2026=0A=0A=C2=A0=0A=0A=C2=A0=0A=0AHi ${first_name},=
+=0A=0AMost planning systems store a supplier's promised date as if every co=
+mmitment=0Acarries the same reliability. In reality, confidence varies by p=
+art, supplier,=0Aorder condition, revision history, and recent behavior. A =
+supplier who has moved=0Aa date twice, shipped partial three times, and tak=
+en five days to acknowledge=0Athe last purchase order is not the same risk =
+as a supplier who has never missed.=0A=0AThis issue is about the shift from=
+ planning around one date to planning around=0Athe evidence behind that dat=
+e. The data to build that evidence already exists in=0Ayour ERP and email l=
+ogs. The gap is the aggregation.=0A=0ABill=0A=0A=C2=A0=0A=0ATHE SHIFT=0A=0A=
+=0ASupplier Commit Dates Need a Confidence Score.=0A=0AEvery promised date =
+carries different reliability. Most planning systems treat=0Athem as equall=
+y solid.=0A=0ASupplier delivery performance is not improving. The ISM Manuf=
+acturing Supplier=0ADeliveries Index registered 58.9 in July 2026, up from =
+57.4 the prior month.=0AReadings above 50 indicate slower supplier deliveri=
+es, and the index has stayed=0Aelevated through the summer. At the same tim=
+e, 70% of organizations have had=0Abetween one and five critical suppliers =
+fail in the past 12 months, and 41% say=0Athey are one supplier failure awa=
+y from a supply chain crisis.=0A=0AThe problem is not that suppliers are be=
+coming less reliable. The problem is=0Athat most operators discover supplie=
+r failure only after it happens. 57% admit=0Athey are reacting to supplier =
+failure rather than anticipating it, even though=0A73% say they would like =
+to spot supplier distress earlier. The evidence to see=0Ait coming already =
+exists. It just lives in scattered form: acknowledgment=0Atimestamps, PO ch=
+ange logs, partial-shipment records, and informal follow-up=0Anotes that no=
+body aggregates into one signal.=0A=0AEvidence already in your system=0A=0A=
+=C2=B7 Organizations take 25 days on average to identify and onboard a repl=
+acement=0Asupplier, and 74% are exposed to shortages or operational disrupt=
+ion during that=0Awindow. The cost is not just the disruption. It is all th=
+e customer promises=0Athat were made on top of dates that should not have b=
+een trusted.=0A=0A=C2=B7 76% of organizations still rely on manual processe=
+s for supplier due diligence=0Aand risk checks, and 58% say their reliance =
+on spreadsheets exposes them to=0Ahuman error. Most never extract the suppl=
+ier-reliability signals that are=0Aalready sitting in acknowledgment logs a=
+nd PO histories.=0A=0A=C2=B7 Reliability now outweighs speed in keeping cus=
+tomers. Retail delivery leaders=0Asay: "It's when you're not reliable is wh=
+en we're going to lose our customers."=0AA 2024 McKinsey consumer survey fo=
+und shoppers rank arriving within the promised=0Awindow above speed, with s=
+peed falling from the top delivery priority in 2022 to=0Afifth in 2024. Ind=
+ustrial buyers expect the same discipline from their own=0Asuppliers.=0A=0A=
+The operating environment is getting less predictable. The tools to see it=
+=0Acoming already exist in scattered form. The operators who assemble that =
+evidence=0Afirst get to act before a date slips instead of scrambling after=
+ it breaks.=0A=0AThe promised date is not a fact. It is the output of a pro=
+cess that has its own=0Atrack record, and that track record is knowable bef=
+ore the date is missed.=0A=0A=C2=A0=0A=0AFROM THE FLOOR=0A=0A=0AEvery order=
+ is now a rush order.=0A=0AAaron Bradley, VP of Sales & Compliance, Terry T=
+own, on the cost of broken=0Adelivery trust=0A=0A"The way this industry mov=
+es now, every order is a rush order. Once someone=0Aloses trust in that com=
+munication or delivery time, the customer won't come=0Aback."=0A=0AAaron Br=
+adley=0A=0AVP of Sales & Compliance, Terry Town =C2=A0=C2=B7=C2=A0 ASI Coun=
+selor, August 3, 2026=0A[https://members.asicentral.com/news/strategy/july-=
+2026/counselor-state-of-the-industry-2026-becoming-indispensable-to-distrib=
+utors/]=0A=0AThat is exactly the blind spot the confidence score below is b=
+uilt to close. The=0Amoment a customer loses trust in a delivery promise is=
+ the moment they start=0Alooking at a competitor. Seeing which promises are=
+ already at risk before the=0Atrust is spent is the difference between acti=
+ng as a supplier and reacting as a=0Avendor.=0A=0AThe takeaway=0A=0AThe ope=
+rators winning on customer retention are not the ones with the best=0Aforec=
+asts. They are the ones who spot which supplier commitments are already at=
+=0Arisk before the customer discovers it through a missed shipment.=0A=0A=
+=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Supplier Commit-Confidence Board.=0A=0AOn=
+e score per open commitment. A weekly view of which dates deserve trust.=0A=
+=0AA ranked list that tells the planner which dates to buffer, which to mon=
+itor,=0Aand which to escalate now instead of after the date slips.=0A=0AEve=
+ry open purchase order carries a promised date, and every promised date get=
+s=0Aplanned against as if it were equally solid. It never is. Some supplier=
+s move=0Adates the moment a PO is placed. Others acknowledge late, ship par=
+tial, or have=0Aa track record that quietly degrades on exactly the part fa=
+milies that matter=0Amost.=0A=0AThe Supplier Commit-Confidence Board turns =
+that scattered evidence into one=0Ascore per open commitment. It does not r=
+eplace the ERP or the supplier portal.=0AIt reads from them and produces a =
+weekly view that tells the planner which dates=0Ato trust, which to buffer,=
+ and which to escalate now instead of after the date=0Aslips.=0A=0AWhat goe=
+s into it=0A=0ACreate one row for every open PO line with a promised delive=
+ry date. Each row=0Acaptures:=0A=0A=C2=B7 Supplier and part. Supplier name,=
+ part number or part family, and criticality=0Atier (single-source, long le=
+ad-time, safety-related, or readily available with=0Abackup).=0A=0A=C2=B7 P=
+romised date. The current committed date as it stands today, and the origin=
+al=0Adate first committed at PO placement.=0A=0A=C2=B7 Acknowledgment lag. =
+Days between PO issuance and supplier acknowledgment. Late=0Aor missing ack=
+nowledgment is an early confidence signal, before any date has=0Amoved.=0A=
+=0A=C2=B7 Date-change count. How many times this line's promised date has m=
+oved since=0Athe PO was placed, and the direction and size of each change.=
+=0A=0A=C2=B7 Partial-shipment history. Whether this supplier has shipped pa=
+rtial against=0Acomparable orders in the last 6-12 months, and how often a =
+partial shipment=0Apreceded a final delay.=0A=0A=C2=B7 Recent on-time rate.=
+ This supplier's on-time percentage over the trailing 90=0Aand 365 days, we=
+ighted toward the same part family when volume allows.=0A=0A=C2=B7 Order co=
+ndition flags. Rush order, first order with this supplier, order=0Aplaced d=
+uring a known constraint, or unusually large quantity relative to=0Asupplie=
+r's typical run size.=0A=0A=C2=B7 Confidence score. A single 1-100 score bu=
+ilt from the fields above, weighted=0Aby part criticality so a low score on=
+ a single-source critical part surfaces=0Aabove a low score on a readily av=
+ailable commodity part.=0A=0A=C2=B7 Recommended action. Hold, monitor, cont=
+act supplier, expedite alternate=0Asourcing, or escalate to customer commun=
+ication.=0A=0AThe scoring logic=0A=0AKeep the scoring transparent enough th=
+at a planner can explain any score in one=0Asentence. Start every commitmen=
+t at a baseline score tied to that supplier's=0Atrailing on-time rate. Subt=
+ract points for acknowledgment lag beyond the=0Asupplier's typical response=
+ time. Subtract points for each date change, with=0Alater changes (closer t=
+o the promised date) weighted more heavily than early=0Achanges. Subtract p=
+oints if a partial shipment has already occurred on this line=0Aor is a doc=
+umented pattern for this supplier. Multiply the resulting score by a=0Acrit=
+icality weight so single-source and safety-related parts surface first=0Are=
+gardless of raw score. Do not let the score replace judgment. It ranks=0Aat=
+tention, it does not auto-generate customer promises.=0A=0ASupplier / Part=
+=0A=0ACriticality=0A=0APromised (Current / Original)=0A=0AAck Lag=0A=0ADate=
+ Changes=0A=0AScore=0A=0AAction=0A=0ASupplier A / Single-source bearing=0A=
+=0ACritical=0A=0ASep 12 / Aug 28=0A=0A6 days=0A=0A2=0A=0A34=0A=0AContact su=
+pplier, begin alternate check=0A=0ASupplier B / Standard fastener=0A=0ALow=
+=0A=0ASep 3 / Sep 3=0A=0ASame day=0A=0A0=0A=0A91=0A=0AHold, no action=0A=0A=
+Supplier C / Custom weldment=0A=0AHigh=0A=0ASep 20 / Sep 5=0A=0A4 days=0A=
+=0A3, partial shipped=0A=0A41=0A=0AEscalate, flag customer=0A=0ASupplier D =
+/ Commodity resin=0A=0AMedium=0A=0AAug 29 / Aug 25=0A=0A2 days=0A=0A1=0A=0A=
+68=0A=0AMonitor=0A=0AWhat the weekly output looks like=0A=0AEvery Monday, t=
+he planner receives one view with four blocks: a confidence heat=0Amap with=
+ every open commitment sorted by score (lowest confidence and highest=0Acri=
+ticality at the top); a movers list showing any commitment whose score=0Adr=
+opped since last week and the specific field that changed; customer exposur=
+e=0Aflagging which low-confidence commitments feed a specific customer prom=
+ise; and=0Arecommended actions listing the three to five commitments that n=
+eed a supplier=0Acall, an alternate-sourcing check, or a proactive customer=
+ conversation this=0Aweek.=0A=0AOperating rhythm=0A=0ADaily: Automated fiel=
+ds (acknowledgment status, date changes, partial-shipment=0Aflags) update f=
+rom ERP and supplier-portal data without manual entry.=0A=0AMonday: Planner=
+ reviews the confidence heat map and movers list in a focused=0A15-20 minut=
+e session, not a full PO-by-PO review.=0A=0AMidweek: Any commitment that dr=
+ops below a defined threshold triggers an=0Aimmediate supplier contact or c=
+ustomer-facing heads-up, not a wait for Friday.=0A=0AMonthly: Compare predi=
+cted low-confidence commitments against what actually=0Aslipped. Use the mi=
+ss rate to retune the scoring weights.=0A=0AQuarterly: Review supplier-leve=
+l trends. A supplier whose average confidence=0Ascore is declining across m=
+ultiple parts is a sourcing conversation, not just a=0Aplanning adjustment.=
+=0A=0ABuild guardrails=0A=0A=C2=B7 Score the commitment, not the supplier r=
+elationship. A good supplier can still=0Ahave a low-confidence line on a sp=
+ecific constrained part.=0A=0A=C2=B7 Keep the scoring logic visible to the =
+planner. A black-box score that can't be=0Aexplained in one sentence will g=
+et ignored the first time it's wrong.=0A=0A=C2=B7 Weight by criticality fir=
+st. A perfect score on a commodity part matters less=0Athan a mediocre scor=
+e on a single-source part.=0A=0A=C2=B7 Do not auto-communicate to customers=
+. The score informs a human decision about=0Awhen and how to raise exposur=
+e, it does not trigger the message itself.=0A=0A=C2=B7 Feed it from data yo=
+u already have. Acknowledgment timestamps, PO change logs,=0Aand shipment r=
+ecords already exist in most ERPs. This is an aggregation and=0Aweighting l=
+ayer, not a new data-capture burden.=0A=0A=C2=B7 Retune quarterly. Supplier=
+ behavior changes. A scoring model that never gets=0Achecked against actual=
+ outcomes becomes another number nobody trusts.=0A=0AWhat the operator gets=
+ every week=0A=0A=C2=B7 A ranked view of which promised dates deserve trust=
+ and which deserve a=0Abuffer.=0A=0A=C2=B7 Early visibility into suppliers =
+whose reliability is quietly declining, before=0Aa single missed date makes=
+ it obvious.=0A=0A=C2=B7 A clear reason to start an alternate-sourcing or c=
+ustomer conversation before=0Athe date slips, not after.=0A=0A=C2=B7 Less t=
+ime spent manually re-checking every open PO and more time spent on the=0Ah=
+andful that actually matter.=0A=0A=C2=B7 A record of which planning assumpt=
+ions were wrong, so the model gets sharper=0Aevery cycle.=0A=0ABuild paths=
+=0A=0APath 1. Internal build=0A=0AStart with a spreadsheet or Airtable base=
+ pulling the fields above from your ERP=0Aexport: promised date, original d=
+ate, acknowledgment timestamp, date-change=0Ahistory, and partial-shipment =
+flags. Assign a criticality tier to your top=0A50-100 parts by hand. Build =
+a simple weighted score, even a basic=0Apoint-deduction model, and sort by =
+score every Monday. Track your miss rate for=0Aone quarter before trusting =
+the score to drive customer conversations.=0A=0APath 2. ERP or partner path=
+=0A=0AAsk your ERP provider or systems integrator whether commit-date histo=
+ry,=0Aacknowledgment timestamps, and partial-shipment data are already capt=
+ured and=0Aexportable. Most are, they're just never aggregated into a singl=
+e view. The=0Adeliverable should include a per-line confidence score, a cri=
+ticality weighting=0Ascheme, a weekly ranked view, and change-tracking so a=
+ planner can see exactly=0Awhy a score moved. The partner should leave the =
+operating team owning the weekly=0Areview, not another dashboard that requi=
+res a login nobody remembers.=0A=0ABuild the confidence layer before the ne=
+xt missed date tells you it was already=0Athere to see.=0A=0A=C2=A0=0A=0ATH=
+E OPERATIONS BRIEF=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony=
+ Spark [https://www.colonyspark.com]=0A=0AWatching supplier promises slip a=
+nd scrambling to explain why, or already=0Abuilding a confidence layer to s=
+pot the risk early=3F Hit reply, I read every one.=0ABill=0A=0AYou're recei=
+ving this because you subscribed to The Operations Brief.=0AUnsubscribe [[[=
+custom:unsubscribe]]]
+--_----LX58rehoohmvwPOQMGFtfw===_5E/5C-50874-2DFF3BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head> <style></style> =0A<meta charset=3D"UTF-8">=0A<meta =
+name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A=
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D=
+"x-apple-disable-message-reformatting">=0A<meta name=3D"format-detection" c=
+ontent=3D"telephone=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<me=
+ta name=3D"color-scheme" content=3D"light only">=0A<meta name=3D"supported-=
+color-schemes" content=3D"light only">=0A<title>The Operations Brief &#x201=
+4; Issue #22</title>=0A<!--[if mso]>=0A<xml><o:OfficeDocumentSettings><o:Pi=
+xelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></x=
+ml>=0A<style type=3D"text/css">=0Atable, td, th {border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;}=0Atd, p, a, span, div, h1, =
+h2, h3 {mso-line-height-rule: exactly;}=0Abody, table, td, p, a, h1, h2, h3=
+ {font-family: 'Segoe UI', Arial, sans-serif !important;}=0A</style>=0A<![e=
+ndif]-->=0A</head>=0A<body bgcolor=3D"#f4f2ef" style=3D"margin:0;padding:0;=
+width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-=
+size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" cl=
+ass=3D"bodyClass"><span style=3D"display:none">Not every promised delivery =
+is equally trustworthy. Here&apos;s how to know which ones are.</span>=0A<d=
+iv style=3D"display:none;max-height:0;overflow:hidden;font-size:1px;line-he=
+ight:1px;color:#f4f2ef;mso-hide:all;">Most planning systems store a supplie=
+r&apos;s promised date as if every commitment carries the same reliability.=
+ Actual confidence varies by part, supplier, order condition, revision hist=
+ory, and recent behavior. The shift is from planning around one date to pla=
+nning around the evidence behind that date.&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&=
+#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;=
+&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x20=
+0C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;</div>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0" width=3D"100%" bgcolor=3D"#f4f2ef" style=3D"background-color:=
+#f4f2ef;width:100%;">=0A<tbody><tr>=0A<td align=3D"center" valign=3D"top" s=
+tyle=3D"padding:24px 16px;">=0A<table role=3D"presentation" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0" width=3D"600" align=3D"center" style=3D"m=
+ax-width:600px;width:100%;">=0A<tbody><tr>=0A<td>=0A<table role=3D"presenta=
+tion" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<t=
+body><tr><td height=3D"5" bgcolor=3D"#C8392A" style=3D"background-color:#C8=
+392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0=
+;</td></tr>=0A<tr>=0A<td align=3D"center" bgcolor=3D"#1a1a1a" style=3D"back=
+ground-color:#1a1a1a;padding:36px 40px 28px 40px;">=0A<table role=3D"presen=
+tation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A=
+<tbody><tr><td align=3D"center" style=3D"padding-bottom:20px;"><p style=3D"=
+margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spa=
+cing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB=
+7;&#xA0; Powered by <a href=3D"https://www.colonyspark.com" style=3D"color:=
+#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>=0A<tr><td ali=
+gn=3D"center"><h1 style=3D"margin:0;padding:0;font-family:-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font=
+-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-transform:=
+uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br=
+>BRIEF</h1></td></tr>=0A<tr><td align=3D"center" style=3D"padding-top:14px;=
+"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0"><tbody><tr><td width=3D"48" height=3D"2" bgcolor=3D"#C8392A" style=
+=3D"background-color:#C8392A;width:48px;height:2px;font-size:0;line-height:=
+0;">&#xA0;</td></tr></tbody></table></td></tr>=0A<tr><td align=3D"center" s=
+tyle=3D"padding-top:12px;"><p style=3D"margin:0;font-family:-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transfor=
+m:uppercase;">ISSUE #22 &#xA0;&#xB7;&#xA0; AUGUST 21, 2026</p></td></tr>=0A=
+</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"3" bgcolor=3D"#C8392A"=
+ style=3D"background-color:#C8392A;height:3px;font-size:0;line-height:0;">&=
+#xA0;</td></tr>=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"8" s=
+tyle=3D"height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=0A<t=
+d bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;border-radius:8px;p=
+adding:32px 40px;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkM=
+acSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-si=
+ze:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Hi ${=
+first_name},</p>=0A<p style=3D"margin:12px 0 0;font-family:-apple-system,Bl=
+inkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fon=
+t-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">M=
+ost planning systems store a supplier&apos;s promised date as if every comm=
+itment carries the same reliability. In reality, confidence varies by part,=
+ supplier, order condition, revision history, and recent behavior. A suppli=
+er who has moved a date twice, shipped partial three times, and taken five =
+days to acknowledge the last purchase order is not the same risk as a suppl=
+ier who has never missed.</p>=0A<p style=3D"margin:12px 0 0;font-family:-ap=
+ple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,s=
+ans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rul=
+e:exactly;">This issue is about the shift from planning around one date to =
+planning around the evidence behind that date. The data to build that evide=
+nce already exists in your ERP and email logs. The gap is the aggregation.<=
+/p>=0A<p style=3D"margin:18px 0 0;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;l=
+ine-height:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>=0A</t=
+d>=0A</tr>=0A<tr><td height=3D"8" style=3D"height:8px;font-size:0;line-heig=
+ht:0;">&#xA0;</td></tr>=0A<tr>=0A<td bgcolor=3D"#ffffff" style=3D"backgroun=
+d-color:#ffffff;border-radius:8px;">=0A<table role=3D"presentation" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr><td =
+bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;padding:18px 40px;"><=
+p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700=
+;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p><=
+/td></tr>=0A</tbody></table>=0A<table role=3D"presentation" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A<td style=
+=3D"padding:32px 40px 36px;">=0A<h2 style=3D"margin:0 0 8px;font-family:-ap=
+ple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,s=
+ans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso=
+-line-height-rule:exactly;">Supplier Commit Dates Need a Confidence Score.<=
+/h2>=0A<p style=3D"margin:0 0 20px;font-family:-apple-system,BlinkMacSystem=
+Font,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;=
+font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase=
+;line-height:18px;mso-line-height-rule:exactly;">Every promised date carrie=
+s different reliability. Most planning systems treat them as equally solid.=
+</p>=0A<p style=3D"margin:0 0 16px;font-family:-apple-system,BlinkMacSystem=
+Font,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;=
+line-height:26px;color:#444444;mso-line-height-rule:exactly;">Supplier deli=
+very performance is not improving. The ISM Manufacturing Supplier Deliverie=
+s Index registered 58.9 in July 2026, up from 57.4 the prior month. Reading=
+s above 50 indicate slower supplier deliveries, and the index has stayed el=
+evated through the summer. At the same time, 70% of organizations have had =
+between one and five critical suppliers fail in the past 12 months, and 41%=
+ say they are one supplier failure away from a supply chain crisis.</p>=0A<=
+p style=3D"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-hei=
+ght:26px;color:#444444;mso-line-height-rule:exactly;">The problem is not th=
+at suppliers are becoming less reliable. The problem is that most operators=
+ discover supplier failure only after it happens. 57% admit they are reacti=
+ng to supplier failure rather than anticipating it, even though 73% say the=
+y would like to spot supplier distress earlier. The evidence to see it comi=
+ng already exists. It just lives in scattered form: acknowledgment timestam=
+ps, PO change logs, partial-shipment records, and informal follow-up notes =
+that nobody aggregates into one signal.</p>=0A<table role=3D"presentation" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"ma=
+rgin:0 0 24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:2=
+0px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C=
+8392A;">=0A<p style=3D"margin:0 0 12px;font-family:-apple-system,BlinkMacSy=
+stemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:1=
+1px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:upperca=
+se;line-height:16px;mso-line-height-rule:exactly;">Evidence already in your=
+ system</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7;=
+ <strong style=3D"color:#1a1a1a;">Organizations take 25 days on average to =
+identify and onboard a replacement supplier</strong>, and 74% are exposed t=
+o shortages or operational disruption during that window. The cost is not j=
+ust the disruption. It is all the customer promises that were made on top o=
+f dates that should not have been trusted.</p>=0A<p style=3D"margin:0 0 10p=
+x;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,=
+Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;ms=
+o-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a;">76% of=
+ organizations still rely on manual processes for supplier due diligence an=
+d risk checks</strong>, and 58% say their reliance on spreadsheets exposes =
+them to human error. Most never extract the supplier-reliability signals th=
+at are already sitting in acknowledgment logs and PO histories.</p>=0A<p st=
+yle=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI=
+&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;co=
+lor:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1=
+a1a1a;">Reliability now outweighs speed in keeping customers.</strong> Reta=
+il delivery leaders say: &quot;It&apos;s when you&apos;re not reliable is w=
+hen we&apos;re going to lose our customers.&quot; A 2024 McKinsey consumer =
+survey found shoppers rank arriving within the promised window above speed,=
+ with speed falling from the top delivery priority in 2022 to fifth in 2024=
+. Industrial buyers expect the same discipline from their own suppliers.</=
+p>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 24px;font-fa=
+mily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica=
+,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-he=
+ight-rule:exactly;">The operating environment is getting less predictable. =
+The tools to see it coming already exist in scattered form. The operators w=
+ho assemble that evidence first get to act before a date slips instead of s=
+crambling after it breaks.</p>=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom=
+:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"border-left:3px s=
+olid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px=
+ 6px 0;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;li=
+ne-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-hei=
+ght-rule:exactly;">The promised date is not a fact. It is the output of a p=
+rocess that has its own track record, and that track record is knowable bef=
+ore the date is missed.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A</td>=0A</=
+tr>=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"8" style=3D"heig=
+ht:8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=0A<td bgcolor=3D=
+"#ffffff" style=3D"background-color:#ffffff;border-radius:8px;">=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%">=0A<tbody><tr><td bgcolor=3D"#1a1a1a" style=3D"background-color:#=
+1a1a1a;padding:18px 40px;"><p style=3D"margin:0;font-family:-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transfor=
+m:uppercase;">FROM THE FLOOR</p></td></tr>=0A</tbody></table>=0A<table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D=
+"100%">=0A<tbody><tr>=0A<td style=3D"padding:32px 40px 36px;">=0A<h2 style=
+=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;=
+color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Every order i=
+s now a rush order.</h2>=0A<p style=3D"margin:0 0 20px;font-family:-apple-s=
+ystem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-s=
+erif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text=
+-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Aaron =
+Bradley, VP of Sales & Compliance, Terry Town, on the cost of broken delive=
+ry trust</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody>=
+<tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"background-color:#fdf6f5;border-rad=
+ius:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">=0A<p style=
+=3D"margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27p=
+x;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exac=
+tly;">&quot;The way this industry moves now, every order is a rush order. O=
+nce someone loses trust in that communication or delivery time, the custome=
+r won&apos;t come back.&quot;</p>=0A<table role=3D"presentation" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A<td>=
+=0A<p style=3D"margin:0 0 1px;font-family:-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-=
+weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;">Aa=
+ron Bradley</p>=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSy=
+stemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:1=
+2px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">VP of Sal=
+es & Compliance, Terry Town &#xA0;&#xB7;&#xA0; <a href=3D"https://members.a=
+sicentral.com/news/strategy/july-2026/counselor-state-of-the-industry-2026-=
+becoming-indispensable-to-distributors/" style=3D"color:#C8392A;text-decora=
+tion:none;">ASI Counselor, August 3, 2026</a></p>=0A</td>=0A</tr>=0A</tbody=
+></table>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 24px;=
+font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,He=
+lvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-=
+line-height-rule:exactly;">That is exactly the blind spot the confidence sc=
+ore below is built to close. The moment a customer loses trust in a deliver=
+y promise is the moment they start looking at a competitor. Seeing which pr=
+omises are already at risk before the trust is spent is the difference betw=
+een acting as a supplier and reacting as a vendor.</p>=0A<table role=3D"pre=
+sentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=
+=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:18px 22px;backgro=
+und-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">=0A<p st=
+yle=3D"margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:8=
+00;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16=
+px;mso-line-height-rule:exactly;">The takeaway</p>=0A<p style=3D"margin:0;f=
+ont-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Hel=
+vetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-l=
+ine-height-rule:exactly;">The operators winning on customer retention are n=
+ot the ones with the best forecasts. They are the ones who spot which suppl=
+ier commitments are already at risk before the customer discovers it throug=
+h a missed shipment.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A</td>=0A</tr>=
+=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"8" style=3D"height:=
+8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=0A<td bgcolor=3D"#f=
+fffff" style=3D"background-color:#ffffff;border-radius:8px;">=0A<table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D=
+"100%">=0A<tbody><tr><td bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1=
+a1a;padding:18px 40px;"><p style=3D"margin:0;font-family:-apple-system,Blin=
+kMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-=
+size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:u=
+ppercase;">THE STACK</p></td></tr>=0A</tbody></table>=0A<table role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=
+=0A<tbody><tr>=0A<td style=3D"padding:32px 40px 36px;">=0A<h2 style=3D"marg=
+in:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1=
+a1a1a;line-height:30px;mso-line-height-rule:exactly;">The Supplier Commit-C=
+onfidence Board.</h2>=0A<p style=3D"margin:0 0 8px;font-family:-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-tra=
+nsform:uppercase;line-height:18px;mso-line-height-rule:exactly;">One score =
+per open commitment. A weekly view of which dates deserve trust.</p>=0A<p s=
+tyle=3D"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;=
+Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height=
+:22px;color:#888888;mso-line-height-rule:exactly;">A ranked list that tells=
+ the planner which dates to buffer, which to monitor, and which to escalate=
+ now instead of after the date slips.</p>=0A<p style=3D"margin:0 0 16px;fon=
+t-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helve=
+tica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-lin=
+e-height-rule:exactly;">Every open purchase order carries a promised date, =
+and every promised date gets planned against as if it were equally solid. I=
+t never is. Some suppliers move dates the moment a PO is placed. Others ack=
+nowledge late, ship partial, or have a track record that quietly degrades o=
+n exactly the part families that matter most.</p>=0A<p style=3D"margin:0 0 =
+28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444=
+;mso-line-height-rule:exactly;">The Supplier Commit-Confidence Board turns =
+that scattered evidence into one score per open commitment. It does not rep=
+lace the ERP or the supplier portal. It reads from them and produces a week=
+ly view that tells the planner which dates to trust, which to buffer, and w=
+hich to escalate now instead of after the date slips.</p>=0A<p style=3D"mar=
+gin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-=
+spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-lin=
+e-height-rule:exactly;">What goes into it</p>=0A<p style=3D"margin:0 0 16px=
+;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,H=
+elvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso=
+-line-height-rule:exactly;">Create one row for every open PO line with a pr=
+omised delivery date. Each row captures:</p>=0A<table role=3D"presentation"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"m=
+argin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"paddi=
+ng:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px soli=
+d #1a1a1a;">=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7;=
+ <strong style=3D"color:#1a1a1a;">Supplier and part.</strong> Supplier name=
+, part number or part family, and criticality tier (single-source, long lea=
+d-time, safety-related, or readily available with backup).</p>=0A<p style=
+=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px=
+;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color=
+:#1a1a1a;">Promised date.</strong> The current committed date as it stands =
+today, and the original date first committed at PO placement.</p>=0A<p styl=
+e=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24p=
+x;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"colo=
+r:#1a1a1a;">Acknowledgment lag.</strong> Days between PO issuance and suppl=
+ier acknowledgment. Late or missing acknowledgment is an early confidence s=
+ignal, before any date has moved.</p>=0A<p style=3D"margin:0 0 8px;font-fam=
+ily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,=
+Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-hei=
+ght-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a;">Date-change coun=
+t.</strong> How many times this line&apos;s promised date has moved since t=
+he PO was placed, and the direction and size of each change.</p>=0A<p style=
+=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px=
+;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color=
+:#1a1a1a;">Partial-shipment history.</strong> Whether this supplier has shi=
+pped partial against comparable orders in the last 6-12 months, and how oft=
+en a partial shipment preceded a final delay.</p>=0A<p style=3D"margin:0 0 =
+8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robot=
+o,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;=
+mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a;">Rece=
+nt on-time rate.</strong> This supplier&apos;s on-time percentage over the =
+trailing 90 and 365 days, weighted toward the same part family when volume =
+allows.</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMac=
+SystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size=
+:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; =
+<strong style=3D"color:#1a1a1a;">Order condition flags.</strong> Rush order=
+, first order with this supplier, order placed during a known constraint, o=
+r unusually large quantity relative to supplier&apos;s typical run size.</p=
+>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line=
+-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong st=
+yle=3D"color:#1a1a1a;">Confidence score.</strong> A single 1-100 score buil=
+t from the fields above, weighted by part criticality so a low score on a s=
+ingle-source critical part surfaces above a low score on a readily availabl=
+e commodity part.</p>=0A<p style=3D"margin:0;font-family:-apple-system,Blin=
+kMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-=
+size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#x=
+B7; <strong style=3D"color:#1a1a1a;">Recommended action.</strong> Hold, mon=
+itor, contact supplier, expedite alternate sourcing, or escalate to custome=
+r communication.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"margi=
+n:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-sp=
+acing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-=
+height-rule:exactly;">The scoring logic</p>=0A<p style=3D"margin:0 0 24px;f=
+ont-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Hel=
+vetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-l=
+ine-height-rule:exactly;">Keep the scoring transparent enough that a planne=
+r can explain any score in one sentence. Start every commitment at a baseli=
+ne score tied to that supplier&apos;s trailing on-time rate. Subtract point=
+s for acknowledgment lag beyond the supplier&apos;s typical response time. =
+Subtract points for each date change, with later changes (closer to the pro=
+mised date) weighted more heavily than early changes. Subtract points if a =
+partial shipment has already occurred on this line or is a documented patte=
+rn for this supplier. Multiply the resulting score by a criticality weight =
+so single-source and safety-related parts surface first regardless of raw s=
+core. Do not let the score replace judgment. It ranks attention, it does no=
+t auto-generate customer promises.</p>=0A<table role=3D"presentation" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-=
+bottom:24px; border-collapse:collapse;">=0A<tbody><tr>=0A<td bgcolor=3D"#1a=
+1a1a" style=3D"padding:14px 16px;background-color:#1a1a1a;border:1px solid =
+#333333;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font=
+-weight:800;color:#ffffff;text-transform:uppercase;line-height:16px;mso-lin=
+e-height-rule:exactly;">Supplier / Part</p></td>=0A<td bgcolor=3D"#1a1a1a" =
+style=3D"padding:14px 16px;background-color:#1a1a1a;border:1px solid #33333=
+3;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weigh=
+t:800;color:#ffffff;text-transform:uppercase;line-height:16px;mso-line-heig=
+ht-rule:exactly;">Criticality</p></td>=0A<td bgcolor=3D"#1a1a1a" style=3D"p=
+adding:14px 16px;background-color:#1a1a1a;border:1px solid #333333;"><p sty=
+le=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;colo=
+r:#ffffff;text-transform:uppercase;line-height:16px;mso-line-height-rule:ex=
+actly;">Promised (Current / Original)</p></td>=0A<td bgcolor=3D"#1a1a1a" st=
+yle=3D"padding:14px 16px;background-color:#1a1a1a;border:1px solid #333333;=
+"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:=
+800;color:#ffffff;text-transform:uppercase;line-height:16px;mso-line-height=
+-rule:exactly;">Ack Lag</p></td>=0A<td bgcolor=3D"#1a1a1a" style=3D"padding=
+:14px 16px;background-color:#1a1a1a;border:1px solid #333333;"><p style=3D"=
+margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;color:#fff=
+fff;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;=
+">Date Changes</p></td>=0A<td bgcolor=3D"#1a1a1a" style=3D"padding:14px 16p=
+x;background-color:#1a1a1a;border:1px solid #333333;"><p style=3D"margin:0;=
+font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,He=
+lvetica,Arial,sans-serif;font-size:12px;font-weight:800;color:#ffffff;text-=
+transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Score</=
+p></td>=0A<td bgcolor=3D"#1a1a1a" style=3D"padding:14px 16px;background-col=
+or:#1a1a1a;border:1px solid #333333;"><p style=3D"margin:0;font-family:-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:12px;font-weight:800;color:#ffffff;text-transform:upperc=
+ase;line-height:16px;mso-line-height-rule:exactly;">Action</p></td>=0A</tr>=
+=0A<tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;border:1px sol=
+id #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;c=
+olor:#555555;line-height:18px;mso-line-height-rule:exactly;">Supplier A / S=
+ingle-source bearing</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12=
+px 16px;border:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:13px;color:#555555;line-height:18px;mso-line-height-rule:ex=
+actly;">Critical</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 1=
+6px;border:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:13px;color:#555555;line-height:18px;mso-line-height-rule:exactl=
+y;">Sep 12 / Aug 28</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12p=
+x 16px;border:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-s=
+ystem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-s=
+erif;font-size:13px;color:#555555;line-height:18px;mso-line-height-rule:exa=
+ctly;">6 days</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px=
+;border:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,=
+BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;f=
+ont-size:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly;"=
+>2</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;border:1px=
+ solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSys=
+temFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13=
+px;color:#555555;line-height:18px;mso-line-height-rule:exactly;"><strong>34=
+</strong></p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;bor=
+der:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,Blin=
+kMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-=
+size:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly;">Con=
+tact supplier, begin alternate check</p></td>=0A</tr>=0A<tr>=0A<td bgcolor=
+=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=
+=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-hei=
+ght:18px;mso-line-height-rule:exactly;">Supplier B / Standard fastener</p><=
+/td>=0A<td bgcolor=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid =
+#eeeeee;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;colo=
+r:#555555;line-height:18px;mso-line-height-rule:exactly;">Low</p></td>=0A<t=
+d bgcolor=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"=
+><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555=
+;line-height:18px;mso-line-height-rule:exactly;">Sep 3 / Sep 3</p></td>=0A<=
+td bgcolor=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;=
+"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#55555=
+5;line-height:18px;mso-line-height-rule:exactly;">Same day</p></td>=0A<td b=
+gcolor=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p=
+ style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;li=
+ne-height:18px;mso-line-height-rule:exactly;">0</p></td>=0A<td bgcolor=3D"#=
+ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=3D"m=
+argin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,R=
+oboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-height:1=
+8px;mso-line-height-rule:exactly;"><strong>91</strong></p></td>=0A<td bgcol=
+or=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p sty=
+le=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-h=
+eight:18px;mso-line-height-rule:exactly;">Hold, no action</p></td>=0A</tr>=
+=0A<tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;border:1px sol=
+id #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;c=
+olor:#555555;line-height:18px;mso-line-height-rule:exactly;">Supplier C / C=
+ustom weldment</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16p=
+x;border:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly;=
+">High</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;border=
+:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly;">Sep 20=
+ / Sep 5</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;bord=
+er:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly;">4 da=
+ys</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;border:1px=
+ solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSys=
+temFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13=
+px;color:#555555;line-height:18px;mso-line-height-rule:exactly;">3, partial=
+ shipped</p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16px;bord=
+er:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly;"><str=
+ong>41</strong></p></td>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:12px 16=
+px;border:1px solid #eeeeee;"><p style=3D"margin:0;font-family:-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:13px;color:#555555;line-height:18px;mso-line-height-rule:exactly=
+;">Escalate, flag customer</p></td>=0A</tr>=0A<tr>=0A<td bgcolor=3D"#ffffff=
+" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=3D"margin:=
+0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,=
+Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-height:18px;ms=
+o-line-height-rule:exactly;">Supplier D / Commodity resin</p></td>=0A<td bg=
+color=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p =
+style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe =
+UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;lin=
+e-height:18px;mso-line-height-rule:exactly;">Medium</p></td>=0A<td bgcolor=
+=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=
+=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-hei=
+ght:18px;mso-line-height-rule:exactly;">Aug 29 / Aug 25</p></td>=0A<td bgco=
+lor=3D"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p st=
+yle=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI=
+&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-=
+height:18px;mso-line-height-rule:exactly;">2 days</p></td>=0A<td bgcolor=3D=
+"#ffffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=3D=
+"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-height=
+:18px;mso-line-height-rule:exactly;">1</p></td>=0A<td bgcolor=3D"#ffffff" s=
+tyle=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=3D"margin:0;f=
+ont-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Hel=
+vetica,Arial,sans-serif;font-size:13px;color:#555555;line-height:18px;mso-l=
+ine-height-rule:exactly;"><strong>68</strong></p></td>=0A<td bgcolor=3D"#ff=
+ffff" style=3D"padding:12px 16px;border:1px solid #eeeeee;"><p style=3D"mar=
+gin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Rob=
+oto,Helvetica,Arial,sans-serif;font-size:13px;color:#555555;line-height:18p=
+x;mso-line-height-rule:exactly;">Monitor</p></td>=0A</tr>=0A</tbody></table=
+>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font=
+-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-=
+height:18px;mso-line-height-rule:exactly;">What the weekly output looks lik=
+e</p>=0A<p style=3D"margin:0 0 16px;font-family:-apple-system,BlinkMacSyste=
+mFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px=
+;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Every Monday=
+, the planner receives one view with four blocks: a confidence heat map wit=
+h every open commitment sorted by score (lowest confidence and highest crit=
+icality at the top); a movers list showing any commitment whose score dropp=
+ed since last week and the specific field that changed; customer exposure f=
+lagging which low-confidence commitments feed a specific customer promise; =
+and recommended actions listing the three to five commitments that need a s=
+upplier call, an alternate-sourcing check, or a proactive customer conversa=
+tion this week.</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,=
+BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;f=
+ont-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transfo=
+rm:uppercase;line-height:18px;mso-line-height-rule:exactly;">Operating rhyt=
+hm</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" width=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<=
+td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px;background-color:#f9f9f9;=
+border-radius:6px;border-top:2px solid #1a1a1a;">=0A<p style=3D"margin:0 0 =
+10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555=
+;mso-line-height-rule:exactly;"><strong style=3D"color:#1a1a1a;">Daily:</st=
+rong> Automated fields (acknowledgment status, date changes, partial-shipme=
+nt flags) update from ERP and supplier-portal data without manual entry.</p=
+>=0A<p style=3D"margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;lin=
+e-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong style=3D=
+"color:#1a1a1a;">Monday:</strong> Planner reviews the confidence heat map a=
+nd movers list in a focused 15-20 minute session, not a full PO-by-PO revie=
+w.</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14p=
+x;line-height:24px;color:#555555;mso-line-height-rule:exactly;"><strong sty=
+le=3D"color:#1a1a1a;">Midweek:</strong> Any commitment that drops below a d=
+efined threshold triggers an immediate supplier contact or customer-facing =
+heads-up, not a wait for Friday.</p>=0A<p style=3D"margin:0 0 10px;font-fam=
+ily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,=
+Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-hei=
+ght-rule:exactly;"><strong style=3D"color:#1a1a1a;">Monthly:</strong> Compa=
+re predicted low-confidence commitments against what actually slipped. Use =
+the miss rate to retune the scoring weights.</p>=0A<p style=3D"margin:0;fon=
+t-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helve=
+tica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-lin=
+e-height-rule:exactly;"><strong style=3D"color:#1a1a1a;">Quarterly:</strong=
+> Review supplier-level trends. A supplier whose average confidence score i=
+s declining across multiple parts is a sourcing conversation, not just a pl=
+anning adjustment.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"mar=
+gin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-=
+spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-lin=
+e-height-rule:exactly;">Build guardrails</p>=0A<table role=3D"presentation"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"m=
+argin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"paddi=
+ng:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px soli=
+d #C8392A;">=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7;=
+ Score the commitment, not the supplier relationship. A good supplier can s=
+till have a low-confidence line on a specific constrained part.</p>=0A<p st=
+yle=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:2=
+4px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Keep the scoring lo=
+gic visible to the planner. A black-box score that can&apos;t be explained =
+in one sentence will get ignored the first time it&apos;s wrong.</p>=0A<p s=
+tyle=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:=
+24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Weight by critical=
+ity first. A perfect score on a commodity part matters less than a mediocre=
+ score on a single-source part.</p>=0A<p style=3D"margin:0 0 8px;font-famil=
+y:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ar=
+ial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-heigh=
+t-rule:exactly;">&#xB7; Do not auto-communicate to customers. The score inf=
+orms a human decision about when and how to raise exposure, it does not tri=
+gger the message itself.</p>=0A<p style=3D"margin:0 0 8px;font-family:-appl=
+e-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,san=
+s-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:=
+exactly;">&#xB7; Feed it from data you already have. Acknowledgment timesta=
+mps, PO change logs, and shipment records already exist in most ERPs. This =
+is an aggregation and weighting layer, not a new data-capture burden.</p>=
+=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;=
+Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height=
+:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Retune quarterly.=
+ Supplier behavior changes. A scoring model that never gets checked against=
+ actual outcomes becomes another number nobody trusts.</p>=0A</td>=0A</tr>=
+=0A</tbody></table>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,=
+BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;f=
+ont-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transfo=
+rm:uppercase;line-height:18px;mso-line-height-rule:exactly;">What the opera=
+tor gets every week</p>=0A<table role=3D"presentation" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24px;">=
+=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px;backgro=
+und-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">=0A<p st=
+yle=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:2=
+4px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A ranked view of wh=
+ich promised dates deserve trust and which deserve a buffer.</p>=0A<p style=
+=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px=
+;color:#555555;mso-line-height-rule:exactly;">&#xB7; Early visibility into =
+suppliers whose reliability is quietly declining, before a single missed da=
+te makes it obvious.</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple-sy=
+stem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-se=
+rif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exac=
+tly;">&#xB7; A clear reason to start an alternate-sourcing or customer conv=
+ersation before the date slips, not after.</p>=0A<p style=3D"margin:0 0 8px=
+;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,H=
+elvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso=
+-line-height-rule:exactly;">&#xB7; Less time spent manually re-checking eve=
+ry open PO and more time spent on the handful that actually matter.</p>=0A<=
+p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24p=
+x;color:#555555;mso-line-height-rule:exactly;">&#xB7; A record of which pla=
+nning assumptions were wrong, so the model gets sharper every cycle.</p>=0A=
+</td>=0A</tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 8px;font-family:-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial=
+,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A=
+;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">B=
+uild paths</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:14px;">=0A<tbody>=
+<tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px;background-color:=
+#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">=0A<p style=3D"ma=
+rgin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter=
+-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-li=
+ne-height-rule:exactly;">Path 1. Internal build</p>=0A<p style=3D"margin:0;=
+font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,He=
+lvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-=
+line-height-rule:exactly;">Start with a spreadsheet or Airtable base pullin=
+g the fields above from your ERP export: promised date, original date, ackn=
+owledgment timestamp, date-change history, and partial-shipment flags. Assi=
+gn a criticality tier to your top 50-100 parts by hand. Build a simple weig=
+hted score, even a basic point-deduction model, and sort by score every Mon=
+day. Track your miss rate for one quarter before trusting the score to driv=
+e customer conversations.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9=
+f9f9" style=3D"padding:20px 22px;background-color:#f9f9f9;border-radius:6px=
+;border-left:3px solid #C8392A;">=0A<p style=3D"margin:0 0 5px;font-family:=
+-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Aria=
+l,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392=
+A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">=
+Path 2. ERP or partner path</p>=0A<p style=3D"margin:0;font-family:-apple-s=
+ystem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-s=
+erif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exa=
+ctly;">Ask your ERP provider or systems integrator whether commit-date hist=
+ory, acknowledgment timestamps, and partial-shipment data are already captu=
+red and exportable. Most are, they&apos;re just never aggregated into a sin=
+gle view. The deliverable should include a per-line confidence score, a cri=
+ticality weighting scheme, a weekly ranked view, and change-tracking so a p=
+lanner can see exactly why a score moved. The partner should leave the oper=
+ating team owning the weekly review, not another dashboard that requires a =
+login nobody remembers.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<table rol=
+e=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%">=0A<tbody><tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"border-left:3px=
+ solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6=
+px 6px 0;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystem=
+Font,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;=
+line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-h=
+eight-rule:exactly;">Build the confidence layer before the next missed date=
+ tells you it was already there to see.</p>=0A</td>=0A</tr>=0A</tbody></tab=
+le>=0A</td>=0A</tr>=0A</tbody></table>=0A</td>=0A</tr>=0A<tr><td height=3D"=
+8" style=3D"height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<tr>=
+=0A<td bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;border-radius:=
+8px;padding:32px 40px;">=0A<table role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:20px;">=
+=0A<tbody><tr>=0A<td>=0A<p style=3D"margin:0 0 2px;font-family:-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-trans=
+form:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIO=
+NS BRIEF</p>=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSyste=
+mFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px=
+;color:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murp=
+hy &#xA0;&#xB7;&#xA0; Powered by <a href=3D"https://www.colonyspark.com" st=
+yle=3D"color:#C8392A;text-decoration:none;">Colony Spark</a></p>=0A</td>=0A=
+</tr>=0A</tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom:24px;">=
+=0A<tbody><tr>=0A<td bgcolor=3D"#222222" style=3D"background-color:#222222;=
+border-radius:6px;padding:16px 20px;">=0A<p style=3D"margin:0;font-family:-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-r=
+ule:exactly;">Watching supplier promises slip and scrambling to explain why=
+, or already building a confidence layer to spot the risk early=3F Hit repl=
+y, I read every one. Bill</p>=0A</td>=0A</tr>=0A</tbody></table>=0A<p style=
+=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color=
+:#555555;text-align:center;mso-line-height-rule:exactly;">You&apos;re recei=
+ving this because you subscribed to The Operations Brief.<br><a href=3D"[[c=
+ustom:unsubscribe]]" style=3D"color:#C8392A;text-decoration:underline;">Uns=
+ubscribe</a></p>=0A</td>=0A</tr>=0A<tr><td height=3D"24" style=3D"height:24=
+px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A</tbody></table>=0A</td>=
+=0A</tr>=0A</tbody></table>=0A=0A<img src=3D"https://trk.ebitcommweekly.com=
+/opens=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&type=3Dhtml&info=3Dey=
+JhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEt=
+OGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1Mzc=
+tZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMTgxMzMwfQ.73_aNFehdHTcE22f6oxaQ5xt8QNZ8KU=
+nGw0MM2THaVU" height=3D"1px" width=3D"1px"><table width=3D"100%" align=3D"c=
+enter"><tbody><tr><td width=3D"100%" align=3D"center">=0A        <a style=
+=3D"margin-left: auto; margin-right: auto; color: grey; font-size: 10px; te=
+xt-decoration: underline;" href=3D"https://trk.ebitcommweekly.com/unsubscri=
+bes=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&info=3DeyJhbGciOiJIUzI1N=
+iIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTV=
+hN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YT=
+ljIiwiaWF0IjoxNzkwMTgxMzMwfQ.73_aNFehdHTcE22f6oxaQ5xt8QNZ8KUnGw0MM2THaVU&ty=
+pe=3Dhtml">Click here to unsubscribe</a>=0A        </td></tr></tbody></tabl=
+e></body></html>
+--_----LX58rehoohmvwPOQMGFtfw===_5E/5C-50874-2DFF3BA6--
+

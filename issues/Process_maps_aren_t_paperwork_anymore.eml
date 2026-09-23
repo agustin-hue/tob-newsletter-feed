@@ -1,0 +1,536 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:4611:b0:1e7:9e60:6b22 with SMTP id w17csp277723rdc;
+        Fri, 4 Sep 2026 09:04:11 -0700 (PDT)
+X-Received: by 2002:a05:6a21:7a91:b0:3d0:e034:a26f with SMTP id adf61e73a8af0-3da3a0a6f2fmr12520628637.17.1788537850741;
+        Fri, 04 Sep 2026 09:04:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1788537850; cv=none;
+        d=google.com; s=arc-20260327;
+        b=X/9nI0NmdUS6Uv0ytWPZmJOiatvDG5vBVLSSsAwkMU+4qV992hF5b+yoxqKYr8h/1y
+         4+NDB0EnFYzkZaEPliuh6IGDV7I8FwxrfHdKxlJbmdNhN5XNfbekDtO9W4rIyz8tnp03
+         zbM54yp2YG0N8cnrv+hF57/lp8JEf1ampozxRupylqer/hsqSiYy/JYGsfpiKGp5Pvhx
+         OVQNtFQKkHWGtsCkiga0F8Y3Fb4bNKnHfzygDucVYjH4HQ4OaSlT/OtcMyW4rjq/X20t
+         wUXDVGCPvX1JLFp/EfvTM/bAG3tl/uagBJTemxvnyXwDIo2M0+rxjMlEc1b0NUNUNl6B
+         ZPOg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=KrkNWB6gjF9XCbMXVe784o0tJmAtsHw0j+D3qu+f/qM=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=B7TR8ATydblgBfrve6rn+EbpKTP8UzYnptXvL00Uue2Nh7bEYuaXKOoKBBD2D9dokv
+         Br0QnOCb4NwZpS7QPcZC0AAOKGa8Rn6siTzDQkBkOZuhICjvfYxEgCUMYxxf3sxcFCFy
+         odZcC+N7bqxU2IZ/zcXTlPwlNyqxZycKd4eUuuKrKKBDmWCNfpNZQtR/tKKkxMNjDq+m
+         HB0E/k8qX7uOH18dRNPUh7aks+mJT40B4quBA1ZIKL3++JuP+KlEOT4rpos+S/X3jT26
+         M0Eb5+/lrIzs1SWFaAmpyNmBixYTWl5hKha5fxGqhs6kAchHmzIUy8GsIbfhY3tXZQ6M
+         qQQA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b="E/Kx/Y8y";
+       spf=pass (google.com: domain of msprvs1=20707te7qn_pw=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20707te7qN_pw=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20707te7qN_pw=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-164.sparkpostmail.com (mta-203-49-164.sparkpostmail.com. [168.203.49.164])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-cc4555c7d25si5659358a12.241.2026.09.04.09.04.10
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 04 Sep 2026 09:04:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20707te7qn_pw=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) client-ip=168.203.49.164;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b="E/Kx/Y8y";
+       spf=pass (google.com: domain of msprvs1=20707te7qn_pw=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20707te7qN_pw=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: cXhvwMotJ2h3xYm8fV/2NfQcDvqRiNWx5orV8Ue8/3w=|eyJjdXN0b21lcl9pZCI
+	6IjMwMzI4NyIsInIiOiJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsIm1lc3NhZ2V
+	faWQiOiI2YTk5ZjllYjlhNmE5NzgwMTkyOSIsInRlbmFudF9pZCI6InNwYyIsInN
+	1YmFjY291bnRfaWQiOiIxMDExNyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1788537849;
+	i=@colonysparkweekly.com;
+	bh=KrkNWB6gjF9XCbMXVe784o0tJmAtsHw0j+D3qu+f/qM=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=E/Kx/Y8yj9zONG1XIoW5MZJJfj/U/5Zp5P792YvMIMxFqiuQzamUnk0dwdJ79EDPU
+	 LsxpD4AVkiFjhbij91ZsyzL0K5Yla5l8KDaLUbM0GJqpcBpFo/S76Ji987OcaZJ0qQ
+	 N/Xm/f+yOMci+SbvIUxFiEi/vJOi2PdSeF9nypCo=
+Received: from [10.90.2.203] ([10.90.2.203])
+	by i-079ddb0ea79c4f800.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76393 r(msys-ecelerity:tags/5.3.0.9)) with REST
+	id 92/91-07615-9FBEA9A6; Fri, 04 Sep 2026 16:04:09 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <92.91.07615.9FBEA9A6@i-079ddb0ea79c4f800.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 04 Sep 2026 16:04:09 +0000
+Content-Type: multipart/alternative; boundary="_----bOTcV5PWJlGBgRN6qHxhnQ===_BF/81-07615-9FBEA9A6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Process maps aren't paperwork anymore
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3AnHPJRSur_ykXVC3Xsy-L8OIevWvkPwR8aDkqTpCRBVo~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJzdWJhY2NvdW50X2lkIjogIjEwMTE3IiwgIm1lc3NhZ2VfaWQiOiAiNmE5OWY5ZWI5YTZhOTc4MDE5MjkiIH0~>,<https://unsubscribe.spmta.com/u/pGb_FspdNSp3s2OoCjlQEA~~/AASgtxA~/OvCUG9iVJxBRL65HAdI_5UtYgV79Z4BMI9Fs0Lc5qLgU_pcSVFFe1J5_MvF_qmVY-ubwMPkhXb8uAjGnFKIh0Q~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----bOTcV5PWJlGBgRN6qHxhnQ===_BF/81-07615-9FBEA9A6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+AI moves faster than organizations can agree on how work actually flows=0AA=
+I moves faster than organizations can agree on how work actually flows=0ATh=
+ree operators on the floor say the same thing: map the process first.=0A=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=0A=
+=0A=C2=A0=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [h=
+ttps://www.colonyspark.com/]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=0A=
+=0AISSUE #19 =C2=A0=C2=B7=C2=A0 SEPTEMBER 4, 2026=0A=0A=C2=A0=0A=0A=C2=A0=
+=0A=0AHi ${first_name},=0A=0AAI can generate an answer before the organizat=
+ion has agreed on the process that=0Amakes the answer useful. That gap is w=
+here most AI rollouts stall: not on the=0Amodel, but on work that has never=
+ been mapped, decided, or owned in writing.=0A=0AThis issue is about closin=
+g that gap: why process mapping is quietly becoming=0Apart of the infrastru=
+cture reliable AI depends on, what three operators told us=0Aon the floor a=
+bout where AI should and should not sit, and a working template=0Afor turni=
+ng a flowchart into a decision-ready map.=0A=0ABill=0A=0A=C2=A0=0A=0ATHE SH=
+IFT=0A=0A=0AProcess Maps Are Becoming AI Infrastructure.=0A=0AThe model is =
+not the constraint. The undocumented process is.=0A=0AMost AI conversations=
+ start with a model, a vendor, or a use case. The operators=0Amoving fastes=
+t right now are starting one step earlier: is the underlying=0Aprocess clea=
+r enough for a model to support it without amplifying the confusion=0Aalrea=
+dy built into it=3F=0A=0AThe hidden problem is not simply bad data. It is w=
+ork that exists as tribal=0Aknowledge spread across people, spreadsheets, s=
+ide systems, and local=0Aworkarounds. Two experienced employees can walk th=
+e same process and describe=0Atwo different versions of it, and both believ=
+e they are following the same one.=0APut an AI tool on top of that environm=
+ent and you get faster output, not shared=0Ajudgment.=0A=0AThe adoption gap=
+, by the numbers=0A=0A=C2=B7 34% of operations are already AI-augmented, bu=
+t only 43% of collected data is=0Aused effectively, per Rockwell Automation=
+'s 2026 State of Smart Manufacturing=0Asurvey of 1,560 manufacturing respon=
+dents across 17 countries. Read this as a=0Ascale signal, not a benchmark: =
+the study is vendor-sponsored and spans companies=0Afrom $100 million to mo=
+re than $30 billion in revenue (Rockwell Automation=0A[https://www.rockwell=
+automation.com/en-dk/company/news/press-releases/90-of-Manufacturers-Say-Di=
+gital-Transformation-Is-Now-Essential-According-to-New-Global-Study.html],=
+=0AMay 19, 2026).=0A=0A=C2=B7 The hard deployment problems are operational,=
+ not algorithmic. NIST's 2026=0Aroadmap for AI in smart manufacturing names=
+ effective data management,=0Aintegration with heterogeneous sensing and co=
+ntrol systems, and trustworthy,=0Aexplainable operation in high-stakes envi=
+ronments as the critical challenges=0A(NIST, 2026 Roadmap=0A[https://www.ni=
+st.gov/publications/2026-roadmap-artificial-intelligence-and-machine-learni=
+ng-smart-manufacturing]).=0A=0A=C2=B7 Industrial AI only has meaning inside=
+ a defined system and user context.=0ANIST's Industrial AI Management and M=
+etrology program says an AI application=0Ashould fulfill an explicit system=
+ need and stay bounded by the system's=0Acapabilities, and flags decision, =
+planning, and control work as needing clearer=0Astandard operating procedur=
+es (NIST Industrial AI Management and Metrology=0A[https://www.nist.gov/pro=
+grams-projects/industrial-artificial-intelligence-management-and-metrology-=
+iaimm]).=0A=0A=C2=B7 The operating context has to be documented before perf=
+ormance can be judged.=0ANIST's AI Risk Management Framework calls for team=
+s to define business value,=0Ausers, system requirements, the specific task=
+, model limits, human oversight,=0Aand deployment scope, with domain expert=
+s informing evaluation in the real=0Aoperating context (NIST AI RMF Core=0A=
+[https://airc.nist.gov/airmf-resources/airmf/5-sec-core/]).=0A=0AThe shift =
+is from mapping activities to mapping decisions. The next useful=0Aprocess =
+map shows which record is authoritative, what evidence a person needs,=0Awh=
+ich exception changes the route, who owns the decision, what happens when t=
+he=0Asystem is unavailable, and where AI is allowed to assist.=0A=0AIf two =
+experienced employees disagree about the source of truth, the exception=0Ao=
+wner, or the evidence of completion, the workflow is not ready for AI.=0A=
+=0ABefore an operator asks what AI can automate, the team has to answer a m=
+ore=0Abasic question: have we agreed on how the work actually moves=3F=0A=
+=0ASources: Rockwell Automation, May 2026; NIST 2026 Roadmap on AI and Mach=
+ine=0ALearning for Smart Manufacturing; NIST Industrial AI Management and M=
+etrology;=0ANIST AI Risk Management Framework Core.=0A=0A=C2=A0=0A=0AFROM T=
+HE FLOOR=0A=0A=0AHave We Mapped the Basics=3F=0A=0ALouis Balla, CRO and Par=
+tner at Nuage, on the back-to-basics test for AI=0Areadiness=0A=0ALouis Bal=
+la [https://www.linkedin.com/in/louis-balla] is CRO and Partner at=0ANuage =
+[https://www.nuagecg.com/about-us/], a consulting group working with=0Amanu=
+facturers and distributors on process and technology decisions. At The=0AOp=
+erations Brief's first roundtable in August, he pushed back on the instinct=
+ to=0Aadd AI before the basics are settled.=0A=0A=E2=80=9CHave we thought t=
+hrough our entire process, from design to build and order to=0Acash=3F Have=
+ we ironed out the basics=3F Have we even mapped them out=3F=E2=80=9D=0A=0A=
+Louis Balla=0A=0ACRO and Partner, Nuage [https://nuagecg.com] =C2=A0=C2=B7=
+=C2=A0 The Operations Brief Roundtable=0A#1, August 2026=0A[https://docs.go=
+ogle.com/document/d/1ZJBtVjgk98ONMXoEXs4YVqDHDxeijaJ81gyqjpHjBcw/edit]=0A=
+=0AEarlier in the same conversation, Louis drew the line that matters: a te=
+am can=0Agenerate a report in seconds and still struggle to synthesize it, =
+align=0Aleadership, maintain segregation of duties, and decide what action =
+follows.=0ARight after the quote above, he pointed to tribal knowledge and =
+missing process=0Adocumentation as the real barriers to moving AI through a=
+n organization, not the=0Atooling.=0A=0AThe takeaway=0A=0AA model can summa=
+rize a process it can see. It cannot settle a process the=0Aorganization ha=
+s never made explicit. The operating work is mapping the=0Adecisions, excep=
+tions, and ownership before asking technology to accelerate=0Athem.=0A=0AMo=
+re from the roundtable=0A=0A=C2=B7 Matt Gargas [https://www.linkedin.com/in=
+/mattgargas/] of RDT=0A[https://rdt.com]: =E2=80=9CBroad AI rollouts design=
+ed at the executive level often miss=0Athe day-to-day work. The useful scop=
+e emerges when leaders walk the floor and=0Atalk with managers, engineers, =
+operators, and quality staff about what should=0Aactually change.=E2=80=9D=
+=0A=0A=C2=B7 Robert Wyse [https://www.linkedin.com/in/robert-wyse-3aa20884/=
+] of=0AIndustronics Service Company [https://industronics.com/]: =E2=80=9CA=
+utomate the=0Alower-risk, repetitive work so people can focus their attenti=
+on on the=0Ahigher-risk decisions that cannot be allowed to slip.=E2=80=9D=
+=0A=0A=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Decision-Ready Process Map.=0A=0AA =
+working specification for where AI may assist, and where people still decid=
+e.=0A=0AOne document that turns a flowchart into an AI-readiness spec, befo=
+re the pilot=0Astarts.=0A=0AMost process maps show activities and handoffs:=
+ who does what, and where the=0Apaper or the ticket moves next. The Decisio=
+n-Ready Process Map adds the layer an=0AAI-supported workflow actually need=
+s: the source of truth, the decision being=0Amade, the exception that chang=
+es the route, the evidence required, the=0Aaccountable owner, and the bound=
+ary where human judgment has to stay in control.=0A=0AThe goal is not more =
+documentation. It is one place to answer four questions:=0Awhat is the deci=
+sion, what information is trusted, who owns the outcome, and=0Awhere could =
+AI help without moving responsibility away from the person=0Aaccountable fo=
+r the work.=0A=0AStart with one value stream where the pain is visible and =
+measurable:=0Aquote-to-order, order-to-cash, supplier exception handling, i=
+nventory=0Aprioritization, or quality disposition. Do not begin with an ent=
+erprise-wide=0Amap.=0A=0AWhat goes into the map=0A=0A=C2=B7 Trigger and out=
+come. What starts the process, and what business result proves=0Ait finishe=
+d correctly.=0A=0A=C2=B7 Actual steps and systems. What people really do, i=
+ncluding local spreadsheets,=0Ainboxes, sticky notes, and workarounds absen=
+t from the official procedure.=0A=0A=C2=B7 Source of truth. Which field, re=
+cord, or system is authoritative at each=0Acritical point.=0A=0A=C2=B7 Deci=
+sion and owner. What judgment is being made, who is accountable, and who=0A=
+has approval authority.=0A=0A=C2=B7 Required evidence. What the next person=
+ must see before accepting the decision=0Aor handoff.=0A=0A=C2=B7 Exception=
+s. What changes the normal route, who resolves it, where it=0Aescalates, an=
+d what happens if it is missed.=0A=0A=C2=B7 Risk and consequence. Which err=
+ors are reversible, and which affect safety,=0Aquality, customer commitment=
+s, cash, or compliance.=0A=0A=C2=B7 Potential AI role. Could a model retrie=
+ve, summarize, classify, detect,=0Apredict, recommend, or draft at this poi=
+nt.=0A=0A=C2=B7 Human boundary and fallback. What requires human confirmati=
+on, and how the=0Aprocess continues when the model or system is unavailable=
+.=0A=0A=C2=B7 Baseline. Current cycle time, queue age, rework, error rate,=
+ manual touches,=0Aand decision outcome.=0A=0AHow the team builds it=0A=0AE=
+ight steps, one bounded process=0A=0A1. Select one bounded workflow and nam=
+e its owner.=0A=0A2. Observe the real work with the people who perform it. =
+Record workarounds=0Ainstead of copying the SOP.=0A=0A3. Map the normal pat=
+h and the exceptions that change sequence, owner, evidence,=0Aor risk.=0A=
+=0A4. At every decision point, name the authoritative input, accountable pe=
+rson,=0Aallowed action, and required proof.=0A=0A5. Identify only the narro=
+w steps where AI may assist.=0A=0A6. Define the model's limit, the human re=
+view point, the escalation rule, and=0Athe non-AI fallback.=0A=0A7. Score w=
+hether the process is ready based on agreement, source authority,=0Aexcepti=
+on coverage, ownership, and an available baseline.=0A=0A8. Pilot the highes=
+t-readiness assistive step. Add newly discovered exceptions=0Ato the map be=
+fore expanding.=0A=0AWhat the operator gets=0A=0A=C2=B7 A current-state pro=
+cess and decision map.=0A=0A=C2=B7 A source-of-truth table for critical inp=
+uts.=0A=0A=C2=B7 An exception and workaround register.=0A=0A=C2=B7 A decisi=
+on-rights and escalation matrix.=0A=0A=C2=B7 An AI-role map showing where a=
+ model may assist and where it must not decide.=0A=0A=C2=B7 A readiness vie=
+w showing what must be fixed before a pilot.=0A=0A=C2=B7 Baseline measures =
+for cycle time, queue age, rework, error, and decision=0Aoutcomes.=0A=0ABui=
+ld guardrails=0A=0A=C2=B7 Map actual work, not only the official procedure.=
+=0A=0A=C2=B7 Keep high-consequence decisions under explicit human approval.=
+=0A=0A=C2=B7 Give every AI output an evidence view and a non-AI fallback.=
+=0A=0A=C2=B7 Version the map when systems, policy, ownership, or exceptions=
+ change.=0A=0A=C2=B7 Update the process record with exceptions discovered d=
+uring the pilot before=0Aexpanding automation.=0A=0A=C2=B7 Accept =E2=80=9C=
+do not automate yet=E2=80=9D as a valid result when the source of truth,=0A=
+ownership, or process agreement is unresolved.=0A=0ATwo paths=0A=0APath 1: =
+Internal build=0A=0AStart with a shared document, whiteboard, or process-ma=
+pping tool. Bring the=0Aprocess owner and two or three people who perform t=
+he work into a 60-minute=0Asession. Map one real order, exception, or decis=
+ion from trigger to completion.=0AAdd the fields above, then test the map a=
+gainst the last three exceptions the=0Ateam handled.=0A=0APath 2: Existing =
+technology partner=0A=0AAsk the ERP partner, systems integrator, or automat=
+ion partner to document the=0Asame decision-ready fields before proposing a=
+n AI workflow. The deliverable=0Ashould show source systems, decision owner=
+s, exception routes, evidence=0Arequirements, model boundaries, fallback, a=
+nd baseline measures. The operating=0Ateam should own the process map even =
+if the partner builds the integration.=0A=0AIf the process is not clear eno=
+ugh for a new employee to follow, it is not clear=0Aenough for AI to improv=
+e.=0A=0A=C2=A0=0A=0ATHE OPERATIONS BRIEF=0A=0ABy Bill Murphy =C2=A0=C2=B7=
+=C2=A0 Powered by Colony Spark [https://www.colonyspark.com/]=0A=0AAlready =
+mapping decisions before the AI conversation starts, or watching a=0Arollou=
+t stall on process gaps nobody has agreed on=3F Hit reply, I read every one=
+.=0ABill
+--_----bOTcV5PWJlGBgRN6qHxhnQ===_BF/81-07615-9FBEA9A6
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head> <style></style> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>The Operations Brief &#x2014; Issue #19</title>
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<style type="text/css">
+table, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+td, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exactly;}
+body, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f2ef" style="margin:0;padding:0;width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" class="bodyClass"><span style="display:none">AI moves faster than organizations can agree on how work actually flows</span>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">Three operators on the floor say the same thing: map the process first.</div>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;</div>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#f4f2ef" style="background-color:#f4f2ef;width:100%;">
+<tbody><tr>
+<td align="center" valign="top" style="padding:24px 16px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="max-width:600px;width:100%;">
+<tbody><tr>
+<td>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td height="5" bgcolor="#C8392A" style="background-color:#C8392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td align="center" bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:36px 40px 28px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td align="center" style="padding-bottom:20px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com/" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>
+<tr><td align="center"><h1 style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-transform:uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br>BRIEF</h1></td></tr>
+<tr><td align="center" style="padding-top:14px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="48" height="2" bgcolor="#C8392A" style="background-color:#C8392A;width:48px;height:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td></tr>
+<tr><td align="center" style="padding-top:12px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transform:uppercase;">ISSUE #19 &#xA0;&#xB7;&#xA0; SEPTEMBER 4, 2026</p></td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#C8392A" style="background-color:#C8392A;height:3px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;padding:32px 40px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Hi ${first_name},</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">AI can generate an answer before the organization has agreed on the process that makes the answer useful. That gap is where most AI rollouts stall: not on the model, but on work that has never been mapped, decided, or owned in writing.</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">This issue is about closing that gap: why process mapping is quietly becoming part of the infrastructure reliable AI depends on, what three operators told us on the floor about where AI should and should not sit, and a working template for turning a flowchart into a decision-ready map.</p>
+<p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Process Maps Are Becoming AI Infrastructure.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The model is not the constraint. The undocumented process is.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Most AI conversations start with a model, a vendor, or a use case. The operators moving fastest right now are starting one step earlier: is the underlying process clear enough for a model to support it without amplifying the confusion already built into it?</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The hidden problem is not simply bad data. It is work that exists as tribal knowledge spread across people, spreadsheets, side systems, and local workarounds. Two experienced employees can walk the same process and describe two different versions of it, and both believe they are following the same one. Put an AI tool on top of that environment and you get faster output, not shared judgment.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 0 24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">The adoption gap, by the numbers</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">34%</strong> of operations are already AI-augmented, but only <strong style="color:#1a1a1a;">43%</strong> of collected data is used effectively, per Rockwell Automation&apos;s 2026 State of Smart Manufacturing survey of 1,560 manufacturing respondents across 17 countries. Read this as a scale signal, not a benchmark: the study is vendor-sponsored and spans companies from $100 million to more than $30 billion in revenue (<a href="https://www.rockwellautomation.com/en-dk/company/news/press-releases/90-of-Manufacturers-Say-Digital-Transformation-Is-Now-Essential-According-to-New-Global-Study.html" style="color:#C8392A;text-decoration:underline;">Rockwell Automation</a>, May 19, 2026).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; The hard deployment problems are operational, not algorithmic. NIST&apos;s 2026 roadmap for AI in smart manufacturing names effective data management, integration with heterogeneous sensing and control systems, and trustworthy, explainable operation in high-stakes environments as the critical challenges (<a href="https://www.nist.gov/publications/2026-roadmap-artificial-intelligence-and-machine-learning-smart-manufacturing" style="color:#C8392A;text-decoration:underline;">NIST, 2026 Roadmap</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Industrial AI only has meaning inside a defined system and user context. NIST&apos;s Industrial AI Management and Metrology program says an AI application should fulfill an explicit system need and stay bounded by the system&apos;s capabilities, and flags decision, planning, and control work as needing clearer standard operating procedures (<a href="https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm" style="color:#C8392A;text-decoration:underline;">NIST Industrial AI Management and Metrology</a>).</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; The operating context has to be documented before performance can be judged. NIST&apos;s AI Risk Management Framework calls for teams to define business value, users, system requirements, the specific task, model limits, human oversight, and deployment scope, with domain experts informing evaluation in the real operating context (<a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" style="color:#C8392A;text-decoration:underline;">NIST AI RMF Core</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The shift is from mapping activities to mapping decisions. The next useful process map shows which record is authoritative, what evidence a person needs, which exception changes the route, who owns the decision, what happens when the system is unavailable, and where AI is allowed to assist.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">If two experienced employees disagree about the source of truth, the exception owner, or the evidence of completion, the workflow is not ready for AI.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Before an operator asks what AI can automate, the team has to answer a more basic question: have we agreed on how the work actually moves?</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#999999;mso-line-height-rule:exactly;">Sources: Rockwell Automation, May 2026; NIST 2026 Roadmap on AI and Machine Learning for Smart Manufacturing; NIST Industrial AI Management and Metrology; NIST AI Risk Management Framework Core.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">FROM THE FLOOR</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Have We Mapped the Basics?</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Louis Balla, CRO and Partner at Nuage, on the back-to-basics test for AI readiness</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;"><a href="https://www.linkedin.com/in/louis-balla" style="color:#C8392A;text-decoration:underline;">Louis Balla</a> is CRO and Partner at <a href="https://www.nuagecg.com/about-us/" style="color:#C8392A;text-decoration:underline;">Nuage</a>, a consulting group working with manufacturers and distributors on process and technology decisions. At The Operations Brief&apos;s first roundtable in August, he pushed back on the instinct to add AI before the basics are settled.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="background-color:#fdf6f5;border-radius:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">&#x201C;Have we thought through our entire process, from design to build and order to cash? Have we ironed out the basics? Have we even mapped them out?&#x201D;</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td>
+<p style="margin:0 0 1px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;">Louis Balla</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">CRO and Partner, <a href="https://nuagecg.com" style="color:#888888;text-decoration:underline;">Nuage</a> &#xA0;&#xB7;&#xA0; <a href="https://docs.google.com/document/d/1ZJBtVjgk98ONMXoEXs4YVqDHDxeijaJ81gyqjpHjBcw/edit" style="color:#C8392A;text-decoration:none;">The Operations Brief Roundtable #1, August 2026</a></p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Earlier in the same conversation, Louis drew the line that matters: a team can generate a report in seconds and still struggle to synthesize it, align leadership, maintain segregation of duties, and decide what action follows. Right after the quote above, he pointed to tribal knowledge and missing process documentation as the real barriers to moving AI through an organization, not the tooling.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:18px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">The takeaway</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">A model can summarize a process it can see. It cannot settle a process the organization has never made explicit. The operating work is mapping the decisions, exceptions, and ownership before asking technology to accelerate them.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">More from the roundtable</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;"><a href="https://www.linkedin.com/in/mattgargas/" style="color:#1a1a1a;text-decoration:none;">Matt Gargas</a></strong> of <a href="https://rdt.com" style="color:#C8392A;text-decoration:underline;">RDT</a>: &#x201C;Broad AI rollouts designed at the executive level often miss the day-to-day work. The useful scope emerges when leaders walk the floor and talk with managers, engineers, operators, and quality staff about what should actually change.&#x201D;</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;"><a href="https://www.linkedin.com/in/robert-wyse-3aa20884/" style="color:#1a1a1a;text-decoration:none;">Robert Wyse</a></strong> of <a href="https://industronics.com/" style="color:#C8392A;text-decoration:underline;">Industronics Service Company</a>: &#x201C;Automate the lower-risk, repetitive work so people can focus their attention on the higher-risk decisions that cannot be allowed to slip.&#x201D;</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE STACK</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">The Decision-Ready Process Map.</h2>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">A working specification for where AI may assist, and where people still decide.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-height-rule:exactly;">One document that turns a flowchart into an AI-readiness spec, before the pilot starts.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Most process maps show activities and handoffs: who does what, and where the paper or the ticket moves next. The Decision-Ready Process Map adds the layer an AI-supported workflow actually needs: the source of truth, the decision being made, the exception that changes the route, the evidence required, the accountable owner, and the boundary where human judgment has to stay in control.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The goal is not more documentation. It is one place to answer four questions: what is the decision, what information is trusted, who owns the outcome, and where could AI help without moving responsibility away from the person accountable for the work.</p>
+<p style="margin:0 0 28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Start with one value stream where the pain is visible and measurable: quote-to-order, order-to-cash, supplier exception handling, inventory prioritization, or quality disposition. Do not begin with an enterprise-wide map.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">What goes into the map</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Trigger and outcome.</strong> What starts the process, and what business result proves it finished correctly.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Actual steps and systems.</strong> What people really do, including local spreadsheets, inboxes, sticky notes, and workarounds absent from the official procedure.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Source of truth.</strong> Which field, record, or system is authoritative at each critical point.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Decision and owner.</strong> What judgment is being made, who is accountable, and who has approval authority.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Required evidence.</strong> What the next person must see before accepting the decision or handoff.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Exceptions.</strong> What changes the normal route, who resolves it, where it escalates, and what happens if it is missed.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Risk and consequence.</strong> Which errors are reversible, and which affect safety, quality, customer commitments, cash, or compliance.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Potential AI role.</strong> Could a model retrieve, summarize, classify, detect, predict, recommend, or draft at this point.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Human boundary and fallback.</strong> What requires human confirmation, and how the process continues when the model or system is unavailable.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Baseline.</strong> Current cycle time, queue age, rework, error rate, manual touches, and decision outcome.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">How the team builds it</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#1a1a1a" style="padding:22px 24px;background-color:#1a1a1a;border-radius:6px;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Eight steps, one bounded process</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">1.</strong> Select one bounded workflow and name its owner.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">2.</strong> Observe the real work with the people who perform it. Record workarounds instead of copying the SOP.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">3.</strong> Map the normal path and the exceptions that change sequence, owner, evidence, or risk.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">4.</strong> At every decision point, name the authoritative input, accountable person, allowed action, and required proof.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">5.</strong> Identify only the narrow steps where AI may assist.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">6.</strong> Define the model&apos;s limit, the human review point, the escalation rule, and the non-AI fallback.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">7.</strong> Score whether the process is ready based on agreement, source authority, exception coverage, ownership, and an available baseline.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">8.</strong> Pilot the highest-readiness assistive step. Add newly discovered exceptions to the map before expanding.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">What the operator gets</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A current-state process and decision map.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A source-of-truth table for critical inputs.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; An exception and workaround register.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A decision-rights and escalation matrix.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; An AI-role map showing where a model may assist and where it must not decide.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; A readiness view showing what must be fixed before a pilot.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Baseline measures for cycle time, queue age, rework, error, and decision outcomes.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Build guardrails</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Map actual work, not only the official procedure.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Keep high-consequence decisions under explicit human approval.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Give every AI output an evidence view and a non-AI fallback.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Version the map when systems, policy, ownership, or exceptions change.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Update the process record with exceptions discovered during the pilot before expanding automation.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; Accept &#x201C;do not automate yet&#x201D; as a valid result when the source of truth, ownership, or process agreement is unresolved.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Two paths</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:14px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 1: Internal build</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Start with a shared document, whiteboard, or process-mapping tool. Bring the process owner and two or three people who perform the work into a 60-minute session. Map one real order, exception, or decision from trigger to completion. Add the fields above, then test the map against the last three exceptions the team handled.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #C8392A;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 2: Existing technology partner</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Ask the ERP partner, systems integrator, or automation partner to document the same decision-ready fields before proposing an AI workflow. The deliverable should show source systems, decision owners, exception routes, evidence requirements, model boundaries, fallback, and baseline measures. The operating team should own the process map even if the partner builds the integration.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">If the process is not clear enough for a new employee to follow, it is not clear enough for AI to improve.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#1a1a1a" style="background-color:#1a1a1a;border-radius:8px;padding:32px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:20px;">
+<tbody><tr>
+<td>
+<p style="margin:0 0 2px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-transform:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIONS BRIEF</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com/" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#222222" style="background-color:#222222;border-radius:6px;padding:16px 20px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-rule:exactly;">Already mapping decisions before the AI conversation starts, or watching a rollout stall on process gaps nobody has agreed on? Hit reply, I read every one. Bill</p>
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+<tr><td height="24" style="height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<img src="https://trk.therapidinbox.com/opens?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&type=html&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzg4NTM3ODQ5fQ.AYuo30O1BPNHsF5f3Kw8e23BUDwkz_s_zi4YN1Q849w" height="1px" width="1px"><table width="100%" align="center"><tbody><tr><td width="100%" align="center">
+        <a style="margin-left: auto; margin-right: auto; color: grey; font-size: 10px; text-decoration: underline;" href="https://trk.therapidinbox.com/unsubscribes?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzg4NTM3ODQ5fQ.AYuo30O1BPNHsF5f3Kw8e23BUDwkz_s_zi4YN1Q849w&type=html">Click here to unsubscribe</a>
+        </td></tr></tbody></table></body></html>
+--_----bOTcV5PWJlGBgRN6qHxhnQ===_BF/81-07615-9FBEA9A6--
+

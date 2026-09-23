@@ -1,0 +1,665 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:2f09:b0:1f3:5b97:24c0 with SMTP id ck9csp11012720rdb;
+        Wed, 23 Sep 2026 09:42:39 -0700 (PDT)
+X-Received: by 2002:a05:6820:4d04:b0:6b7:8396:f3d1 with SMTP id 006d021491bc7-6d2d1b21ab3mr3070523eaf.51.1790181759611;
+        Wed, 23 Sep 2026 09:42:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790181759; cv=none;
+        d=google.com; s=arc-20260327;
+        b=kTkDf0Pd7oOC+LXErtt4GECT5khy3X2pJMEoQHX/APDXzFTCBBeCphlUioazsvNm/9
+         RMte3X5LfEbdD2pj0cwXgfwiSHPyP+xKapd5KWC9UGOv1qpIOQOfIPH1P2x3Ean2stfN
+         RxpDc4J7MdDwDmnigb9cia4mGize2gDq4waXvaX9jeby8js1tZbBvvB6IADomDcjcOdI
+         IM1yXHwSFcBGg0xnMWPJSshlFgmRIm40EmjjOyac7uw9L2gtHN1WYKEHUaFBZSGQX4bc
+         zJ+wyQ81EJ1nEn8QLXP8q3Irmgph13LuJN3SeMi2UXPdglGFIArE8zFTLVvjE3H/30BH
+         k/SA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=aJkyROaj4bzjgQVZoDDpwBLub3Ip8zPmfw7nkxc6fMc=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=Fx6ItsV63uNX+qZVlpY5FWkJErvO//LsTZfCwuQivC5M9NiJHM2m1rFRg8iE8OgRUK
+         3vCRkAeRvxHoM2AV+ORkSMR45QjBk45SJCSsVHd4PqakWYZlj5Zfy0lWZ2MFLQJ/spkx
+         6PGrxDemuzPZzQlwd2cYU2F5D6KtGN1GwIw+iA0hXVkDIQd0vxCTb+q+1X9svIzKlydP
+         6atV/xnPRiijU6U0iOLfMyIWmLmQWVb18v32QrhWy2vADmozq2Y/yqcZdgHGkRZ2Plf2
+         jy5p+fu0L4g0ji8B+4E831ntDvYFL9zy/h0hWQtSgz6+Hx0lzqlgkADyu1h9slsweKZF
+         wrJA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=O5r32ptd;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-155.sparkpostmail.com (mta-203-49-155.sparkpostmail.com. [168.203.49.155])
+        by mx.google.com with ESMTPS id 586e51a60fabf-4908f41c9e3si3872264fac.278.2026.09.23.09.42.39
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Sep 2026 09:42:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) client-ip=168.203.49.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=O5r32ptd;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.155 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: fKV6QV55Q5Mhqvw6InAEdos5rQA/uGteNqa/iDJS1ME=|eyJ0ZW5hbnRfaWQiOiJ
+	zcGMiLCJjdXN0b21lcl9pZCI6IjMwMzI4NyIsInN1YmFjY291bnRfaWQiOiIxMDE
+	xNyIsInIiOiJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsIm1lc3NhZ2VfaWQiOiI
+	2YWIzN2UwMWI0NmExNDZmMzVjNSJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1790181758;
+	i=@colonysparkweekly.com;
+	bh=aJkyROaj4bzjgQVZoDDpwBLub3Ip8zPmfw7nkxc6fMc=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=O5r32ptdhHbNhfFHjmgWdnglMGPjqOuvLhWJ2G2NZQLEGLbDriY/3ekUP8JyjjHGH
+	 dvm36r4cv2+bc9pU2P7/2Sj5LSdztekluOKuXuad/tnBM+AWULTUITcLsqRToyy2U+
+	 l8rzx6L1+z8bHcRBKLPb3X3SJ8Tvx2l0SWEjWOlQ=
+Received: from [10.90.8.190] ([10.90.8.190])
+	by i-09f3e7c965a4decb0.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76429 r(msys-ecelerity:tags/5.3.0.18)) with REST
+	id 5C/5B-61348-E7104BA6; Wed, 23 Sep 2026 16:42:38 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <5C.5B.61348.E7104BA6@i-09f3e7c965a4decb0.mta1vrest.sd.prd.sparkpost>
+Date: Wed, 23 Sep 2026 16:42:38 +0000
+Content-Type: multipart/alternative; boundary="_----9TKhPYpyVpdC8H3UCvgZcQ===_C8/5B-61348-E7104BA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Deere's CFO on the demand hiding in your fleet
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3A3IIqUQCJh-BQ-G4qCn5YOpnB49kuw5tlI2wiQo1uv0w~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJzdWJhY2NvdW50X2lkIjogIjEwMTE3IiwgIm1lc3NhZ2VfaWQiOiAiNmFiMzdlMDFiNDZhMTQ2ZjM1YzUiIH0~>,<https://unsubscribe.spmta.com/u/UF-6dNGu8FBxDVDpz0odXg~~/AASgtxA~/8TAbciaaeY5stFZyAHnQqZOBN4mUhoS26VG81F6S_vIX9GAI1XiqPOwTbZxAujeOKq2hKdGlL7Q3C1xY9o2LTA~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----9TKhPYpyVpdC8H3UCvgZcQ===_C8/5B-61348-E7104BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Machine hours keep accruing under soft orders =E2=80=94 the installed base =
+is already flagging replacement.=0AMachine hours keep accruing under soft o=
+rders =E2=80=94 the installed base is already=0Aflagging replacement.=0ACat=
+erpillar has 1.6 million connected assets. Deere=E2=80=99s CFO says the agi=
+ng fleet=0Ais already flagging replacement demand under soft orders. The in=
+stalled base is=0Abecoming the forecast.=0A=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=0A=0A=C2=A0=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered =
+by Colony Spark [https://www.colonyspark.com/]=0A=0A=0ATHE OPERATIONS=0ABRI=
+EF=0A=0A=C2=A0=0A=0AISSUE #20 =C2=A0=C2=B7=C2=A0 JULY 31, 2026=0A=0A=C2=A0=
+=0A=0A=C2=A0=0A=0AHi there,=0A=0ANew orders are still the record of committ=
+ed demand. They just arrive too late=0Ato be the only signal the team shoul=
+d trust. Long-lived equipment produces=0Aevidence before a replacement orde=
+r, an overhaul, or a parts request appears:=0Arising service frequency, rep=
+eated warranty codes, condition alerts, and=0Aoperator questions moving fro=
+m =E2=80=9Chow do I run this=3F=E2=80=9D to =E2=80=9Cwhat replaces this=3F=
+=E2=80=9D=0A=0AThis issue is about turning that evidence into an operating =
+forecast the parts,=0Aservice, finance, and account teams can act on togeth=
+er.=0A=0ABill=0A=0A=C2=A0=0A=0ATHE SHIFT=0A=0A=0AThe Installed Base Is Beco=
+ming the Forecast.=0A=0ANew orders describe demand that committed. Installe=
+d-base signals describe=0Ademand about to.=0A=0AOne service call is noise. =
+Three calls against the same serial number, a=0Arecurring component failure=
+, an expiring warranty, and a compatibility question=0Aform a demand signal=
+. The forecast improves when those events are joined at the=0Aasset level,=
+ not left scattered across the ERP, field-service system, warranty=0Adataba=
+se, telemetry platform, and technician notes.=0A=0AThe infrastructure to do=
+ it is finally in place, and the market is putting money=0Abehind it.=0A=0A=
+Three signals from 2026=0A=0A=C2=B7 1.6 million connected and reporting Cat=
+erpillar assets, tied to $24 billion in=0A2025 services revenue. The connec=
+ted fleet creates an earlier view of asset=0Aneed; the service network turn=
+s that view into planned parts, repairs, and=0Alifecycle revenue (Caterpill=
+ar 2025 Annual Report Highlights=0A[https://www.caterpillar.com/en/investor=
+s/reports/annual-report/segment-highlights.html]).=0A=0A=C2=B7 Predictive m=
+aintenance systems now combine IoT sensors, CMMS data, work=0Aorders, maint=
+enance records, and environmental monitoring, and can auto-trigger=0Awork o=
+rders, inspections, and parts activity (IBM, June 2026=0A[https://www.ibm.c=
+om/think/topics/predictive-maintenance]).=0A=0A=C2=B7 $13.89B in 2026, proj=
+ected $23.79B by 2031 for the predictive maintenance=0Amarket. Connected eq=
+uipment and AI drive the growth. Data integration and=0Aaccuracy remain the=
+ constraints (MarketsandMarkets, 2026=0A[https://www.marketsandmarkets.com/=
+Market-Reports/operational-predictive-maintenance-market-8656856.html]).=0A=
+=0AMore signals do not create a better forecast on their own. The advantage=
+ belongs=0Ato operators who can connect the signal to the correct asset, cu=
+stomer,=0Acomponent, and decision window. The winners are changing three op=
+erating habits:=0Athey keep a governed serial-number record across sales an=
+d service, they=0Aclassify field evidence into a small set of actions (insp=
+ect, stage a part,=0Arevise a warranty assumption, offer an upgrade, or beg=
+in replacement planning),=0Aand they compare predicted events with what act=
+ually happened so the system=0Alearns which combinations lead to demand.=0A=
+=0AThe installed base was once the record of what had already been sold. It=
+ is=0Abecoming the earliest reliable view of what will be needed next.=0A=
+=0A=C2=A0=0A=0AFROM THE FLOOR=0A=0A=0AThe fleet ages either way.=0A=0ABrent=
+ Norwood, CFO of Deere & Company, on what installed-base age signals under=
+=0Amuted orders=0A=0ABrent Norwood is CFO at Deere & Company. On Deere=E2=
+=80=99s Q2 2026 earnings call in=0AMay, he described what the installed bas=
+e is already telling the finance and=0Aoperations teams while new orders re=
+main soft.=0A=0A=E2=80=9CWe=E2=80=99ve managed field inventories tightly of=
+ new equipment and made significant=0Aprogress on used. All the while, mach=
+ine hours continue to accrue, aging out the=0Afleet and driving a base-leve=
+l need for replacement.=E2=80=9D=0A=0ABrent Norwood=0A=0ACFO, Deere & Compa=
+ny =C2=A0=C2=B7=C2=A0 Q2 2026 earnings call, May 2026=0A[https://stockanaly=
+sis.com/stocks/de/transcripts/560362-q2-2026/]=0A=0ANorwood is describing D=
+eere=E2=80=99s own operating reality in a down cycle. New orders=0Aremain m=
+uted. Machine hours and fleet age are already revealing the replacement=0Ad=
+emand building underneath them. The installed base can signal the next orde=
+r=0Awell before the order book does.=0A=0AThe takeaway=0A=0AThe order book =
+is a trailing measure of demand that already committed. The=0Ainstalled bas=
+e is a leading measure of demand about to. Both belong in the same=0Aforeca=
+st, weighted differently.=0A=0A=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Installed =
+Base Demand Radar.=0A=0AService activity translated into a 30, 60, and 90-d=
+ay operating view.=0A=0ANot a replacement for the order forecast. The layer=
+ that says what will surface=0Abefore an order exists.=0A=0ABuild a serial-=
+number-level demand radar. It reads service activity, warranty=0Apatterns, =
+parts consumption, maintenance intervals, condition alerts, and=0Aoperator =
+questions, and returns a weekly exception view of demand about to=0Acommit.=
+=0A=0AInputs=0A=0A=C2=B7 Asset register: installed equipment, age, and conf=
+iguration.=0A=0A=C2=B7 Service activity: calls, technician notes, work orde=
+rs, parts consumed.=0A=0A=C2=B7 Warranty: claims and coverage expiration da=
+tes.=0A=0A=C2=B7 Condition and interval data: preventive-maintenance schedu=
+les and telemetry=0Aalerts.=0A=0A=C2=B7 Commercial signals: open quotes and=
+ inbound operator questions.=0A=0AHow it works=0A=0AThree layers=0A=0A1. Jo=
+in. Every event is tied to an asset, customer, product family, and=0Acompon=
+ent. No orphan events.=0A=0A2. Rules. Known intervals and thresholds fire t=
+he obvious signals: warranty=0Aexpiring, maintenance due, part reaching end=
+ of life.=0A=0A3. Classification. AI reads unstructured notes and questions=
+ for failure=0Asymptoms, upgrade interest, obsolescence concerns, and repla=
+cement language.=0AEach signal carries a demand type, time window, confiden=
+ce level, evidence=0Atrail, and named owner.=0A=0AWhat the operator gets, w=
+eekly=0A=0A=C2=B7 Parts staging list by component, location, demand window,=
+ and confidence.=0A=0A=C2=B7 Asset watchlist for repeated service, accelera=
+ting parts use, approaching=0Amaintenance, warranty exposure.=0A=0A=C2=B7 C=
+ustomer-intent queue separating likely repair, upgrade, and replacement=0Ac=
+onversations.=0A=0A=C2=B7 Warranty hotspot report by model, component, age =
+band, and operating=0Aenvironment.=0A=0A=C2=B7 Forecast-vs-actual log showi=
+ng which signals produced a work order, quote,=0Aparts order, or replacemen=
+t.=0A=0ATwo paths to build it=0A=0APath 1: Internal starting point=0A=0ASta=
+rt with one equipment family and two signals the team already trusts, such =
+as=0Aservice frequency and parts consumption. Back-test six to twelve month=
+s of=0Ahistory. Ask whether the radar would have identified the demand earl=
+y enough to=0Achange a parts buy, a technician schedule, a warranty reserve=
+, or a customer=0Acall. Add telemetry and free-text classification only aft=
+er serial numbers,=0Acomponent codes, and outcomes reconcile.=0A=0APath 2: =
+ERP or field-service partner=0A=0AAn existing ERP, field-service, IoT, or s=
+upply-chain partner can connect the=0Asource systems and automate the weekl=
+y exception run. The operator keeps=0Aownership of signal definitions, conf=
+idence thresholds, planning windows, and=0Athe decision attached to each al=
+ert. No alert enters the forecast without its=0Aunderlying evidence, and no=
+ AI-classified safety or warranty action bypasses=0Ahuman review.=0A=0AThe =
+goal is not to predict every failure. It is to give parts, service, finance=
+,=0Aand account teams the same early view of what the installed base is alr=
+eady=0Asaying.=0A=0A=C2=A0=0A=0ATHE OPERATIONS BRIEF=0A=0ABy Bill Murphy =
+=C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https://www.colonyspark.com/]=
+=0A=0AAlready treating the installed base as a forecast, or watching servic=
+e data pile=0Aup in five systems that don=E2=80=99t talk=3F Hit reply, I re=
+ad every one. Bill=0A=0AYou=E2=80=99re receiving this because you subscribe=
+d to The Operations Brief.=0A=0AColony Spark =C2=B7 [COMPLETAR: direcci=C3=
+=B3n postal f=C3=ADsica de Colony Spark =E2=80=94 requerido=0Apor CAN-SPAM]
+--_----9TKhPYpyVpdC8H3UCvgZcQ===_C8/5B-61348-E7104BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head> <style></style> =0A<meta charset=3D"UTF-8">=0A<meta =
+name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A=
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D=
+"x-apple-disable-message-reformatting">=0A<meta name=3D"format-detection" c=
+ontent=3D"telephone=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<me=
+ta name=3D"color-scheme" content=3D"light only">=0A<meta name=3D"supported-=
+color-schemes" content=3D"light only">=0A<title>The Operations Brief &#x201=
+4; Issue #20</title>=0A<!--[if mso]>=0A<xml><o:OfficeDocumentSettings><o:Pi=
+xelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></x=
+ml>=0A<style type=3D"text/css">=0Atable, td, th {border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt;}=0Atd, p, a, span, div, h1, =
+h2, h3 {mso-line-height-rule: exactly;}=0Abody, table, td, p, a, h1, h2, h3=
+ {font-family: 'Segoe UI', Arial, sans-serif !important;}=0A</style>=0A<![e=
+ndif]-->=0A</head>=0A<body bgcolor=3D"#f4f2ef" style=3D"margin:0;padding:0;=
+width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-=
+size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" cl=
+ass=3D"bodyClass"><span style=3D"display:none">Machine hours keep accruing =
+under soft orders &#x2014; the installed base is already flagging replaceme=
+nt.</span>=0A=0A<div style=3D"display:none;max-height:0;overflow:hidden;fon=
+t-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">Caterpillar has 1.6=
+ million connected assets. Deere&#x2019;s CFO says the aging fleet is alrea=
+dy flagging replacement demand under soft orders. The installed base is bec=
+oming the forecast.</div>=0A<div style=3D"display:none;max-height:0;overflo=
+w:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#x=
+A0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#=
+x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C=
+;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&=
+#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;=
+&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;</div>=0A=0A<table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D=
+"100%" bgcolor=3D"#f4f2ef" style=3D"background-color:#f4f2ef;width:100%;">=
+=0A<tbody><tr>=0A<td align=3D"center" valign=3D"top" style=3D"padding:24px =
+16px;">=0A=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" width=3D"600" align=3D"center" style=3D"max-width:600px;wid=
+th:100%;">=0A=0A<tbody><tr>=0A<td>=0A<table role=3D"presentation" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr><td he=
+ight=3D"5" bgcolor=3D"#C8392A" style=3D"background-color:#C8392A;height:5px=
+;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<=
+tr>=0A<td align=3D"center" bgcolor=3D"#1a1a1a" style=3D"background-color:#1=
+a1a1a;padding:36px 40px 28px 40px;">=0A<table role=3D"presentation" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr><td =
+align=3D"center" style=3D"padding-bottom:20px;"><p style=3D"margin:0;font-f=
+amily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetic=
+a,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:=
+#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powere=
+d by <a href=3D"https://www.colonyspark.com/" style=3D"color:#C8392A;text-d=
+ecoration:none;">Colony Spark</a></p></td></tr>=0A<tr><td align=3D"center">=
+<h1 style=3D"margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:42px;fon=
+t-weight:800;letter-spacing:5px;color:#ffffff;text-transform:uppercase;line=
+-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br>BRIEF</h1></t=
+d></tr>=0A<tr><td align=3D"center" style=3D"padding-top:14px;"><table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><=
+tr><td width=3D"48" height=3D"2" bgcolor=3D"#C8392A" style=3D"background-co=
+lor:#C8392A;width:48px;height:2px;font-size:0;line-height:0;">&#xA0;</td></=
+tr></tbody></table></td></tr>=0A<tr><td align=3D"center" style=3D"padding-t=
+op:12px;"><p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font=
+-weight:500;letter-spacing:2px;color:#999999;text-transform:uppercase;">ISS=
+UE #20 &#xA0;&#xB7;&#xA0; JULY 31, 2026</p></td></tr>=0A</tbody></table>=0A=
+</td>=0A</tr>=0A<tr><td height=3D"3" bgcolor=3D"#C8392A" style=3D"backgroun=
+d-color:#C8392A;height:3px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A<=
+/tbody></table>=0A</td>=0A</tr>=0A=0A<tr><td height=3D"8" style=3D"height:8=
+px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A=0A<tr>=0A<td bgcolor=3D"=
+#ffffff" style=3D"background-color:#ffffff;border-radius:8px;padding:32px 4=
+0px;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-=
+height:26px;color:#444444;mso-line-height-rule:exactly;">Hi there,</p>=0A<p=
+ style=3D"margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apo=
+s;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-heig=
+ht:26px;color:#444444;mso-line-height-rule:exactly;">New orders are still t=
+he record of committed demand. They just arrive too late to be the only sig=
+nal the team should trust. Long-lived equipment produces evidence before a =
+replacement order, an overhaul, or a parts request appears: rising service =
+frequency, repeated warranty codes, condition alerts, and operator question=
+s moving from &#x201C;how do I run this=3F&#x201D; to &#x201C;what replaces=
+ this=3F&#x201D;</p>=0A<p style=3D"margin:12px 0 0;font-family:-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly=
+;">This issue is about turning that evidence into an operating forecast the=
+ parts, service, finance, and account teams can act on together.</p>=0A<p s=
+tyle=3D"margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;=
+Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height=
+:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>=0A</td>=0A</tr>=
+=0A=0A<tr><td height=3D"8" style=3D"height:8px;font-size:0;line-height:0;">=
+&#xA0;</td></tr>=0A=0A<tr>=0A<td bgcolor=3D"#ffffff" style=3D"background-co=
+lor:#ffffff;border-radius:8px;">=0A=0A<table role=3D"presentation" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr><td b=
+gcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;padding:18px 40px;"><p=
+ style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;=
+letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p></=
+td></tr>=0A</tbody></table>=0A=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A<td s=
+tyle=3D"padding:32px 40px 36px;">=0A=0A<h2 style=3D"margin:0 0 8px;font-fam=
+ily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,=
+Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:3=
+0px;mso-line-height-rule:exactly;">The Installed Base Is Becoming the Forec=
+ast.</h2>=0A<p style=3D"margin:0 0 20px;font-family:-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppe=
+rcase;line-height:18px;mso-line-height-rule:exactly;">New orders describe d=
+emand that committed. Installed-base signals describe demand about to.</p>=
+=0A=0A<p style=3D"margin:0 0 16px;font-family:-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;l=
+ine-height:26px;color:#444444;mso-line-height-rule:exactly;">One service ca=
+ll is noise. Three calls against the same serial number, a recurring compon=
+ent failure, an expiring warranty, and a compatibility question form a dema=
+nd signal. The forecast improves when those events are joined at the asset =
+level, not left scattered across the ERP, field-service system, warranty da=
+tabase, telemetry platform, and technician notes.</p>=0A<p style=3D"margin:=
+0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#44=
+4444;mso-line-height-rule:exactly;">The infrastructure to do it is finally =
+in place, and the market is putting money behind it.</p>=0A=0A<table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D=
+"100%" style=3D"margin:0 0 24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" =
+style=3D"padding:20px 22px;background-color:#f9f9f9;border-radius:6px;borde=
+r-top:2px solid #C8392A;">=0A<p style=3D"margin:0 0 12px;font-family:-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text=
+-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Three =
+signals from 2026</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactl=
+y;">&#xB7; <strong style=3D"color:#1a1a1a;">1.6 million</strong> connected =
+and reporting Caterpillar assets, tied to <strong style=3D"color:#1a1a1a;">=
+$24 billion</strong> in 2025 services revenue. The connected fleet creates =
+an earlier view of asset need; the service network turns that view into pla=
+nned parts, repairs, and lifecycle revenue (<a href=3D"https://www.caterpil=
+lar.com/en/investors/reports/annual-report/segment-highlights.html" style=
+=3D"color:#C8392A;text-decoration:underline;">Caterpillar 2025 Annual Repor=
+t Highlights</a>).</p>=0A<p style=3D"margin:0 0 10px;font-family:-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exact=
+ly;">&#xB7; <strong style=3D"color:#1a1a1a;">Predictive maintenance systems=
+</strong> now combine IoT sensors, CMMS data, work orders, maintenance reco=
+rds, and environmental monitoring, and can auto-trigger work orders, inspec=
+tions, and parts activity (<a href=3D"https://www.ibm.com/think/topics/pred=
+ictive-maintenance" style=3D"color:#C8392A;text-decoration:underline;">IBM,=
+ June 2026</a>).</p>=0A<p style=3D"margin:0;font-family:-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB=
+7; <strong style=3D"color:#1a1a1a;">$13.89B in 2026, projected $23.79B by 2=
+031</strong> for the predictive maintenance market. Connected equipment and=
+ AI drive the growth. Data integration and accuracy remain the constraints =
+(<a href=3D"https://www.marketsandmarkets.com/Market-Reports/operational-pr=
+edictive-maintenance-market-8656856.html" style=3D"color:#C8392A;text-decor=
+ation:underline;">MarketsandMarkets, 2026</a>).</p>=0A</td>=0A</tr>=0A</tbo=
+dy></table>=0A=0A<p style=3D"margin:0 0 24px;font-family:-apple-system,Blin=
+kMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-=
+size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Mor=
+e signals do not create a better forecast on their own. The advantage belon=
+gs to operators who can connect the signal to the correct asset, customer, =
+component, and decision window. The winners are changing three operating ha=
+bits: they keep a governed serial-number record across sales and service, t=
+hey classify field evidence into a small set of actions (inspect, stage a p=
+art, revise a warranty assumption, offer an upgrade, or begin replacement p=
+lanning), and they compare predicted events with what actually happened so =
+the system learns which combinations lead to demand.</p>=0A=0A<table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D=
+"100%">=0A<tbody><tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"border-left:3px so=
+lid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px =
+6px 0;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;lin=
+e-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-heig=
+ht-rule:exactly;">The installed base was once the record of what had alread=
+y been sold. It is becoming the earliest reliable view of what will be need=
+ed next.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A=0A</td>=0A</tr>=0A</tbod=
+y></table>=0A=0A</td>=0A</tr>=0A=0A<tr><td height=3D"8" style=3D"height:8px=
+;font-size:0;line-height:0;">&#xA0;</td></tr>=0A=0A<tr>=0A<td bgcolor=3D"#f=
+fffff" style=3D"background-color:#ffffff;border-radius:8px;">=0A=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%">=0A<tbody><tr><td bgcolor=3D"#1a1a1a" style=3D"background-color:#=
+1a1a1a;padding:18px 40px;"><p style=3D"margin:0;font-family:-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transfor=
+m:uppercase;">FROM THE FLOOR</p></td></tr>=0A</tbody></table>=0A=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%">=0A<tbody><tr>=0A<td style=3D"padding:32px 40px 36px;">=0A=0A<h2 =
+style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;=
+Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight=
+:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">The flee=
+t ages either way.</h2>=0A<p style=3D"margin:0 0 20px;font-family:-apple-sy=
+stem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-se=
+rif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-=
+transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Brent N=
+orwood, CFO of Deere & Company, on what installed-base age signals under mu=
+ted orders</p>=0A=0A<p style=3D"margin:0 0 24px;font-family:-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">=
+Brent Norwood is CFO at Deere & Company. On Deere&#x2019;s Q2 2026 earnings=
+ call in May, he described what the installed base is already telling the f=
+inance and operations teams while new orders remain soft.</p>=0A=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#fd=
+f6f5" style=3D"background-color:#fdf6f5;border-radius:6px;padding:24px 24px=
+ 20px;border-top:2px solid #C8392A;">=0A<p style=3D"margin:0 0 14px;font-fa=
+mily:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica=
+,Arial,sans-serif;font-size:17px;line-height:27px;color:#1a1a1a;font-style:=
+italic;font-weight:500;mso-line-height-rule:exactly;">&#x201C;We&#x2019;ve =
+managed field inventories tightly of new equipment and made significant pro=
+gress on used. All the while, machine hours continue to accrue, aging out t=
+he fleet and driving a base-level need for replacement.&#x201D;</p>=0A<tabl=
+e role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wi=
+dth=3D"100%">=0A<tbody><tr>=0A<td>=0A<p style=3D"margin:0 0 1px;font-family=
+:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ari=
+al,sans-serif;font-size:13px;font-weight:800;color:#1a1a1a;line-height:18px=
+;mso-line-height-rule:exactly;">Brent Norwood</p>=0A<p style=3D"margin:0;fo=
+nt-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helv=
+etica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-li=
+ne-height-rule:exactly;">CFO, Deere & Company &#xA0;&#xB7;&#xA0; <a href=3D=
+"https://stockanalysis.com/stocks/de/transcripts/560362-q2-2026/" style=3D"=
+color:#C8392A;text-decoration:none;">Q2 2026 earnings call, May 2026</a></p=
+>=0A</td>=0A</tr>=0A</tbody></table>=0A</td>=0A</tr>=0A</tbody></table>=0A=
+=0A<p style=3D"margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line=
+-height:26px;color:#444444;mso-line-height-rule:exactly;">Norwood is descri=
+bing Deere&#x2019;s own operating reality in a down cycle. New orders remai=
+n muted. Machine hours and fleet age are already revealing the replacement =
+demand building underneath them. The installed base can signal the next ord=
+er well before the order book does.</p>=0A=0A<table role=3D"presentation" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><t=
+r>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:18px 22px;background-color:#f=
+9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">=0A<p style=3D"margi=
+n:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-sp=
+acing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-=
+height-rule:exactly;">The takeaway</p>=0A<p style=3D"margin:0;font-family:-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-r=
+ule:exactly;">The order book is a trailing measure of demand that already c=
+ommitted. The installed base is a leading measure of demand about to. Both =
+belong in the same forecast, weighted differently.</p>=0A</td>=0A</tr>=0A</=
+tbody></table>=0A=0A</td>=0A</tr>=0A</tbody></table>=0A=0A</td>=0A</tr>=0A=
+=0A<tr><td height=3D"8" style=3D"height:8px;font-size:0;line-height:0;">&#x=
+A0;</td></tr>=0A=0A<tr>=0A<td bgcolor=3D"#ffffff" style=3D"background-color=
+:#ffffff;border-radius:8px;">=0A=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr><td bgco=
+lor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;padding:18px 40px;"><p st=
+yle=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI=
+&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;let=
+ter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE STACK</p></td>=
+</tr>=0A</tbody></table>=0A=0A<table role=3D"presentation" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A<tbody><tr>=0A<td style=
+=3D"padding:32px 40px 36px;">=0A=0A<h2 style=3D"margin:0 0 8px;font-family:=
+-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Aria=
+l,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;=
+mso-line-height-rule:exactly;">The Installed Base Demand Radar.</h2>=0A<p s=
+tyle=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:=
+600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height=
+:18px;mso-line-height-rule:exactly;">Service activity translated into a 30,=
+ 60, and 90-day operating view.</p>=0A<p style=3D"margin:0 0 24px;font-fami=
+ly:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,A=
+rial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-heig=
+ht-rule:exactly;">Not a replacement for the order forecast. The layer that =
+says what will surface before an order exists.</p>=0A=0A<p style=3D"margin:=
+0 0 28px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#44=
+4444;mso-line-height-rule:exactly;">Build a serial-number-level demand rada=
+r. It reads service activity, warranty patterns, parts consumption, mainten=
+ance intervals, condition alerts, and operator questions, and returns a wee=
+kly exception view of demand about to commit.</p>=0A=0A<p style=3D"margin:0=
+ 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Ro=
+boto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spaci=
+ng:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-hei=
+ght-rule:exactly;">Inputs</p>=0A=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom=
+:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px=
+;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">=
+=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-=
+height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong sty=
+le=3D"color:#1a1a1a;">Asset register:</strong> installed equipment, age, an=
+d configuration.</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;=
+">&#xB7; <strong style=3D"color:#1a1a1a;">Service activity:</strong> calls,=
+ technician notes, work orders, parts consumed.</p>=0A<p style=3D"margin:0 =
+0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Rob=
+oto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#55555=
+5;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a;">Wa=
+rranty:</strong> claims and coverage expiration dates.</p>=0A<p style=3D"ma=
+rgin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color=
+:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a=
+1a;">Condition and interval data:</strong> preventive-maintenance schedules=
+ and telemetry alerts.</p>=0A<p style=3D"margin:0;font-family:-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;=
+">&#xB7; <strong style=3D"color:#1a1a1a;">Commercial signals:</strong> open=
+ quotes and inbound operator questions.</p>=0A</td>=0A</tr>=0A</tbody></tab=
+le>=0A=0A<p style=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSyste=
+mFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px=
+;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;=
+line-height:18px;mso-line-height-rule:exactly;">How it works</p>=0A=0A<tabl=
+e role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wi=
+dth=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"=
+#1a1a1a" style=3D"padding:22px 24px;background-color:#1a1a1a;border-radius:=
+6px;">=0A<p style=3D"margin:0 0 14px;font-family:-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13p=
+x;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase=
+;line-height:18px;mso-line-height-rule:exactly;">Three layers</p>=0A<p styl=
+e=3D"margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Seg=
+oe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24=
+px;color:#cccccc;mso-line-height-rule:exactly;"><strong style=3D"color:#fff=
+fff;">1. Join.</strong> Every event is tied to an asset, customer, product =
+family, and component. No orphan events.</p>=0A<p style=3D"margin:0 0 10px;=
+font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,He=
+lvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-=
+line-height-rule:exactly;"><strong style=3D"color:#ffffff;">2. Rules.</stro=
+ng> Known intervals and thresholds fire the obvious signals: warranty expir=
+ing, maintenance due, part reaching end of life.</p>=0A<p style=3D"margin:0=
+;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,H=
+elvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso=
+-line-height-rule:exactly;"><strong style=3D"color:#ffffff;">3. Classificat=
+ion.</strong> AI reads unstructured notes and questions for failure symptom=
+s, upgrade interest, obsolescence concerns, and replacement language. Each =
+signal carries a demand type, time window, confidence level, evidence trail=
+, and named owner.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A=0A<p style=3D"=
+margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;lett=
+er-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-=
+line-height-rule:exactly;">What the operator gets, weekly</p>=0A=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" style=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9=
+f9f9" style=3D"padding:20px 22px;background-color:#f9f9f9;border-radius:6px=
+;border-top:2px solid #C8392A;">=0A<p style=3D"margin:0 0 8px;font-family:-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial=
+,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-r=
+ule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a;">Parts staging list</s=
+trong> by component, location, demand window, and confidence.</p>=0A<p styl=
+e=3D"margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24p=
+x;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"colo=
+r:#1a1a1a;">Asset watchlist</strong> for repeated service, accelerating par=
+ts use, approaching maintenance, warranty exposure.</p>=0A<p style=3D"margi=
+n:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#5=
+55555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#1a1a1a;=
+">Customer-intent queue</strong> separating likely repair, upgrade, and rep=
+lacement conversations.</p>=0A<p style=3D"margin:0 0 8px;font-family:-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:e=
+xactly;">&#xB7; <strong style=3D"color:#1a1a1a;">Warranty hotspot report</s=
+trong> by model, component, age band, and operating environment.</p>=0A<p s=
+tyle=3D"margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe U=
+I&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;c=
+olor:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style=3D"color:#=
+1a1a1a;">Forecast-vs-actual log</strong> showing which signals produced a w=
+ork order, quote, parts order, or replacement.</p>=0A</td>=0A</tr>=0A</tbod=
+y></table>=0A=0A<p style=3D"margin:0 0 14px;font-family:-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:12px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:up=
+percase;line-height:18px;mso-line-height-rule:exactly;">Two paths to build =
+it</p>=0A=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" width=3D"100%" style=3D"margin-bottom:14px;">=0A<tbody><tr>=
+=0A<td bgcolor=3D"#f9f9f9" style=3D"padding:20px 22px;background-color:#f9f=
+9f9;border-radius:6px;border-left:3px solid #1a1a1a;">=0A<p style=3D"margin=
+:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spa=
+cing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-h=
+eight-rule:exactly;">Path 1: Internal starting point</p>=0A<p style=3D"marg=
+in:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555=
+;mso-line-height-rule:exactly;">Start with one equipment family and two sig=
+nals the team already trusts, such as service frequency and parts consumpti=
+on. Back-test six to twelve months of history. Ask whether the radar would =
+have identified the demand early enough to change a parts buy, a technician=
+ schedule, a warranty reserve, or a customer call. Add telemetry and free-t=
+ext classification only after serial numbers, component codes, and outcomes=
+ reconcile.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A=0A<table role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" s=
+tyle=3D"margin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#f9f9f9" style=
+=3D"padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-lef=
+t:3px solid #C8392A;">=0A<p style=3D"margin:0 0 5px;font-family:-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-tran=
+sform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 2: ERP=
+ or field-service partner</p>=0A<p style=3D"margin:0;font-family:-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exact=
+ly;">An existing ERP, field-service, IoT, or supply-chain partner can conne=
+ct the source systems and automate the weekly exception run. The operator k=
+eeps ownership of signal definitions, confidence thresholds, planning windo=
+ws, and the decision attached to each alert. No alert enters the forecast w=
+ithout its underlying evidence, and no AI-classified safety or warranty act=
+ion bypasses human review.</p>=0A</td>=0A</tr>=0A</tbody></table>=0A=0A<tab=
+le role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"100%">=0A<tbody><tr>=0A<td bgcolor=3D"#fdf6f5" style=3D"border-left=
+:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius=
+:0 6px 6px 0;">=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSy=
+stemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:1=
+6px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-li=
+ne-height-rule:exactly;">The goal is not to predict every failure. It is to=
+ give parts, service, finance, and account teams the same early view of wha=
+t the installed base is already saying.</p>=0A</td>=0A</tr>=0A</tbody></tab=
+le>=0A=0A</td>=0A</tr>=0A</tbody></table>=0A=0A</td>=0A</tr>=0A=0A<tr><td h=
+eight=3D"8" style=3D"height:8px;font-size:0;line-height:0;">&#xA0;</td></tr=
+>=0A=0A<tr>=0A<td bgcolor=3D"#1a1a1a" style=3D"background-color:#1a1a1a;bor=
+der-radius:8px;padding:32px 40px;">=0A=0A<table role=3D"presentation" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-=
+bottom:20px;">=0A<tbody><tr>=0A<td>=0A<p style=3D"margin:0 0 2px;font-famil=
+y:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ar=
+ial,sans-serif;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:=
+2px;text-transform:uppercase;line-height:20px;mso-line-height-rule:exactly;=
+">THE OPERATIONS BRIEF</p>=0A<p style=3D"margin:0;font-family:-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;=
+">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href=3D"https://www.colon=
+yspark.com/" style=3D"color:#C8392A;text-decoration:none;">Colony Spark</a>=
+</p>=0A</td>=0A</tr>=0A</tbody></table>=0A=0A<table role=3D"presentation" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"mar=
+gin-bottom:24px;">=0A<tbody><tr>=0A<td bgcolor=3D"#222222" style=3D"backgro=
+und-color:#222222;border-radius:6px;padding:16px 20px;">=0A<p style=3D"marg=
+in:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#cccccc=
+;mso-line-height-rule:exactly;">Already treating the installed base as a fo=
+recast, or watching service data pile up in five systems that don&#x2019;t =
+talk=3F Hit reply, I read every one. Bill</p>=0A</td>=0A</tr>=0A</tbody></t=
+able>=0A=0A<p style=3D"margin:0 0 6px;font-family:-apple-system,BlinkMacSys=
+temFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12=
+px;line-height:20px;color:#555555;text-align:center;mso-line-height-rule:ex=
+actly;">You&#x2019;re receiving this because you subscribed to The Operatio=
+ns Brief.</p>=0A<p style=3D"margin:0;font-family:-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12p=
+x;line-height:20px;color:#888888;text-align:center;mso-line-height-rule:exa=
+ctly;">Colony Spark &#xB7; [COMPLETAR: direcci&#xF3;n postal f&#xED;sica de=
+ Colony Spark &#x2014; requerido por CAN-SPAM]</p>=0A=0A</td>=0A</tr>=0A=0A=
+<tr><td height=3D"24" style=3D"height:24px;font-size:0;line-height:0;">&#xA=
+0;</td></tr>=0A=0A</tbody></table>=0A=0A</td>=0A</tr>=0A</tbody></table>=0A=
+=0A=0A=0A<img src=3D"https://trk.ebitcommweekly.com/opens=3Femail=3Def9adbd=
+7-58a1-5141-a08b-c984cd7ffc03&type=3Dhtml&info=3DeyJhbGciOiJIUzI1NiIsInR5cC=
+I6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIi=
+LCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF=
+0IjoxNzkwMTgxNzU4fQ.wFoqpCtG8K6VdttD5DwlY8OHYht_16KtJStFRyq5F6o" height=3D"=
+1px" width=3D"1px"><table width=3D"100%" align=3D"center"><tbody><tr><td wi=
+dth=3D"100%" align=3D"center">=0A        <a style=3D"margin-left: auto; mar=
+gin-right: auto; color: grey; font-size: 10px; text-decoration: underline;"=
+ href=3D"https://trk.ebitcommweekly.com/unsubscribes=3Femail=3Def9adbd7-58a=
+1-5141-a08b-c984cd7ffc03&info=3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2=
+VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkI=
+joiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMTgxNzU4=
+fQ.wFoqpCtG8K6VdttD5DwlY8OHYht_16KtJStFRyq5F6o&type=3Dhtml">Click here to u=
+nsubscribe</a>=0A        </td></tr></tbody></table></body></html>
+--_----9TKhPYpyVpdC8H3UCvgZcQ===_C8/5B-61348-E7104BA6--
+

@@ -1,0 +1,478 @@
+Delivered-To: joaquin@optingrowth.com
+Received: by 2002:a05:7412:2f09:b0:1f3:5b97:24c0 with SMTP id ck9csp11006110rdb;
+        Wed, 23 Sep 2026 09:36:59 -0700 (PDT)
+X-Received: by 2002:a05:6820:1ca9:b0:6c2:d765:b142 with SMTP id 006d021491bc7-6d2cff437b6mr2900041eaf.19.1790181418936;
+        Wed, 23 Sep 2026 09:36:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790181418; cv=none;
+        d=google.com; s=arc-20260327;
+        b=BtA4ZxAo6FsYlFrejwge3uKJsRXL1nB9mFh3CMHOi7Gln2KiES6kBpwKHVoh38LklW
+         U3nnbk2Cdzhdx+NWny2DMZ7L0kLaPnZeExtt6oKvitRxTmLsanm7c4Gvu/4ig1EmO7tp
+         OX03k03NTLGOReGHbW8/1Eub6TzbIFZbot74fDux02/Y2QOCIEICYO8CHeila8dH3U+A
+         3P/HtXG1QpHDwBPLTAU6gLspfJfhEtmiF/vvjOwCyj2DUrC8gTQEUcsd2f1qc7O5XRX6
+         hQYfXVwmzCZk5fyK3eFGPqEQ6e8hTGNulTaYjLe0BMCw3Ewt2bBgeoWgqmkCn8xlrOBk
+         ezOA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=TdKHFbrQC02bciwYJahcsCpB+fuUJcjN8WaPz8dGbeo=;
+        fh=1Gs3HKTWa6XwrdYA2YMqLXZeC/2eMZ1M4vJxFO4alB0=;
+        b=mKSn79DD7eCb3qFZDVGtgQM5qawGXdvAC1EqJVGqLvG2LucvXxQ0I7RQak3x42+b2Z
+         YbcQS8YR+HbpK0JABGIy48UNnoZ99zQfsNgnwPKXz/EA6XntQm+ulMt/laSrYJpzHRq7
+         Juqs6UvIb4opxKYUIdo8SLkSd9pPGS/8QRs3XRjWJEJJQyx7UG8peROrxjjSa7AgYbFQ
+         pmDef3WYUWMKhN8ycikuJKrc1jQfhn9qNYwRoud1gnacKaPk4m5q+tX8LDSTQn4W4V2l
+         R6AkJJPqUeO55LX6ewR5EsjZ1lJzViAC9uA0GJj3APeu1cC4hloB4bgJzM//ibwZUM60
+         sB2g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=Q3H8DgU6;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-174-90-59.sparkpostmail.com (mta-174-90-59.sparkpostmail.com. [192.174.90.59])
+        by mx.google.com with ESMTPS id 006d021491bc7-6d2cfc4ecc3si4549105eaf.15.2026.09.23.09.36.58
+        for <joaquin@optingrowth.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Sep 2026 09:36:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) client-ip=192.174.90.59;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=Q3H8DgU6;
+       spf=pass (google.com: domain of msprvs1=20726bhten3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) smtp.mailfrom="msprvs1=20726bHteN3l4=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: gdH26Mq1hV4Pk37KulkFu8ubz7puVMKwf4waLRyJim4=|eyJyIjoiam9hcXVpbkB
+	vcHRpbmdyb3d0aC5jb20iLCJzdWJhY2NvdW50X2lkIjoiMTAxMTciLCJjdXN0b21
+	lcl9pZCI6IjMwMzI4NyIsIm1lc3NhZ2VfaWQiOiI2YWIzMjkwMGI0NmExMDE1MGN
+	jMCIsInRlbmFudF9pZCI6InNwYyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1790181417;
+	i=@colonysparkweekly.com;
+	bh=TdKHFbrQC02bciwYJahcsCpB+fuUJcjN8WaPz8dGbeo=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=Q3H8DgU6seJZodTsq9z/2hEuO/nZ2bFxsH+nvCHpR4XBsMdvx+9oIJMvfkiuDbLnB
+	 Ga85hXMRDAZSv/KHJCzw0Nuzv0CD/UsUvn0qBpHyFz3iqSXu52bXcYGoi8/hNCIgJc
+	 s+zSSRf6y9FQYdStoHdS410c8TeMskrcPriC8oXc=
+Received: from [10.90.6.198] ([10.90.6.198])
+	by i-091e3fcac1942758c.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76429 r(msys-ecelerity:tags/5.3.0.18)) with REST
+	id 0C/C0-52416-92004BA6; Wed, 23 Sep 2026 16:36:57 +0000
+To: "joaquin@optingrowth.com" <joaquin@optingrowth.com>
+Message-ID: <0C.C0.52416.92004BA6@i-091e3fcac1942758c.mta1vrest.sd.prd.sparkpost>
+Date: Wed, 23 Sep 2026 16:36:57 +0000
+Content-Type: multipart/alternative; boundary="_----dIiUMDP+vAPdVisCicqokg===_39/C0-52416-92004BA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Agents need permission maps, not just prompt reviews
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3ABcRUnr-lV1xgpMj3Hi5VPCdCDrL14FDdqCO_R4HTT-0~%7CeyAicmNwdF90byI6ICJqb2FxdWluQG9wdGluZ3Jvd3RoLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJzdWJhY2NvdW50X2lkIjogIjEwMTE3IiwgIm1lc3NhZ2VfaWQiOiAiNmFiMzI5MDBiNDZhMTAxNTBjYzAiIH0~>,<https://unsubscribe.spmta.com/u/kBYY6YhsYz9BWagDv5bFAg~~/AASgtxA~/TCmmKv0wOVNCLxGUM-5YvX3VLQKWTej5HllWQiEX-qKs-HTAJuo1dQk5_MYd-szkX2N_gEJ0foDVCi7ZdwSAiQ~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----dIiUMDP+vAPdVisCicqokg===_39/C0-52416-92004BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+One compromised credential can reach multiple systems. Here is how to see i=
+t before it happens.=0AOne compromised credential can reach multiple system=
+s. Here is how to see it=0Abefore it happens.=0AThe risk profile of busines=
+s AI changes when an agent stops answering questions=0Aand starts crossing =
+system boundaries. One compromised credential can reach=0Amultiple systems.=
+ The useful question is no longer only whether the output is=0Acorrect. It =
+is what the integration can reach, combine, and change.=0A=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=0A=0A=C2=A0=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark=
+ [https://www.colonyspark.com]=0A=0A=0ATHE OPERATIONS=0ABRIEF=0A=0A=C2=A0=
+=0A=0AISSUE #19 =C2=A0=C2=B7=C2=A0 AUGUST 14, 2026=0A=0A=C2=A0=0A=0A=C2=A0=
+=0A=0AHi ${first_name},=0A=0AThe risk profile of business AI changes when a=
+n agent stops answering questions=0Aand starts crossing system boundaries. =
+A model connected to ERP, CRM, email,=0Afile storage, and workflow tools do=
+es not just produce an answer. It can=0Aassemble records that were previous=
+ly separated, act through credentials that=0Aoutlive the task, and carry on=
+e compromised integration into several operating=0Asystems.=0A=0AThis issue=
+ is about the layer replacing traditional prompt review: system access=0Ama=
+pping. The useful question is no longer only whether the output is correct.=
+ It=0Ais what the integration can reach, combine, and change.=0A=0ABill=0A=
+=0A=C2=A0=0A=0ATHE SHIFT=0A=0A=0ASystem Access Is Becoming the Hidden AI Ri=
+sk.=0A=0AThe model is not the blast radius. The permission map is.=0A=0AThe=
+ first wave of business AI review centered on the model. Did it make up a=
+=0Afact. Did a person check the response. Could sensitive data appear in th=
+e prompt=0Aor answer. Those controls still matter, but they describe an ass=
+istant sitting=0Aon one side of a screen. Agents change the unit of risk.=
+=0A=0AFive signals from 2025 and 2026=0A=0A=C2=B7 16% of respondents were a=
+lready using agents for multi-step workflows and=0Amulti-agent systems, whi=
+le only 26% said leadership was clearly aligned on AI.=0AAdoption is outpac=
+ing control (Microsoft 2026 Work Trend Index=0A[https://www.microsoft.com/e=
+n-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-e=
+very-organization]).=0A=0A=C2=B7 45 non-human identities exist for every hu=
+man identity. These include service=0Aaccounts, API keys, and secrets used =
+by applications and automated systems.=0AAgents use those identities to acc=
+ess sensitive systems and data (Cloud Security=0AAlliance=0A[https://clouds=
+ecurityalliance.org/artifacts/securing-non-human-identities-in-the-age-of-a=
+i-agents-rsac-2025]).=0A=0A=C2=B7 Tool Misuse and Identity Abuse are now di=
+stinct risks in OWASP's Top 10 for=0AAgentic Applications. An agent does no=
+t need an exotic exploit if it has=0Alegitimate access to export customer r=
+ecords, modify an order, send an email, or=0Atrigger a workflow (OWASP Top =
+10 for Agentic Applications=0A[https://genai.owasp.org/2025/12/09/owasp-gen=
+ai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-se=
+curity/]).=0A=0A=C2=B7 One compromised OAuth token associated with Saleslof=
+t Drift was used to export=0Alarge volumes of Salesforce data. The same tok=
+ens provided access to connected=0AGoogle Workspace accounts. One integrati=
+on became the attack path across=0Amultiple systems (Google Threat Intellig=
+ence Group=0A[https://cloud.google.com/blog/topics/threat-intelligence/data=
+-theft-salesforce-instances-via-salesloft-drift]).=0A=0A=C2=B7 13% of breac=
+hed organizations reported breaches of AI models or applications,=0Aand 97%=
+ of that group lacked proper AI access controls. Sixty percent of=0AAI-rela=
+ted incidents led to compromised data and 31% caused operational=0Adisrupti=
+on (IBM 2025 Cost of a Data Breach=0A[https://newsroom.ibm.com/2025-07-30-i=
+bm-report-13-of-organizations-reported-breaches-of-ai-models-or-application=
+s%2C-97-of-which-reported-lacking-proper-ai-access-controls]).=0A=0AMicroso=
+ft's data shows the move into multi-step workflows is already underway,=0Aw=
+hile leadership alignment trails behind. That work needs credentials. CSA's=
+=0Aidentity count shows how quickly those credentials disappear into a much=
+ larger=0Apopulation of service accounts, tokens, keys, and application ide=
+ntities. OWASP=0Athen identifies the failure that becomes possible: a tool =
+can be misused while=0Athe agent remains inside the access it was granted.=
+=0A=0AThe Salesloft Drift incident makes the operating consequence concrete=
+. One=0Aconnected application held OAuth paths into Salesforce and email. =
+When the=0Atokens were compromised, the response could not stop at reviewin=
+g the app.=0ACustomers had to trace every connected system, rotate credenti=
+als, and search=0Athe exported data for more secrets that could extend the =
+breach again. IBM's=0Afindings show what happens when that control gap reac=
+hes AI systems: data loss=0Aand operational disruption, not just a bad resp=
+onse in a chat window.=0A=0AFor a manufacturer or distributor, the blast ra=
+dius follows the workflow. An=0Aorder-status agent may need ERP reads, cust=
+omer emails, shipping documents, and=0Aworkflow actions. A purchasing agent=
+ may touch supplier records, inventory,=0Apurchase approvals, and shared fi=
+les. If each connection inherits a broad=0Aadministrator or employee creden=
+tial, the agent quietly becomes a bridge across=0Acontrols that used to be =
+separate.=0A=0AModel review asks what the AI said. Access review asks what =
+the entire connected=0Aworkflow can do if the agent, token, source document=
+, or integration is wrong.=0A=0A=C2=A0=0A=0AFROM THE FLOOR=0A=0A=0ACompanie=
+s are already exposed without realizing it.=0A=0AKeren Katz, OWASP, on the =
+visibility gap around deployed agents=0A=0A=E2=80=9CCompanies are already e=
+xposed to Agentic AI attacks. Often without realizing=0Athat agents are run=
+ning in their environments.=E2=80=9D=0A=0AKeren Katz=0A=0ASenior Group Mana=
+ger of AI Security, Tenable =C2=A0=C2=B7=C2=A0 Co-Lead, OWASP Top 10 for=0A=
+Agentic Applications=0A[https://genai.owasp.org/2025/12/09/owasp-genai-secu=
+rity-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/=
+]=0A=0AKatz co-led the OWASP Top 10 effort that gathered input from more th=
+an 100=0Asecurity researchers, practitioners, user organizations, and techn=
+ology=0Aproviders. Her statement reflects what most organizations are disco=
+vering right=0Anow: agents are already connected to business systems, movin=
+g data, and taking=0Aactions. The visibility gap is structural. Most agent =
+reviews document the=0Aprompt, model, owner, and intended task. That leaves=
+ the operational exposure=0Ascattered across ERP roles, OAuth grants, share=
+d accounts, API keys, email=0Apermissions, folder access, and workflow acti=
+ons.=0A=0AThe takeaway=0A=0ANo single screen shows that an order-status age=
+nt can read margin data, retrieve=0Afiles, send customer email, and update =
+a case because each permission was=0Aapproved in a different system. The op=
+erating risk is not visible until the=0Apermissions are mapped together.=0A=
+=0A=C2=A0=0A=0ATHE STACK=0A=0A=0AThe Agent Blast-Radius Map.=0A=0AOne opera=
+ting view before a useful integration becomes a shared point of=0Afailure.=
+=0A=0AMap the full reach before one agent becomes the shortest path through=
+ the=0Abusiness.=0A=0AMost agent reviews document the prompt, model, owner,=
+ and intended task. That=0Aleaves the operational exposure scattered across=
+ ERP roles, OAuth grants, shared=0Aaccounts, API keys, email permissions, f=
+older access, and workflow actions. No=0Asingle screen shows that an order-=
+status agent can read margin data, retrieve=0Afiles, send customer email, a=
+nd update a case because each permission was=0Aapproved in a different syst=
+em. The Agent Blast-Radius Map pulls those=0Aconnections into one operating=
+ view before a useful integration becomes a shared=0Apoint of failure.=0A=
+=0AWhat the map shows=0A=0A=C2=B7 The business job. Agent name, owner, inte=
+nded task, and named business=0Acontext.=0A=0A=C2=B7 Connected systems and =
+actions. ERP, CRM, email, file repositories, workflow=0Atools. For each, wh=
+ether the agent can read, create, update, delete, approve,=0Asend, export, =
+or trigger.=0A=0A=C2=B7 Credentials and ownership. Service account, API key=
+, OAuth grant, shared=0Aidentity. Who issued it, when it was created, when =
+it expires, who owns it now.=0A=0A=C2=B7 Sensitive data reached. Customer r=
+ecords, order data, pricing, supplier=0Ainformation, financial commitments.=
+ Data classification and approval thresholds.=0A=0A=C2=B7 Gaps and risks. P=
+ermissions beyond the named job, credentials with no=0Aexpiration, shared i=
+dentities, unnecessary system connections, write access=0Awithout approval =
+gates.=0A=0AHow it works in practice=0A=0AThe mapping process=0A=0AStep 1. =
+Name the agent and the job. What is it called, who owns it, and what=0Abusi=
+ness work does it do. One agent, one job. If the agent touches multiple=0Aw=
+orkflows, map them separately or consolidate the job definition first.=0A=
+=0AStep 2. List every system it touches. ERP, CRM, email, file storage, wor=
+kflow=0Aautomation, external APIs. For each system, record what permissions=
+ the agent=0Aholds: read, create, update, delete, approve, send, export, tr=
+igger.=0A=0AStep 3. Trace the credentials. What identity does each connecti=
+on use. Service=0Aaccount, API key, OAuth grant, shared account. Who owns i=
+t now, when was it=0Acreated, when does it expire, what else can it reach i=
+n each system.=0A=0AStep 4. Identify gaps. Compare actual access against th=
+e minimum needed to do=0Athe named job. Anything outside that path gets fla=
+gged: excessive read scope,=0Awrite access without approval, unnecessary sy=
+stem, shared identity, credential=0Awith no expiration, inherited permissio=
+ns from a previous workflow.=0A=0ABuilding it: Two paths=0A=0APath 1: Inter=
+nal build=0A=0AStart with the three agents or copilots closest to customer =
+orders, purchasing,=0Ainventory, finance, or production scheduling. Export =
+enterprise-application=0Agrants from the identity provider, connected-app p=
+ermissions from CRM,=0Aintegration users and roles from ERP, mailbox delega=
+tion from the email=0Aplatform, and service credentials from the secrets ma=
+nager. Join them in a=0Acontrolled table using the agent or service identit=
+y as the key. Add a fixed=0Aaction vocabulary: read, create, update, delete=
+, approve, send, export, trigger.=0AHave the business owner confirm the min=
+imum actions needed for the named job,=0Athen flag every mismatch. A spread=
+sheet, diagram, and monthly credential review=0Aare enough for the first ve=
+rsion if one owner is accountable for keeping them=0Acurrent.=0A=0APath 2: =
+ERP or partner build=0A=0AAsk the ERP partner, systems integrator, or manag=
+ed service provider to map the=0Aagent's complete transaction path rather t=
+han reviewing only the ERP role. The=0Apartner can pull integration users, =
+role permissions, API scopes, workflow=0Ascripts, connected applications, a=
+nd audit history from the systems it already=0Amanages, then join those rec=
+ords with identity-provider and email permissions.=0AThe useful deliverable=
+ is not another security report. It is a live operating=0Amap tied to order=
+ entry, purchasing, inventory, production, and customer=0Acommunication, wi=
+th named shutoff steps and a permission-change queue the=0Ainternal team ca=
+n review.=0A=0ATreat every agent as its own worker identity. Give it only t=
+he systems and=0Aactions required for one named job. Make the combined reac=
+h visible before the=0Aworkflow goes live.=0A=0A=C2=A0=0A=0ATHE OPERATIONS =
+BRIEF=0A=0ABy Bill Murphy =C2=A0=C2=B7=C2=A0 Powered by Colony Spark [https=
+://www.colonyspark.com]=0A=0AAlready mapping your agent access, or discover=
+ing agents connected to critical=0Asystems you did not know about. Hit repl=
+y, I read every one. Bill=0A=0AYou are receiving this because you subscribe=
+d to The Operations Brief.=0AUnsubscribe [[[custom:unsubscribe]]]
+--_----dIiUMDP+vAPdVisCicqokg===_39/C0-52416-92004BA6
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head> <style></style> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<title>The Operations Brief &#x2014; System Access Is Becoming the Hidden AI Risk</title>
+<!--[if mso]>
+<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+<style type="text/css">
+table, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+td, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exactly;}
+body, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+<body bgcolor="#f4f2ef" style="margin:0;padding:0;width:100%;background-color:#f4f2ef;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-line-height-rule:exactly;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;" class="bodyClass"><span style="display:none">One compromised credential can reach multiple systems. Here is how to see it before it happens.</span>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">The risk profile of business AI changes when an agent stops answering questions and starts crossing system boundaries. One compromised credential can reach multiple systems. The useful question is no longer only whether the output is correct. It is what the integration can reach, combine, and change.</div>
+<div style="display:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f4f2ef;mso-hide:all;">&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;</div>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#f4f2ef" style="background-color:#f4f2ef;width:100%;">
+<tbody><tr>
+<td align="center" valign="top" style="padding:24px 16px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="max-width:600px;width:100%;">
+<tbody><tr>
+<td>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td height="5" bgcolor="#C8392A" style="background-color:#C8392A;height:5px;border-radius:8px 8px 0 0;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td align="center" bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:36px 40px 28px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td align="center" style="padding-bottom:20px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:#C8392A;text-transform:uppercase;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p></td></tr>
+<tr><td align="center"><h1 style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:42px;font-weight:800;letter-spacing:5px;color:#ffffff;text-transform:uppercase;line-height:46px;mso-line-height-rule:exactly;">THE OPERATIONS<br>BRIEF</h1></td></tr>
+<tr><td align="center" style="padding-top:14px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="48" height="2" bgcolor="#C8392A" style="background-color:#C8392A;width:48px;height:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td></tr>
+<tr><td align="center" style="padding-top:12px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;color:#999999;text-transform:uppercase;">ISSUE #19 &#xA0;&#xB7;&#xA0; AUGUST 14, 2026</p></td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="3" bgcolor="#C8392A" style="background-color:#C8392A;height:3px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;padding:32px 40px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Hi ${first_name},</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The risk profile of business AI changes when an agent stops answering questions and starts crossing system boundaries. A model connected to ERP, CRM, email, file storage, and workflow tools does not just produce an answer. It can assemble records that were previously separated, act through credentials that outlive the task, and carry one compromised integration into several operating systems.</p>
+<p style="margin:12px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">This issue is about the layer replacing traditional prompt review: system access mapping. The useful question is no longer only whether the output is correct. It is what the integration can reach, combine, and change.</p>
+<p style="margin:18px 0 0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Bill</p>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE SHIFT</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">System Access Is Becoming the Hidden AI Risk.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The model is not the blast radius. The permission map is.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The first wave of business AI review centered on the model. Did it make up a fact. Did a person check the response. Could sensitive data appear in the prompt or answer. Those controls still matter, but they describe an assistant sitting on one side of a screen. Agents change the unit of risk.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 0 24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 12px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Five signals from 2025 and 2026</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">16% of respondents</strong> were already using agents for multi-step workflows and multi-agent systems, while only 26% said leadership was clearly aligned on AI. Adoption is outpacing control (<a href="https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization" style="color:#C8392A;text-decoration:underline;">Microsoft 2026 Work Trend Index</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">45 non-human identities</strong> exist for every human identity. These include service accounts, API keys, and secrets used by applications and automated systems. Agents use those identities to access sensitive systems and data (<a href="https://cloudsecurityalliance.org/artifacts/securing-non-human-identities-in-the-age-of-ai-agents-rsac-2025" style="color:#C8392A;text-decoration:underline;">Cloud Security Alliance</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Tool Misuse and Identity Abuse</strong> are now distinct risks in OWASP&apos;s Top 10 for Agentic Applications. An agent does not need an exotic exploit if it has legitimate access to export customer records, modify an order, send an email, or trigger a workflow (<a href="https://genai.owasp.org/2025/12/09/owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/" style="color:#C8392A;text-decoration:underline;">OWASP Top 10 for Agentic Applications</a>).</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">One compromised OAuth token</strong> associated with Salesloft Drift was used to export large volumes of Salesforce data. The same tokens provided access to connected Google Workspace accounts. One integration became the attack path across multiple systems (<a href="https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift" style="color:#C8392A;text-decoration:underline;">Google Threat Intelligence Group</a>).</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">13% of breached organizations</strong> reported breaches of AI models or applications, and 97% of that group lacked proper AI access controls. Sixty percent of AI-related incidents led to compromised data and 31% caused operational disruption (<a href="https://newsroom.ibm.com/2025-07-30-ibm-report-13-of-organizations-reported-breaches-of-ai-models-or-applications%2C-97-of-which-reported-lacking-proper-ai-access-controls" style="color:#C8392A;text-decoration:underline;">IBM 2025 Cost of a Data Breach</a>).</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Microsoft&apos;s data shows the move into multi-step workflows is already underway, while leadership alignment trails behind. That work needs credentials. CSA&apos;s identity count shows how quickly those credentials disappear into a much larger population of service accounts, tokens, keys, and application identities. OWASP then identifies the failure that becomes possible: a tool can be misused while the agent remains inside the access it was granted.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">The Salesloft Drift incident makes the operating consequence concrete. One connected application held OAuth paths into Salesforce and email. When the tokens were compromised, the response could not stop at reviewing the app. Customers had to trace every connected system, rotate credentials, and search the exported data for more secrets that could extend the breach again. IBM&apos;s findings show what happens when that control gap reaches AI systems: data loss and operational disruption, not just a bad response in a chat window.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">For a manufacturer or distributor, the blast radius follows the workflow. An order-status agent may need ERP reads, customer emails, shipping documents, and workflow actions. A purchasing agent may touch supplier records, inventory, purchase approvals, and shared files. If each connection inherits a broad administrator or employee credential, the agent quietly becomes a bridge across controls that used to be separate.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">Model review asks what the AI said. Access review asks what the entire connected workflow can do if the agent, token, source document, or integration is wrong.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">FROM THE FLOOR</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">Companies are already exposed without realizing it.</h2>
+<p style="margin:0 0 20px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Keren Katz, OWASP, on the visibility gap around deployed agents</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="background-color:#fdf6f5;border-radius:6px;padding:24px 24px 20px;border-top:2px solid #C8392A;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:27px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">&#x201C;Companies are already exposed to Agentic AI attacks. Often without realizing that agents are running in their environments.&#x201D;</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td>
+<p style="margin:0 0 1px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;color:#1a1a1a;line-height:18px;mso-line-height-rule:exactly;">Keren Katz</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">Senior Group Manager of AI Security, Tenable &#xA0;&#xB7;&#xA0; Co-Lead, <a href="https://genai.owasp.org/2025/12/09/owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/" style="color:#C8392A;text-decoration:none;">OWASP Top 10 for Agentic Applications</a></p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Katz co-led the OWASP Top 10 effort that gathered input from more than 100 security researchers, practitioners, user organizations, and technology providers. Her statement reflects what most organizations are discovering right now: agents are already connected to business systems, moving data, and taking actions. The visibility gap is structural. Most agent reviews document the prompt, model, owner, and intended task. That leaves the operational exposure scattered across ERP roles, OAuth grants, shared accounts, API keys, email permissions, folder access, and workflow actions.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:18px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 6px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">The takeaway</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">No single screen shows that an order-status agent can read margin data, retrieve files, send customer email, and update a case because each permission was approved in a different system. The operating risk is not visible until the permissions are mapped together.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#ffffff" style="background-color:#ffffff;border-radius:8px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;padding:18px 40px;"><p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:4px;color:#C8392A;text-transform:uppercase;">THE STACK</p></td></tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="padding:32px 40px 36px;">
+<h2 style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;color:#1a1a1a;line-height:30px;mso-line-height-rule:exactly;">The Agent Blast-Radius Map.</h2>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#C8392A;letter-spacing:0.5px;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">One operating view before a useful integration becomes a shared point of failure.</p>
+<p style="margin:0 0 24px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;color:#888888;mso-line-height-rule:exactly;">Map the full reach before one agent becomes the shortest path through the business.</p>
+<p style="margin:0 0 16px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:26px;color:#444444;mso-line-height-rule:exactly;">Most agent reviews document the prompt, model, owner, and intended task. That leaves the operational exposure scattered across ERP roles, OAuth grants, shared accounts, API keys, email permissions, folder access, and workflow actions. No single screen shows that an order-status agent can read margin data, retrieve files, send customer email, and update a case because each permission was approved in a different system. The Agent Blast-Radius Map pulls those connections into one operating view before a useful integration becomes a shared point of failure.</p>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">What the map shows</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-top:2px solid #1a1a1a;">
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">The business job.</strong> Agent name, owner, intended task, and named business context.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Connected systems and actions.</strong> ERP, CRM, email, file repositories, workflow tools. For each, whether the agent can read, create, update, delete, approve, send, export, or trigger.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Credentials and ownership.</strong> Service account, API key, OAuth grant, shared identity. Who issued it, when it was created, when it expires, who owns it now.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Sensitive data reached.</strong> Customer records, order data, pricing, supplier information, financial commitments. Data classification and approval thresholds.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">&#xB7; <strong style="color:#1a1a1a;">Gaps and risks.</strong> Permissions beyond the named job, credentials with no expiration, shared identities, unnecessary system connections, write access without approval gates.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">How it works in practice</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#1a1a1a" style="padding:22px 24px;background-color:#1a1a1a;border-radius:6px;">
+<p style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">The mapping process</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Step 1. Name the agent and the job.</strong> What is it called, who owns it, and what business work does it do. One agent, one job. If the agent touches multiple workflows, map them separately or consolidate the job definition first.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Step 2. List every system it touches.</strong> ERP, CRM, email, file storage, workflow automation, external APIs. For each system, record what permissions the agent holds: read, create, update, delete, approve, send, export, trigger.</p>
+<p style="margin:0 0 10px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Step 3. Trace the credentials.</strong> What identity does each connection use. Service account, API key, OAuth grant, shared account. Who owns it now, when was it created, when does it expire, what else can it reach in each system.</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#cccccc;mso-line-height-rule:exactly;"><strong style="color:#ffffff;">Step 4. Identify gaps.</strong> Compare actual access against the minimum needed to do the named job. Anything outside that path gets flagged: excessive read scope, write access without approval, unnecessary system, shared identity, credential with no expiration, inherited permissions from a previous workflow.</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0 0 8px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:18px;mso-line-height-rule:exactly;">Building it: Two paths</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:14px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #1a1a1a;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#1a1a1a;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 1: Internal build</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Start with the three agents or copilots closest to customer orders, purchasing, inventory, finance, or production scheduling. Export enterprise-application grants from the identity provider, connected-app permissions from CRM, integration users and roles from ERP, mailbox delegation from the email platform, and service credentials from the secrets manager. Join them in a controlled table using the agent or service identity as the key. Add a fixed action vocabulary: read, create, update, delete, approve, send, export, trigger. Have the business owner confirm the minimum actions needed for the named job, then flag every mismatch. A spreadsheet, diagram, and monthly credential review are enough for the first version if one owner is accountable for keeping them current.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#f9f9f9" style="padding:20px 22px;background-color:#f9f9f9;border-radius:6px;border-left:3px solid #C8392A;">
+<p style="margin:0 0 5px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;color:#C8392A;text-transform:uppercase;line-height:16px;mso-line-height-rule:exactly;">Path 2: ERP or partner build</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:24px;color:#555555;mso-line-height-rule:exactly;">Ask the ERP partner, systems integrator, or managed service provider to map the agent&apos;s complete transaction path rather than reviewing only the ERP role. The partner can pull integration users, role permissions, API scopes, workflow scripts, connected applications, and audit history from the systems it already manages, then join those records with identity-provider and email permissions. The useful deliverable is not another security report. It is a live operating map tied to order entry, purchasing, inventory, production, and customer communication, with named shutoff steps and a permission-change queue the internal team can review.</p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td bgcolor="#fdf6f5" style="border-left:3px solid #C8392A;padding:12px 20px;background-color:#fdf6f5;border-radius:0 6px 6px 0;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#1a1a1a;font-style:italic;font-weight:500;mso-line-height-rule:exactly;">Treat every agent as its own worker identity. Give it only the systems and actions required for one named job. Make the combined reach visible before the workflow goes live.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td height="8" style="height:8px;font-size:0;line-height:0;">&#xA0;</td></tr>
+<tr>
+<td bgcolor="#1a1a1a" style="background-color:#1a1a1a;border-radius:8px;padding:32px 40px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:20px;">
+<tbody><tr>
+<td>
+<p style="margin:0 0 2px;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;color:#ffffff;letter-spacing:2px;text-transform:uppercase;line-height:20px;mso-line-height-rule:exactly;">THE OPERATIONS BRIEF</p>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#888888;line-height:18px;mso-line-height-rule:exactly;">By Bill Murphy &#xA0;&#xB7;&#xA0; Powered by <a href="https://www.colonyspark.com" style="color:#C8392A;text-decoration:none;">Colony Spark</a></p>
+</td>
+</tr>
+</tbody></table>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:24px;">
+<tbody><tr>
+<td bgcolor="#222222" style="background-color:#222222;border-radius:6px;padding:16px 20px;">
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:23px;color:#cccccc;mso-line-height-rule:exactly;">Already mapping your agent access, or discovering agents connected to critical systems you did not know about. Hit reply, I read every one. Bill</p>
+</td>
+</tr>
+</tbody></table>
+<p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#555555;text-align:center;mso-line-height-rule:exactly;">You are receiving this because you subscribed to The Operations Brief.<br><a href="[[custom:unsubscribe]]" style="color:#C8392A;text-decoration:underline;">Unsubscribe</a></p>
+</td>
+</tr>
+<tr><td height="24" style="height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<img src="https://trk.ebitcommweekly.com/opens?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&type=html&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMTgxNDE3fQ.DHqzAcbTiOdJdVsLFCENcv9erNL4Xi_F0xw9FOrh9Nw" height="1px" width="1px"><table width="100%" align="center"><tbody><tr><td width="100%" align="center">
+        <a style="margin-left: auto; margin-right: auto; color: grey; font-size: 10px; text-decoration: underline;" href="https://trk.ebitcommweekly.com/unsubscribes?email=ef9adbd7-58a1-5141-a08b-c984cd7ffc03&info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMTgxNDE3fQ.DHqzAcbTiOdJdVsLFCENcv9erNL4Xi_F0xw9FOrh9Nw&type=html">Click here to unsubscribe</a>
+        </td></tr></tbody></table></body></html>
+--_----dIiUMDP+vAPdVisCicqokg===_39/C0-52416-92004BA6--
+
