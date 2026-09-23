@@ -124,8 +124,8 @@ def clean(html, resolver, title):
     pixel_pats = [p.lower() for p in CFG.get("pixel_patterns", [])]
     for img in soup.find_all("img"):
         src = (img.get("src") or "").lower()
-        tiny = str(img.get("width", "")).strip() in ("0", "1") and \
-               str(img.get("height", "")).strip() in ("0", "1")
+        dims = [re.sub(r"px$", "", str(img.get(k, "")).strip()) for k in ("width", "height")]
+        tiny = any(d in ("0", "1") for d in dims)
         if tiny or any(p in src for p in pixel_pats):
             img.decompose()
 
@@ -234,6 +234,10 @@ def load_mailmodo():
             if m:
                 date = parse_date(m.group(1))
 
+        if title:
+            for pref in CFG.get("title_remove_prefixes", []):
+                if title.lower().startswith(pref.lower()):
+                    title = title[len(pref):].strip()
         ov = overrides.get(path.name, {})
         if (ov.get("titulo") or "").strip():
             title = ov["titulo"].strip()
@@ -244,6 +248,9 @@ def load_mailmodo():
             continue
         if date.tzinfo is None:
             date = date.replace(tzinfo=timezone.utc)
+        if any(i["title"].lower() == title.lower() for i in items):
+            warn(f"{path.name}: '{title}' está repetido, se ignora el duplicado")
+            continue
         items.append({"title": title, "date": date, "html": html, "guid": None, "source": "mailmodo"})
     print(f"mailmodo: {len(items)} issues")
     return items
