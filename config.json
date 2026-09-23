@@ -1,0 +1,22 @@
+{
+  "site_url": "https://TU-USUARIO.github.io/tob-newsletter-feed",
+  "title": "The Operations Brief",
+  "description": "Archivo del newsletter The Operations Brief",
+
+  "listmonk_snapshot_file": "listmonk_archive.xml",
+  "listmonk_feed_url": "https://150.colonysparkweekly.com/archive.xml",
+
+  "tracking_hosts": ["150.colonysparkweekly.com"],
+  "pixel_patterns": ["px.png"],
+
+  "remove_links_containing": [
+    "unsubscribe", "/subscription/", "optout", "opt-out",
+    "darse de baja", "desuscrib", "manage preferences", "update your preferences",
+    "view in browser", "view online", "ver en el navegador", "ver online"
+  ],
+  "remove_paragraphs_containing": [
+    "receiving this because", "you are receiving this", "recibís este mail", "recibes este correo"
+  ],
+
+  "feed_content": "body"
+}

@@ -1,0 +1,4 @@
+Subí acá cada issue de Mailmodo:
+- .eml (recomendado): título y fecha se leen solos.
+- .html: nombralo empezando con la fecha (2026-07-16-issue-19.html)
+  o agregá una línea en issues.csv con el título y la fecha.
