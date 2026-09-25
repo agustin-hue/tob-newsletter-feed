@@ -1,0 +1,933 @@
+Delivered-To: agustin@media150.com
+Received: by 2002:a0c:e98b:0:b0:914:1e7a:48a6 with SMTP id z11csp36903qvn;
+        Fri, 25 Sep 2026 09:00:44 -0700 (PDT)
+X-Received: by 2002:a05:6830:6f85:b0:7fa:ab72:9e03 with SMTP id 46e09a7af769-81917b2c146mr2869453a34.27.1790352044076;
+        Fri, 25 Sep 2026 09:00:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790352044; cv=none;
+        d=google.com; s=arc-20260327;
+        b=Sue9Gc0PKq2Feref/8IpI7Gep0CRG3OCsHq0hdkjyIBv1RgliwV4znXhdJFzFa87wl
+         j2YjGsiKmhCOYOUwB9xXgUGwIrrSREWwzl5Kw098Dbtiy3Tsj+VdGfHfpaIAPtXUfLDD
+         pKV7c2fxtgLHPMfuE06jjASx156EWT+d4surjykG42UqI0JWfvVp+P/plsjFMK/q/igH
+         fYOqtniAn8mYRI3oQ9CCPsQp3Czzzgj+yURkjpyPRjUj4hT53rZS0A7MTIPQz5YWRaRi
+         tSuhYKkDyveThJoOayl1mG90FzAYsWw4iiFoMfX63ENNkK26LYo5bMohHfEOyc29Uj1H
+         jDug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=ALf//WIlxyrVblj0Ecchi1YZO3ArRvk++Nl/li/rGLk=;
+        fh=HHrjEAvXg1voA2ribokICAGLU0uXgDCGQin+OhhN30c=;
+        b=Fmmll40o3ikbLILk4bcDKgHG7gOi1OesBLr7X2G2uLHgT6A3JAYnMm5h127QKT3KZn
+         v/Pm57k+Kb9RSM/i58EioRomWrAqpfgFlHKPuyZ/UoJcjBaSeIdfXitTQ6rIHIpim0Yp
+         CLaBDzT9D1tQ7WiwMB0LhtXxiGaW8N6hCjK8XqMlXHN/2z/NYFVntbtxQWknUWRZe1Go
+         uLinoLZjdQXK3x9JzWZ1NOiUURboyPkvicURqnE8nPT7TDFp01g8nfaG8Gmu8/9KjoVQ
+         vK/9yBn6lDwB+zBwBWDuKnv7nKAqm7x8LY0MBUap8GwOIl234eWOYzu0L9a/dwCOfC1l
+         CxWA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=sQ5hxEkK;
+       spf=pass (google.com: domain of msprvs1=207284gnunryl=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 156.70.120.32 as permitted sender) smtp.mailfrom="msprvs1=207284gnuNryL=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=207284gnuNryL=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-70-120-32.sparkpostmail.com (mta-70-120-32.sparkpostmail.com. [156.70.120.32])
+        by mx.google.com with ESMTPS id 46e09a7af769-818e6210299si5727190a34.2.2026.09.25.09.00.43
+        for <agustin@media150.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 25 Sep 2026 09:00:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=207284gnunryl=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 156.70.120.32 as permitted sender) client-ip=156.70.120.32;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=sQ5hxEkK;
+       spf=pass (google.com: domain of msprvs1=207284gnunryl=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 156.70.120.32 as permitted sender) smtp.mailfrom="msprvs1=207284gnuNryL=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: eSQeXg35csKm4Lo58nnp20PwLzC0jh9TpPgw3BsWJ9Q=|eyJ0ZW5hbnRfaWQiOiJ
+	zcGMiLCJjdXN0b21lcl9pZCI6IjMwMzI4NyIsInN1YmFjY291bnRfaWQiOiIxMDE
+	xNyIsIm1lc3NhZ2VfaWQiOiI2YWI2YWE5YWI2NmE5ZDgzNTJlYyIsInIiOiJhZ3V
+	zdGluQG1lZGlhMTUwLmNvbSJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1790352042;
+	i=@colonysparkweekly.com;
+	bh=ALf//WIlxyrVblj0Ecchi1YZO3ArRvk++Nl/li/rGLk=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=sQ5hxEkKH/HIVb/I3tG3C/Gq/wUPq/A7ld4AbQ0STb9xkyFCZgwiGQoIvVPPFcFwH
+	 GGsNiCvtF4w4zeK0LJ3IGC1HItbovvcaYrGBrWpzj+xvH/kzvOZx6CU/IizQ7nbh/J
+	 CKPH3Km9htocrzlfHpX4GLlvVYPsenYSClcfWMQg=
+Received: from [10.90.3.98] ([10.90.3.98])
+	by i-04dac57fef8a85b96.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76435 r(msys-ecelerity:tags/5.3.0.19)) with REST
+	id CE/2D-21229-AAA96BA6; Fri, 25 Sep 2026 16:00:42 +0000
+To: "agustin@media150.com" <agustin@media150.com>
+Message-ID: <CE.2D.21229.AAA96BA6@i-04dac57fef8a85b96.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 25 Sep 2026 16:00:42 +0000
+Content-Type: multipart/alternative; boundary="_----iUvbzRR0Vfmvg4bHRy3umA===_DA/2D-21229-AAA96BA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Your supplier's lot data just became your problem
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3ABOh9JdhhdwJ8N87gyi04OKqGoB9T-6vHUmwsrDLS74c~%7CeyAicmNwdF90byI6ICJhZ3VzdGluQG1lZGlhMTUwLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJtZXNzYWdlX2lkIjogIjZhYjZhYTlhYjY2YTlkODM1MmVjIiwgInN1YmFjY291bnRfaWQiOiAiMTAxMTciIH0~>,<https://unsubscribe.spmta.com/u/Wxb3wq3WBjyQ0zPjK9r49A~~/AASgtxA~/aV4dz62XhL34PyuE8nR35Cchxoz733BpSf-OQT3VRmD5DCDAXN70xDhYPaz5PdlSX1P_YTVK-u-UeDSoUI8czg~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----iUvbzRR0Vfmvg4bHRy3umA===_DA/2D-21229-AAA96BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+A truck at the dock, no data to receive it. Here's where the supplier hando=
+ff breaks.=0AA truck at the dock, no data to receive it. Here's where the s=
+upplier handoff=0Abreaks.=0ACencora can=E2=80=99t unload until the data lan=
+ds. NIST just set a new bar for supplier=0Ahandoffs.=0A=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=0A=0AA weekly bri=
+efing for the industrial economy=0A=0A=0AThe Operations=0ABrief=0A=0ABy Bil=
+l Murphy, powered by Colony Spark [https://www.colonyspark.com/]=0A=0A=C2=
+=A0=0A=0ASeptember 25, 2026=0A=0AA new look for The Operations Brief=0A=0AW=
+e refreshed the design to match our new website, so the newsletter and the =
+site=0Anow read as one publication. What you get from it hasn=E2=80=99t cha=
+nged: three sections=0Aevery week, written for the people running manufactu=
+ring and distribution=0Aoperations. Thanks for reading.=0A=0AMost operators=
+ can trace product reasonably well inside their own four walls.=0AThe troub=
+le starts at the handoff, when a supplier=E2=80=99s records have to make se=
+nse=0Ainside someone else=E2=80=99s ERP, WMS, and quality system.=0A=0AThis=
+ issue is about that handoff: why it=E2=80=99s becoming part of the supplie=
+r=0Arelationship, what it looks like at a real receiving dock, and a practi=
+cal way=0Ato find where your own evidence chain breaks.=0A=0AThis week=E2=
+=80=99s question=0A=0ACould your receiving team trace one supplier lot from=
+ last month, PO to=0Aproduction use, without digging through email=3F=0A=0A=
+Hit reply with yes, no, or =E2=80=9Cdepends on the supplier.=E2=80=9D One w=
+ord is enough. I=E2=80=99ll=0Ashare what readers say in a future issue.=0A=
+=0ABill=0A=0A01The Shift=0A=0A=0AThe Traceability Handshake Is Becoming a S=
+upplier Requirement=0A=0ATraceability evidence now has to survive the bound=
+ary between companies.=0A=0AA shipment can reach the dock before its usable=
+ traceability record does. The=0Aproduct is physically there. The lot refer=
+ences, certificates, event records,=0Aand receiving data that would let the=
+ next operator accept it are not, or they=0Aarrive in a form the receiving =
+system can=E2=80=99t use. So the team rebuilds the trail=0Aby hand from inb=
+oxes, portals, and disconnected systems before it can decide=0Awhether to a=
+ccept, hold, investigate, or escalate.=0A=0AMost companies can trace at lea=
+st part of a product inside their own=0Aenvironment. The harder problem sta=
+rts when that history has to cross into=0Aanother company=E2=80=99s ERP, WM=
+S, QMS, MES, or receiving process. Item identifiers=0Adiffer. Lot and seria=
+l references don=E2=80=99t match. Certificates travel separately=0Afrom the=
+ shipment. Event records use different structures.=0A=0ANIST gave this prob=
+lem a current technical foundation on September 9. NIST IR=0A8536=0A[https:=
+//www.nist.gov/publications/supply-chain-traceability-principles-manufactur=
+ing-meta-framework]=0Alays out a manufacturing traceability meta-framework =
+for building a continuous,=0Atime-ordered provenance chain across separate =
+supply chain ecosystems. It relies=0Aon common data patterns, interoperable=
+ interfaces, cryptographically verifiable=0Alinks, and selective disclosure=
+, so companies can share the evidence=0Atraceability requires without expos=
+ing proprietary operating data or depending=0Aon a central repository.=0A=
+=0AThe framework matters less than what it signals for operators. The shift=
+ is from=0Avisibility to usability. A supplier can hold the right informati=
+on and still=0Afail the handoff if the receiver can=E2=80=99t connect it to=
+ the product, lot, shipment,=0Aevent, or decision inside its own workflow. =
+Traceability is becoming part of the=0Asupplier handshake, judged alongside=
+ the product, the ASN, and the delivery=0Adate.=0A=0AA test for your receiv=
+ing team=0A=0APick one supplier lot from last month. Can your team connect =
+it to its PO,=0Ashipment, certificate, receipt, inspection, and downstream =
+use without=0Arebuilding the story from email threads and separate systems=
+=3F If the answer=0Atakes a day of digging, the handshake is already broken=
+.=0A=0AHolding the evidence isn=E2=80=99t the same as handing it over in a=
+ form the next=0Acompany can use.=0A=0AFor Cencora, this isn=E2=80=99t a fu=
+ture architecture problem. A truck can reach the=0Adock before the data req=
+uired to receive its product.=0A=0A02From the Floor=0A=0A=0AThe Truck Is at=
+ the Dock. The Data Isn=E2=80=99t.=0A=0AGregg Gorniak of Cencora on receivi=
+ng product that arrives before its evidence.=0A=0AGregg Gorniak is Vice Pre=
+sident of Manufacturer Operations and Data Services and=0ASecure Supply Cha=
+in Lead at Cencora, which receives pharmaceutical shipments=0Afrom manufact=
+urer partners. Under the Drug Supply Chain Security Act, Cencora=0Aneeds th=
+e matching serialized data before it can receive covered product and=0Atake=
+ ownership of it. In a Q&A with Pharmaceutical Commerce=0A[https://www.phar=
+maceuticalcommerce.com/view/q-a-a-playbook-for-dscsa-value-beyond-complianc=
+e],=0AGorniak described how his team compares purchase orders, ASNs, and ex=
+pected=0Adelivery windows against incoming EPCIS data.=0A=0A=E2=80=9CI don=
+=E2=80=99t want to be reactive when the truck arrives at my dock and then I=
+ can=E2=80=99t=0Abreak the seal and open the truck and get the product off.=
+=E2=80=9D=0A=0AGregg Gorniak=0A=0AVP, Manufacturer Operations and Data Serv=
+ices, Cencora. Pharmaceutical Commerce,=0ASept. 2026=0A[https://www.pharmac=
+euticalcommerce.com/view/q-a-a-playbook-for-dscsa-value-beyond-compliance]=
+=0A=0AHis fix is an early warning. A red, amber, and green view flags suppl=
+iers whose=0AEPCIS data hasn=E2=80=99t arrived 12 to 24 hours before the tr=
+uck is due. That window=0Agives Cencora and the manufacturer time to repair=
+ the data handoff, whether the=0Acause was a system glitch or a file nobody=
+ pushed, before the shipment reaches=0Areceiving. Without it, the truck is =
+physically present and the product is=0Aoperationally unavailable.=0A=0AGor=
+niak also draws a line between compliance and a usable handoff. A portal,=
+=0APDF, or spreadsheet can satisfy a minimum access requirement and still l=
+eave the=0Areceiver stuck, because a PDF can=E2=80=99t be ingested into the=
+ system that validates=0Athe product. In his framing, a portal makes a supp=
+lier compliant. It doesn=E2=80=99t=0Amake it a good partner.=0A=0AThe takea=
+way=0A=0ADSCSA is specific to pharmaceutical distribution, not a rule for e=
+very plant or=0Awarehouse. The operating lesson travels anyway: the quality=
+ and timing of the=0Atraceability record is now part of the supplier relati=
+onship, not an=0Aafterthought to the product and the ASN.=0A=0A03The Stack=
+=0A=0A=0AThe Supplier Traceability Reconciliation Agent=0A=0AOne place to r=
+ebuild the supplier-to-production evidence chain, with humans=0Areviewing o=
+nly the exceptions.=0A=0ASupplier evidence arrives through ASNs, certificat=
+es, packing documents, emails,=0Aportals, and shared event records. Interna=
+l evidence sits across the PO, the ERP=0Areceipt, the WMS scan, the QMS ins=
+pection, inventory movements, and BOM or=0Aproduction consumption. Today th=
+e buyer or quality lead spends most of the=0Aeffort matching identifiers an=
+d putting events in order before investigating the=0Aactual discrepancy.=0A=
+=0AThis agent does the assembly work and hands a person only the missing or=
+=0Aconflicting links. It=E2=80=99s a practical system pattern, not a named =
+product you can=0Abuy off the shelf.=0A=0AWhat it reads=0A=0A=C2=A0=0A=0ASu=
+pplier side: ASN, packing list, certificates, and supporting documents.=0A=
+=0A=C2=A0=0A=0APurchasing and ERP: PO line, item, revision, expected quanti=
+ty, supplier master,=0Areceipts, and inventory transactions.=0A=0A=C2=A0=0A=
+=0AWarehouse and quality: WMS scans and location moves, plus QMS inspection=
+,=0Adisposition, and nonconformance records.=0A=0A=C2=A0=0A=0AProduction: M=
+ES or BOM consumption records where available.=0A=0A=C2=A0=0A=0AOptional: E=
+PCIS events, when both supplier and receiver use the standard.=0A=0AHow it =
+runs, in five steps=0A=0A1. Select. The operator picks a component, lot, se=
+rial number, shipment, or=0Areceipt.=0A=0A2. Normalize. The agent extracts =
+and normalizes the supplier and internal=0Aidentifiers.=0A=0A3. Sequence. I=
+t orders the available events from supplier shipment through=0Areceipt, ins=
+pection, inventory, and production use.=0A=0A4. Compare. It checks supplier=
+ claims against internal records and flags=0Amissing, duplicate, late, or c=
+onflicting evidence.=0A=0A5. Decide. The buyer or quality lead reviews the =
+exceptions and approves the=0Anext action.=0A=0AWhat it returns=0A=0A=C2=A0=
+=0A=0AA time-ordered traceability packet with links back to every source re=
+cord.=0A=0A=C2=A0=0A=0AA broken-link list that shows the first missing or c=
+onflicting handoff.=0A=0A=C2=A0=0A=0AThe affected material, inventory, WIP,=
+ or assemblies the current data supports.=0A=0A=C2=A0=0A=0AAn evidence view=
+ for the buyer, receiving lead, or quality lead.=0A=0A=C2=A0=0A=0AA drafted=
+ supplier evidence request, held for human approval.=0A=0AWhat it looks lik=
+e on a real receipt=0A=0AA certificate references supplier lot A417. The AS=
+N uses a shipment-level=0Aidentifier, and the ERP receipt records an intern=
+al lot. The agent links all=0Athree records, checks quantity and revision, =
+and finds that the inspection=0Aresult is tied to the wrong internal lot. I=
+t sends that exception to quality. It=0Adoesn=E2=80=99t release or hold the=
+ material on its own.=0A=0ATwo paths to build it=0A=0APath 1: Internal buil=
+d=0A=0ACombine document extraction, an event store, read connectors to ERP,=
+ WMS, QMS,=0Aand MES, identifier-mapping rules, optional EPCIS semantics, a=
+nd a human=0Aexception queue. Begin with one supplier, one component family=
+, and read-only=0Aaccess.=0A=0APath 2: ERP or implementation partner=0A=0AB=
+uild the same flow around the supplier-document, lot, receipt, quality, and=
+=0Atrace-reporting modules already in place. The operating team keeps owner=
+ship of=0Aidentifier mappings, exception rules, and release authority.=0A=
+=0AGuardrails=0A=0A=C2=A0=0A=0AIt reconciles the evidence that exists. It c=
+an=E2=80=99t make false source data true or=0Aprove that an undocumented ev=
+ent happened.=0A=0A=C2=A0=0A=0AIt doesn=E2=80=99t release material, change =
+a system of record, issue a hold, or contact=0Aa supplier without human app=
+roval.=0A=0A=C2=A0=0A=0AEvery conclusion keeps its source record and a conf=
+idence or gap status.=0A=0A=C2=A0=0A=0AEPCIS [https://ref.gs1.org/standards=
+/epcis/2.0.0/] gives partners a shared event=0Alanguage. It doesn=E2=80=99t=
+ replace ERP, WMS, QMS, MES, or supplier source records.=0A=0A=C2=A0=0A=0AC=
+ost depends on connector access, document variability, event volume, and=0A=
+partner participation, so there=E2=80=99s no universal price. Start read-on=
+ly and=0Anarrow.=0A=0AThe first useful version doesn=E2=80=99t need to trac=
+e the whole enterprise. It needs to=0Ashow one supplier and one receiving t=
+eam exactly where their shared evidence=0Achain breaks.=0A=0ABefore you go=
+=0A=0ACould your receiving team trace one supplier lot from last month, PO =
+to=0Aproduction use, without digging through email=3F=0A=0AReply with yes, =
+no, or =E2=80=9Cdepends on the supplier.=E2=80=9D If it=E2=80=99s a no, tel=
+l me where=0Athe trail breaks. I read every reply. Bill=0A=0AThe Operations=
+ Brief=0A=0ABy Bill Murphy, powered by Colony Spark [https://www.colonyspar=
+k.com/]=0A=0AA weekly briefing on the decisions, people, and systems shapin=
+g manufacturing=0Aand distribution.=0A=0A=C2=A0=0A=0AColony Spark, 170 Maso=
+n Street, Greenwich, Connecticut 06830, United States=0A=0AYou=E2=80=99re r=
+eceiving this because you subscribed to The Operations Brief.=0A=0A=C2=A9 2=
+026 Colony Spark. All rights reserved.
+--_----iUvbzRR0Vfmvg4bHRy3umA===_DA/2D-21229-AAA96BA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head>=0A<meta charset=3D"UTF-8">=0A<meta name=3D"viewport"=
+ content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A<meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D"x-apple-disable=
+-message-reformatting">=0A<meta name=3D"format-detection" content=3D"teleph=
+one=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<meta name=3D"color=
+-scheme" content=3D"light only">=0A<meta name=3D"supported-color-schemes" c=
+ontent=3D"light only">=0A<title>The Operations Brief: The Traceability Hand=
+shake</title>=0A<!--[if mso]>=0A<xml><o:OfficeDocumentSettings><o:PixelsPer=
+Inch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>=0A<=
+style type=3D"text/css">=0Atable, td, th {border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt;}=0Atd, p, a, span, div, h1, h2, h3 =
+{mso-line-height-rule: exactly;}=0Abody, table, td, p, a, h1, h2, h3 {font-=
+family: 'Segoe UI', Arial, sans-serif !important;}=0A</style>=0A<![endif]--=
+>=0A<style type=3D"text/css">=0A@media only screen and (max-width:480px) {=
+=0A  .px { padding:32px 22px !important; }=0A  .px-a { padding:20px 22px !i=
+mportant; }=0A  .px-f { padding:28px 22px !important; }=0A  .h1 { font-size=
+:40px !important; line-height:44px !important; letter-spacing:-1.5px !impor=
+tant; }=0A}=0A</style>=0A</head>=0A<body bgcolor=3D"#f6f8f4" style=3D"margi=
+n:0;padding:0;width:100%;background-color:#f6f8f4;-webkit-text-size-adjust:=
+100%;-ms-text-size-adjust:100%;color-scheme:light only;" class=3D"bodyClass=
+"><span style=3D"display:none">A truck at the dock, no data to receive it. =
+Here&apos;s where the supplier handoff breaks.</span>=0A<div style=3D"displ=
+ay:none;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f=
+6f8f4;mso-hide:all;">Cencora can&#x2019;t unload until the data lands. NIST=
+ just set a new bar for supplier handoffs.</div>=0A<div style=3D"display:no=
+ne;max-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f6f8f4=
+;mso-hide:all;">&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&=
+#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;=
+&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x20=
+0C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#x=
+A0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#=
+x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C=
+;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;</div>=0A=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" width=3D"100%" bgcolor=3D"#f6f8f4" style=3D"background-colo=
+r:#f6f8f4;width:100%;">=0A<tbody><tr>=0A<td align=3D"center" valign=3D"top"=
+ style=3D"padding:24px 12px;">=0A<!--[if mso]><table role=3D"presentation" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600" align=3D"cen=
+ter"><tr><td><![endif]-->=0A<table role=3D"presentation" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" width=3D"100%" align=3D"center" style=3D"max=
+-width:600px;width:100%;">=0A=0A<!-- HEADER -->=0A<tbody><tr>=0A<td align=
+=3D"center" bgcolor=3D"#172b25" style=3D"background-color:#172b25;border-ra=
+dius:14px 14px 0 0;padding:44px 32px 36px;">=0A<p style=3D"margin:0 0 16px;=
+font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:20p=
+x;color:#b2c2af;mso-line-height-rule:exactly;font-weight:700;text-align:cen=
+ter;">A weekly briefing for the industrial economy</p>=0A=0A<h1 class=3D"h1=
+" style=3D"margin:0;padding:0;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:52px;line-height:54px;font-weight:600;letter-spacing:-2px;color:#=
+f3f7eb;text-align:center;mso-line-height-rule:exactly;">The Operations<br><=
+span style=3D"color:#dfef93;">Brief</span></h1>=0A<p style=3D"margin:20px 0=
+ 0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:=
+20px;color:#c0cbbc;mso-line-height-rule:exactly;text-align:center;">By <str=
+ong style=3D"color:#f3f7eb;font-weight:700;">Bill Murphy</strong>, powered =
+by <a href=3D"https://www.colonyspark.com/" style=3D"color:#c0cbbc;text-dec=
+oration:none;">Colony Spark</a></p>=0A=0A</td>=0A</tr>=0A<tr>=0A<td bgcolor=
+=3D"#172b25" style=3D"background-color:#172b25;padding:0 32px;">=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%"><tbody><tr><td height=3D"1" bgcolor=3D"#3a4b40" style=3D"height:1=
+px;background-color:#3a4b40;font-size:0;line-height:0;">&#xA0;</td></tr></t=
+body></table>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center" bgcolor=3D"#172=
+b25" style=3D"background-color:#172b25;padding:14px 32px 16px;">=0A<p style=
+=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;li=
+ne-height:18px;color:#b2c2af;mso-line-height-rule:exactly;text-align:center=
+;">September 25, 2026</p>=0A=0A</td>=0A</tr>=0A=0A<!-- ANNOUNCEMENT -->=0A<=
+tr>=0A<td class=3D"px-a" bgcolor=3D"#dfef93" style=3D"background-color:#dfe=
+f93;padding:22px 44px;border-radius:0 0 14px 14px;">=0A<p style=3D"margin:0=
+ 0 8px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-hei=
+ght:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">A new=
+ look for The Operations Brief</p>=0A<p style=3D"margin:0;font-family:&apos=
+;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto=
+,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#3f4f47;m=
+so-line-height-rule:exactly;">We refreshed the design to match our new webs=
+ite, so the newsletter and the site now read as one publication. What you g=
+et from it hasn&#x2019;t changed: three sections every week, written for th=
+e people running manufacturing and distribution operations. Thanks for read=
+ing.</p>=0A</td>=0A</tr>=0A=0A<!-- INTRO -->=0A<tr><td class=3D"px" style=
+=3D"padding:40px 44px 40px;border-bottom:1px solid #d8dfd6;">=0A<p style=3D=
+"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17p=
+x;line-height:28px;color:#142a25;mso-line-height-rule:exactly;">Most operat=
+ors can trace product reasonably well inside their own four walls. The trou=
+ble starts at the handoff, when a supplier&#x2019;s records have to make se=
+nse inside someone else&#x2019;s ERP, WMS, and quality system.</p>=0A<p sty=
+le=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:17px;line-height:28px;color:#142a25;mso-line-height-rule:exactly;">This i=
+ssue is about that handoff: why it&#x2019;s becoming part of the supplier r=
+elationship, what it looks like at a real receiving dock, and a practical w=
+ay to find where your own evidence chain breaks.</p>=0A<table role=3D"prese=
+ntation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" st=
+yle=3D"margin:0 0 20px;">=0A<tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"bac=
+kground-color:#e5ebdf;border-radius:10px;padding:22px 24px;">=0A<p style=3D=
+"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14p=
+x;line-height:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:7=
+00;">This week&#x2019;s question</p>=0A<p style=3D"margin:0 0 8px;font-fami=
+ly:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:26px;color:#=
+142a25;mso-line-height-rule:exactly;font-weight:700;">Could your receiving =
+team trace one supplier lot from last month, PO to production use, without =
+digging through email=3F</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sa=
+ns&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helve=
+tica,Arial,sans-serif;font-size:15px;line-height:24px;color:#3f4f47;mso-lin=
+e-height-rule:exactly;">Hit reply with yes, no, or &#x201C;depends on the s=
+upplier.&#x201D; One word is enough. I&#x2019;ll share what readers say in =
+a future issue.</p>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0;=
+font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:28p=
+x;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">Bill</p>=0A<=
+/td></tr>=0A=0A<tr><td class=3D"px" style=3D"padding:40px 44px 40px;border-=
+bottom:1px solid #d8dfd6;">=0A<table role=3D"presentation" cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td =
+bgcolor=3D"#e5ebdf" style=3D"background-color:#e5ebdf;border-radius:4px;pad=
+ding:3px 7px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;li=
+ne-height:16px;color:#142a25;mso-line-height-rule:exactly;">01</td><td styl=
+e=3D"padding-left:10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkM=
+acSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-si=
+ze:15px;line-height:20px;font-weight:700;color:#142a25;mso-line-height-rule=
+:exactly;">The Shift</td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10=
+px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:28px;line-height:=
+34px;font-weight:700;letter-spacing:-0.5px;color:#142a25;mso-line-height-ru=
+le:exactly;">The Traceability Handshake Is Becoming a Supplier Requirement<=
+/h2>=0A<p style=3D"margin:0 0 26px;font-family:&apos;DM Sans&apos;,-apple-s=
+ystem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-s=
+erif;font-size:17px;line-height:26px;color:#6b7a71;mso-line-height-rule:exa=
+ctly;">Traceability evidence now has to survive the boundary between compan=
+ies.</p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule=
+:exactly;">A shipment can reach the dock before its usable traceability rec=
+ord does. The product is physically there. The lot references, certificates=
+, event records, and receiving data that would let the next operator accept=
+ it are not, or they arrive in a form the receiving system can&#x2019;t use=
+. So the team rebuilds the trail by hand from inboxes, portals, and discon=
+nected systems before it can decide whether to accept, hold, investigate, o=
+r escalate.</p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apo=
+s;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,A=
+rial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-heig=
+ht-rule:exactly;">Most companies can trace at least part of a product insid=
+e their own environment. The harder problem starts when that history has to=
+ cross into another company&#x2019;s ERP, WMS, QMS, MES, or receiving proce=
+ss. Item identifiers differ. Lot and serial references don&#x2019;t match. =
+Certificates travel separately from the shipment. Event records use differe=
+nt structures.</p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&=
+apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetic=
+a,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-h=
+eight-rule:exactly;">NIST gave this problem a current technical foundation =
+on September 9. <a href=3D"https://www.nist.gov/publications/supply-chain-t=
+raceability-principles-manufacturing-meta-framework" style=3D"color:#2a6b4f=
+;text-decoration:underline;">NIST IR 8536</a> lays out a manufacturing trac=
+eability meta-framework for building a continuous, time-ordered provenance =
+chain across separate supply chain ecosystems. It relies on common data pat=
+terns, interoperable interfaces, cryptographically verifiable links, and se=
+lective disclosure, so companies can share the evidence traceability requir=
+es without exposing proprietary operating data or depending on a central re=
+pository.</p>=0A<p style=3D"margin:0 0 26px;font-family:&apos;DM Sans&apos;=
+,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ari=
+al,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height=
+-rule:exactly;">The framework matters less than what it signals for operato=
+rs. The shift is from visibility to usability. A supplier can hold the righ=
+t information and still fail the handoff if the receiver can&#x2019;t conne=
+ct it to the product, lot, shipment, event, or decision inside its own work=
+flow. Traceability is becoming part of the supplier handshake, judged along=
+side the product, the ASN, and the delivery date.</p>=0A<table role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" s=
+tyle=3D"margin:0 0 26px;">=0A<tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"ba=
+ckground-color:#e5ebdf;border-radius:10px;padding:22px 24px;">=0A<p style=
+=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+14px;line-height:20px;color:#142a25;mso-line-height-rule:exactly;font-weigh=
+t:700;">A test for your receiving team</p>=0A<p style=3D"margin:0;font-fami=
+ly:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#=
+3f4f47;mso-line-height-rule:exactly;">Pick one supplier lot from last month=
+. Can your team connect it to its PO, shipment, certificate, receipt, insp=
+ection, and downstream use without rebuilding the story from email threads =
+and separate systems=3F If the answer takes a day of digging, the handshake=
+ is already broken.</p>=0A</td></tr>=0A</tbody></table>=0A<table role=3D"pr=
+esentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"=
+ style=3D"margin:0 0 26px;">=0A<tbody><tr><td style=3D"border-left:4px soli=
+d #2a6b4f;padding:4px 0 4px 20px;">=0A<p style=3D"margin:0;font-family:&apo=
+s;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robot=
+o,Helvetica,Arial,sans-serif;font-size:19px;line-height:29px;color:#142a25;=
+mso-line-height-rule:exactly;font-weight:700;letter-spacing:-0.2px;">Holdin=
+g the evidence isn&#x2019;t the same as handing it over in a form the next =
+company can use.</p>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0=
+;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Seg=
+oe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:27=
+px;color:#3f4f47;mso-line-height-rule:exactly;">For Cencora, this isn&#x201=
+9;t a future architecture problem. A truck can reach the dock before the da=
+ta required to receive its product.</p>=0A</td></tr>=0A=0A<tr><td class=3D"=
+px" style=3D"padding:40px 44px 40px;border-bottom:1px solid #d8dfd6;">=0A<t=
+able role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"bac=
+kground-color:#e5ebdf;border-radius:4px;padding:3px 7px;font-family:&apos;D=
+M Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,H=
+elvetica,Arial,sans-serif;font-size:12px;line-height:16px;color:#142a25;mso=
+-line-height-rule:exactly;">02</td><td style=3D"padding-left:10px;font-fami=
+ly:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos=
+;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;font-we=
+ight:700;color:#142a25;mso-line-height-rule:exactly;">From the Floor</td></=
+tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-family:&apos;DM San=
+s&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvet=
+ica,Arial,sans-serif;font-size:28px;line-height:34px;font-weight:700;letter=
+-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;">The Truck Is a=
+t the Dock. The Data Isn&#x2019;t.</h2>=0A<p style=3D"margin:0 0 26px;font-=
+family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:26px;col=
+or:#6b7a71;mso-line-height-rule:exactly;">Gregg Gorniak of Cencora on recei=
+ving product that arrives before its evidence.</p>=0A<p style=3D"margin:0 0=
+ 26px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apo=
+s;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-heig=
+ht:27px;color:#3f4f47;mso-line-height-rule:exactly;">Gregg Gorniak is Vice =
+President of Manufacturer Operations and Data Services and Secure Supply Ch=
+ain Lead at Cencora, which receives pharmaceutical shipments from manufactu=
+rer partners. Under the Drug Supply Chain Security Act, Cencora needs the m=
+atching serialized data before it can receive covered product and take owne=
+rship of it. In a <a href=3D"https://www.pharmaceuticalcommerce.com/view/q-=
+a-a-playbook-for-dscsa-value-beyond-compliance" style=3D"color:#2a6b4f;text=
+-decoration:underline;">Q&A with Pharmaceutical Commerce</a>, Gorniak descr=
+ibed how his team compares purchase orders, ASNs, and expected delivery win=
+dows against incoming EPCIS data.</p>=0A<table role=3D"presentation" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0=
+ 0 26px;">=0A<tbody><tr><td bgcolor=3D"#172b25" style=3D"background-color:#=
+172b25;border-radius:10px;padding:24px 26px;">=0A<table role=3D"presentatio=
+n" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"40" style=3D"m=
+argin:0 0 16px;">=0A<tbody><tr><td width=3D"40" height=3D"3" bgcolor=3D"#df=
+ef93" style=3D"width:40px;height:3px;background-color:#dfef93;font-size:0;l=
+ine-height:0;">=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 18=
+px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-height:=
+30px;color:#f3f7eb;mso-line-height-rule:exactly;font-weight:500;letter-spac=
+ing:-0.2px;">&#x201C;I don&#x2019;t want to be reactive when the truck arri=
+ves at my dock and then I can&#x2019;t break the seal and open the truck an=
+d get the product off.&#x201D;</p>=0A<p style=3D"margin:0 0 2px;font-family=
+:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#f3=
+f7eb;mso-line-height-rule:exactly;font-weight:700;">Gregg Gorniak</p>=0A<p =
+style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSys=
+temFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13=
+px;line-height:20px;color:#c0cbbc;mso-line-height-rule:exactly;">VP, Manufa=
+cturer Operations and Data Services, Cencora. <a href=3D"https://www.pharma=
+ceuticalcommerce.com/view/q-a-a-playbook-for-dscsa-value-beyond-compliance"=
+ style=3D"color:#dfef93;text-decoration:underline;">Pharmaceutical Commerce=
+, Sept. 2026</a></p>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0=
+ 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&a=
+pos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-he=
+ight:27px;color:#3f4f47;mso-line-height-rule:exactly;">His fix is an early =
+warning. A red, amber, and green view flags suppliers whose EPCIS data hasn=
+&#x2019;t arrived 12 to 24 hours before the truck is due. That window gives=
+ Cencora and the manufacturer time to repair the data handoff, whether the =
+cause was a system glitch or a file nobody pushed, before the shipment reac=
+hes receiving. Without it, the truck is physically present and the product =
+is operationally unavailable.</p>=0A<p style=3D"margin:0 0 26px;font-family=
+:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f=
+4f47;mso-line-height-rule:exactly;">Gorniak also draws a line between compl=
+iance and a usable handoff. A portal, PDF, or spreadsheet can satisfy a min=
+imum access requirement and still leave the receiver stuck, because a PDF c=
+an&#x2019;t be ingested into the system that validates the product. In his =
+framing, a portal makes a supplier compliant. It doesn&#x2019;t make it a g=
+ood partner.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 0px;">=0A<tbody><t=
+r><td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;border:1px soli=
+d #d8dfd6;border-radius:10px;padding:22px 24px;">=0A<p style=3D"margin:0 0 =
+10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heigh=
+t:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">The tak=
+eaway</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exact=
+ly;">DSCSA is specific to pharmaceutical distribution, not a rule for every=
+ plant or warehouse. The operating lesson travels anyway: the quality and t=
+iming of the traceability record is now part of the supplier relationship, =
+not an afterthought to the product and the ASN.</p>=0A</td></tr>=0A</tbody>=
+</table>=0A</td></tr>=0A=0A<tr><td class=3D"px" style=3D"padding:40px 44px =
+40px;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"#e5ebdf" =
+style=3D"background-color:#e5ebdf;border-radius:4px;padding:3px 7px;font-fa=
+mily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;color=
+:#142a25;mso-line-height-rule:exactly;">03</td><td style=3D"padding-left:10=
+px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:=
+20px;font-weight:700;color:#142a25;mso-line-height-rule:exactly;">The Stack=
+</td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-family:&apos=
+;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto=
+,Helvetica,Arial,sans-serif;font-size:28px;line-height:34px;font-weight:700=
+;letter-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;">The Sup=
+plier Traceability Reconciliation Agent</h2>=0A<p style=3D"margin:0 0 26px;=
+font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:26p=
+x;color:#6b7a71;mso-line-height-rule:exactly;">One place to rebuild the sup=
+plier-to-production evidence chain, with humans reviewing only the exceptio=
+ns.</p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-appl=
+e-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,san=
+s-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:=
+exactly;">Supplier evidence arrives through ASNs, certificates, packing doc=
+uments, emails, portals, and shared event records. Internal evidence sits a=
+cross the PO, the ERP receipt, the WMS scan, the QMS inspection, inventory =
+movements, and BOM or production consumption. Today the buyer or quality le=
+ad spends most of the effort matching identifiers and putting events in ord=
+er before investigating the actual discrepancy.</p>=0A<p style=3D"margin:0 =
+0 26px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-hei=
+ght:27px;color:#3f4f47;mso-line-height-rule:exactly;">This agent does the a=
+ssembly work and hands a person only the missing or conflicting links. It&#=
+x2019;s a practical system pattern, not a named product you can buy off the=
+ shelf.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 24px;">=0A<tbody><tr><t=
+d bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;border:1px solid #d=
+8dfd6;border-radius:10px;padding:22px 24px;">=0A<p style=3D"margin:0 0 10px=
+;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Seg=
+oe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:20=
+px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">What it rea=
+ds</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" width=3D"100%" style=3D"margin:0 0 10px;"><tbody><tr><td width=
+=3D"18" valign=3D"top" style=3D"width:18px;padding-top:9px;"><table role=3D=
+"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr>=
+<td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px;height:=
+7px;background-color:#2a6b4f;border-radius:2px;font-size:0;line-height:0;">=
+&#xA0;</td></tr></tbody></table></td><td valign=3D"top"><p style=3D"margin:=
+0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:2=
+4px;color:#3f4f47;mso-line-height-rule:exactly;"><strong style=3D"color:#14=
+2a25;font-weight:700;">Supplier side:</strong> ASN, packing list, certifica=
+tes, and supporting documents.</p>=0A</td></tr></tbody></table>=0A<table ro=
+le=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%" style=3D"margin:0 0 10px;"><tbody><tr><td width=3D"18" valign=3D"=
+top" style=3D"width:18px;padding-top:9px;"><table role=3D"presentation" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td width=3D"7" he=
+ight=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px;height:7px;background-col=
+or:#2a6b4f;border-radius:2px;font-size:0;line-height:0;">&#xA0;</td></tr></=
+tbody></table></td><td valign=3D"top"><p style=3D"margin:0;font-family:&apo=
+s;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robot=
+o,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#3f4f47;=
+mso-line-height-rule:exactly;"><strong style=3D"color:#142a25;font-weight:7=
+00;">Purchasing and ERP:</strong> PO line, item, revision, expected quantit=
+y, supplier master, receipts, and inventory transactions.</p>=0A</td></tr><=
+/tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 10px;"><tbody><tr><=
+td width=3D"18" valign=3D"top" style=3D"width:18px;padding-top:9px;"><table=
+ role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tb=
+ody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px=
+;height:7px;background-color:#2a6b4f;border-radius:2px;font-size:0;line-hei=
+ght:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D"top"><p style=3D=
+"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-=
+height:24px;color:#3f4f47;mso-line-height-rule:exactly;"><strong style=3D"c=
+olor:#142a25;font-weight:700;">Warehouse and quality:</strong> WMS scans an=
+d location moves, plus QMS inspection, disposition, and nonconformance reco=
+rds.</p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0=
+ 0 10px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;pa=
+dding-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6=
+b4f" style=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:2=
+px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td val=
+ign=3D"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exact=
+ly;"><strong style=3D"color:#142a25;font-weight:700;">Production:</strong> =
+MES or BOM consumption records where available.</p>=0A</td></tr></tbody></t=
+able>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0" width=3D"100%" style=3D"margin:0 0 0px;"><tbody><tr><td width=3D=
+"18" valign=3D"top" style=3D"width:18px;padding-top:9px;"><table role=3D"pr=
+esentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td=
+ width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px;height:7px=
+;background-color:#2a6b4f;border-radius:2px;font-size:0;line-height:0;">&#x=
+A0;</td></tr></tbody></table></td><td valign=3D"top"><p style=3D"margin:0;f=
+ont-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px=
+;color:#3f4f47;mso-line-height-rule:exactly;"><strong style=3D"color:#142a2=
+5;font-weight:700;">Optional:</strong> EPCIS events, when both supplier and=
+ receiver use the standard.</p>=0A</td></tr></tbody></table>=0A</td></tr>=
+=0A</tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 24px;">=0A<tbod=
+y><tr><td bgcolor=3D"#172b25" style=3D"background-color:#172b25;border-radi=
+us:10px;padding:24px 26px;">=0A<p style=3D"margin:0 0 14px;font-family:&apo=
+s;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robot=
+o,Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#dfef93;=
+mso-line-height-rule:exactly;font-weight:700;">How it runs, in five steps</=
+p>=0A<p style=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:15px;line-height:24px;color:#c0cbbc;mso-line-height-rule:exact=
+ly;"><strong style=3D"color:#f3f7eb;font-weight:700;">1. Select.</strong> T=
+he operator picks a component, lot, serial number, shipment, or receipt.</p=
+>=0A<p style=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:15px;line-height:24px;color:#c0cbbc;mso-line-height-rule:exactl=
+y;"><strong style=3D"color:#f3f7eb;font-weight:700;">2. Normalize.</strong>=
+ The agent extracts and normalizes the supplier and internal identifiers.</=
+p>=0A<p style=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:15px;line-height:24px;color:#c0cbbc;mso-line-height-rule:exact=
+ly;"><strong style=3D"color:#f3f7eb;font-weight:700;">3. Sequence.</strong>=
+ It orders the available events from supplier shipment through receipt, ins=
+pection, inventory, and production use.</p>=0A<p style=3D"margin:0 0 10px;f=
+ont-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe=
+ UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px=
+;color:#c0cbbc;mso-line-height-rule:exactly;"><strong style=3D"color:#f3f7e=
+b;font-weight:700;">4. Compare.</strong> It checks supplier claims against =
+internal records and flags missing, duplicate, late, or conflicting evidenc=
+e.</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:15px;line-height:24px;color:#c0cbbc;mso-line-height-rule:exactly;=
+"><strong style=3D"color:#f3f7eb;font-weight:700;">5. Decide.</strong> The =
+buyer or quality lead reviews the exceptions and approves the next action.<=
+/p>=0A</td></tr>=0A</tbody></table>=0A<table role=3D"presentation" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0=
+ 24px;">=0A<tbody><tr><td bgcolor=3D"#ffffff" style=3D"background-color:#ff=
+ffff;border:1px solid #d8dfd6;border-radius:10px;padding:22px 24px;">=0A<p =
+style=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,Blin=
+kMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-=
+size:14px;line-height:20px;color:#142a25;mso-line-height-rule:exactly;font-=
+weight:700;">What it returns</p>=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 10=
+px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;padding=
+-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" s=
+tyle=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:2px;fon=
+t-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D=
+"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,Bl=
+inkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fon=
+t-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;">A=
+ time-ordered traceability packet with links back to every source record.</=
+p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 10=
+px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;padding=
+-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" s=
+tyle=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:2px;fon=
+t-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D=
+"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,Bl=
+inkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fon=
+t-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;">A=
+ broken-link list that shows the first missing or conflicting handoff.</p>=
+=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 10px;=
+"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;padding-to=
+p:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" styl=
+e=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:2px;font-s=
+ize:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D"to=
+p"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;">The =
+affected material, inventory, WIP, or assemblies the current data supports.=
+</p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 1=
+0px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;paddin=
+g-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" =
+style=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:2px;fo=
+nt-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td valign=
+=3D"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;=
+">An evidence view for the buyer, receiving lead, or quality lead.</p>=0A</=
+td></tr></tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 0px;"><tbo=
+dy><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;padding-top:9px;=
+"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D=
+"width:7px;height:7px;background-color:#2a6b4f;border-radius:2px;font-size:=
+0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D"top"><=
+p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;">A drafte=
+d supplier evidence request, held for human approval.</p>=0A</td></tr></tbo=
+dy></table>=0A</td></tr>=0A</tbody></table>=0A<table role=3D"presentation" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"ma=
+rgin:0 0 32px;">=0A<tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"background-c=
+olor:#e5ebdf;border-radius:10px;padding:22px 24px;">=0A<p style=3D"margin:0=
+ 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&a=
+pos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-he=
+ight:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">What=
+ it looks like on a real receipt</p>=0A<p style=3D"margin:0;font-family:&ap=
+os;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#3f4f47=
+;mso-line-height-rule:exactly;">A certificate references supplier lot A417.=
+ The ASN uses a shipment-level identifier, and the ERP receipt records an i=
+nternal lot. The agent links all three records, checks quantity and revisio=
+n, and finds that the inspection result is tied to the wrong internal lot. =
+It sends that exception to quality. It doesn&#x2019;t release or hold the m=
+aterial on its own.</p>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margi=
+n:0 0 14px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:20px;line=
+-height:26px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;let=
+ter-spacing:-0.2px;">Two paths to build it</p>=0A<table role=3D"presentatio=
+n" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D=
+"margin:0 0 12px;">=0A<tbody><tr><td bgcolor=3D"#ffffff" style=3D"backgroun=
+d-color:#ffffff;border:1px solid #d8dfd6;border-left:4px solid #142a25;bord=
+er-radius:10px;padding:20px 22px;">=0A<p style=3D"margin:0 0 6px;font-famil=
+y:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#1=
+42a25;mso-line-height-rule:exactly;font-weight:700;">Path 1: Internal build=
+</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;">=
+Combine document extraction, an event store, read connectors to ERP, WMS, Q=
+MS, and MES, identifier-mapping rules, optional EPCIS semantics, and a huma=
+n exception queue. Begin with one supplier, one component family, and read-=
+only access.</p>=0A</td></tr>=0A</tbody></table>=0A<table role=3D"presentat=
+ion" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=
+=3D"margin:0 0 26px;">=0A<tbody><tr><td bgcolor=3D"#ffffff" style=3D"backgr=
+ound-color:#ffffff;border:1px solid #d8dfd6;border-left:4px solid #2a6b4f;b=
+order-radius:10px;padding:20px 22px;">=0A<p style=3D"margin:0 0 6px;font-fa=
+mily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color=
+:#142a25;mso-line-height-rule:exactly;font-weight:700;">Path 2: ERP or impl=
+ementation partner</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apo=
+s;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,A=
+rial,sans-serif;font-size:15px;line-height:24px;color:#3f4f47;mso-line-heig=
+ht-rule:exactly;">Build the same flow around the supplier-document, lot, re=
+ceipt, quality, and trace-reporting modules already in place. The operating=
+ team keeps ownership of identifier mappings, exception rules, and release =
+authority.</p>=0A</td></tr>=0A</tbody></table>=0A<table role=3D"presentatio=
+n" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D=
+"margin:0 0 30px;">=0A<tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"backgroun=
+d-color:#e5ebdf;border-radius:10px;padding:22px 24px;">=0A<p style=3D"margi=
+n:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line=
+-height:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">G=
+uardrails</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 10px;"><tbody><tr><t=
+d width=3D"18" valign=3D"top" style=3D"width:18px;padding-top:9px;"><table =
+role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbo=
+dy><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px;=
+height:7px;background-color:#2a6b4f;border-radius:2px;font-size:0;line-heig=
+ht:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D"top"><p style=3D"=
+margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&=
+apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-h=
+eight:24px;color:#3f4f47;mso-line-height-rule:exactly;">It reconciles the e=
+vidence that exists. It can&#x2019;t make false source data true or prove t=
+hat an undocumented event happened.</p>=0A</td></tr></tbody></table>=0A<tab=
+le role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" w=
+idth=3D"100%" style=3D"margin:0 0 10px;"><tbody><tr><td width=3D"18" valign=
+=3D"top" style=3D"width:18px;padding-top:9px;"><table role=3D"presentation"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td width=3D"7=
+" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px;height:7px;background=
+-color:#2a6b4f;border-radius:2px;font-size:0;line-height:0;">&#xA0;</td></t=
+r></tbody></table></td><td valign=3D"top"><p style=3D"margin:0;font-family:=
+&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,R=
+oboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#3f4=
+f47;mso-line-height-rule:exactly;">It doesn&#x2019;t release material, chan=
+ge a system of record, issue a hold, or contact a supplier without human ap=
+proval.</p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margi=
+n:0 0 10px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px=
+;padding-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2=
+a6b4f" style=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius=
+:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td v=
+align=3D"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-s=
+ystem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-s=
+erif;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exa=
+ctly;">Every conclusion keeps its source record and a confidence or gap sta=
+tus.</p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cellsp=
+acing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0=
+ 0 10px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;pa=
+dding-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6=
+b4f" style=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:2=
+px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td val=
+ign=3D"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exact=
+ly;"><a href=3D"https://ref.gs1.org/standards/epcis/2.0.0/" style=3D"color:=
+#2a6b4f;text-decoration:underline;">EPCIS</a> gives partners a shared event=
+ language. It doesn&#x2019;t replace ERP, WMS, QMS, MES, or supplier source=
+ records.</p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"mar=
+gin:0 0 0px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18p=
+x;padding-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#=
+2a6b4f" style=3D"width:7px;height:7px;background-color:#2a6b4f;border-radiu=
+s:2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td =
+valign=3D"top"><p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:ex=
+actly;">Cost depends on connector access, document variability, event volum=
+e, and partner participation, so there&#x2019;s no universal price. Start r=
+ead-only and narrow.</p>=0A</td></tr></tbody></table>=0A</td></tr>=0A</tbod=
+y></table>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" width=3D"100%" style=3D"margin:0 0 0px;">=0A<tbody><tr><td =
+style=3D"border-left:4px solid #2a6b4f;padding:4px 0 4px 20px;">=0A<p style=
+=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:19px;li=
+ne-height:29px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;l=
+etter-spacing:-0.2px;">The first useful version doesn&#x2019;t need to trac=
+e the whole enterprise. It needs to show one supplier and one receiving tea=
+m exactly where their shared evidence chain breaks.</p>=0A</td></tr>=0A</tb=
+ody></table>=0A</td></tr>=0A=0A=0A<!-- CLOSING QUESTION -->=0A<tr><td class=
+=3D"px" style=3D"padding:0 44px 40px;">=0A<table role=3D"presentation" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin=
+:0 0 0px;">=0A<tbody><tr><td bgcolor=3D"#172b25" style=3D"background-color:=
+#172b25;border-radius:10px;padding:24px 26px;">=0A<p style=3D"margin:0 0 10=
+px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:=
+20px;color:#dfef93;mso-line-height-rule:exactly;font-weight:700;">Before yo=
+u go</p>=0A<p style=3D"margin:0 0 12px;font-family:&apos;DM Sans&apos;,-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:19px;line-height:28px;color:#f3f7eb;mso-line-height-rule=
+:exactly;font-weight:700;letter-spacing:-0.2px;">Could your receiving team =
+trace one supplier lot from last month, PO to production use, without diggi=
+ng through email=3F</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&ap=
+os;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,=
+Arial,sans-serif;font-size:15px;line-height:24px;color:#c0cbbc;mso-line-hei=
+ght-rule:exactly;">Reply with yes, no, or &#x201C;depends on the supplier.&=
+#x201D; If it&#x2019;s a no, tell me where the trail breaks. I read every r=
+eply. Bill</p>=0A</td></tr>=0A</tbody></table>=0A=0A</td></tr>=0A=0A<!-- FO=
+OTER -->=0A<tr>=0A<td class=3D"px-f" bgcolor=3D"#172b25" style=3D"backgroun=
+d-color:#172b25;border-radius:14px;padding:34px 40px;">=0A<p style=3D"margi=
+n:0 0 4px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-=
+height:24px;color:#f3f7eb;mso-line-height-rule:exactly;font-weight:700;lett=
+er-spacing:-0.2px;">The Operations Brief</p>=0A=0A<p style=3D"margin:0 0 14=
+px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:=
+20px;color:#c0cbbc;mso-line-height-rule:exactly;">By Bill Murphy, powered b=
+y <a href=3D"https://www.colonyspark.com/" style=3D"color:#dfef93;text-deco=
+ration:none;">Colony Spark</a></p>=0A=0A<p style=3D"margin:0 0 22px;font-fa=
+mily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:22px;color=
+:#c0cbbc;mso-line-height-rule:exactly;">A weekly briefing on the decisions,=
+ people, and systems shaping manufacturing and distribution.</p>=0A=0A<tabl=
+e role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wi=
+dth=3D"100%" style=3D"margin:0 0 18px;"><tbody><tr><td height=3D"1" bgcolor=
+=3D"#3a4b40" style=3D"height:1px;background-color:#3a4b40;font-size:0;line-=
+height:0;">&#xA0;</td></tr></tbody></table>=0A<p style=3D"margin:0 0 6px;fo=
+nt-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe =
+UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;=
+color:#b2c2af;mso-line-height-rule:exactly;">Colony Spark, 170 Mason Street=
+, Greenwich, Connecticut 06830, United States</p>=0A=0A<p style=3D"margin:0=
+ 0 6px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-hei=
+ght:18px;color:#b2c2af;mso-line-height-rule:exactly;">You&#x2019;re receivi=
+ng this because you subscribed to The Operations Brief.</p>=0A=0A<p style=
+=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;li=
+ne-height:18px;color:#b2c2af;mso-line-height-rule:exactly;">&#xA9; 2026 Col=
+ony Spark. All rights reserved.</p>=0A=0A</td>=0A</tr>=0A<tr><td height=3D"=
+24" style=3D"height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A=0A=
+</tbody></table>=0A<!--[if mso]></td></tr></table><![endif]-->=0A</td>=0A</=
+tr>=0A</tbody></table>=0A=0A=0A<img src=3D"https://trk.ebitcommweekly.com/o=
+pens=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&type=3Dhtml&info=3DeyJh=
+bGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOG=
+MwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZ=
+GY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkwMzUyMDQyfQ.k9PV3JH-2XtHOs_hOYBSqRZ0UIexVlHSg=
+myuSImkG7c" height=3D"1px" width=3D"1px"><table width=3D"100%" align=3D"cen=
+ter"><tbody><tr><td width=3D"100%" align=3D"center">=0A        <a style=3D"=
+margin-left: auto; margin-right: auto; color: grey; font-size: 10px; text-d=
+ecoration: underline;" href=3D"https://trk.ebitcommweekly.com/unsubscribes=
+=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&info=3DeyJhbGciOiJIUzI1NiIs=
+InR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2=
+I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljI=
+iwiaWF0IjoxNzkwMzUyMDQyfQ.k9PV3JH-2XtHOs_hOYBSqRZ0UIexVlHSgmyuSImkG7c&type=
+=3Dhtml">Click here to unsubscribe</a>=0A        </td></tr></tbody></table>=
+</body></html>
+--_----iUvbzRR0Vfmvg4bHRy3umA===_DA/2D-21229-AAA96BA6--
+
